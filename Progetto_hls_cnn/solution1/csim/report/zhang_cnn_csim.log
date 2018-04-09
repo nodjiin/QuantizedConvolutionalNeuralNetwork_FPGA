@@ -1,0 +1,386 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../testbench/20c-net.c in debug mode
+INFO: [HLS 200-10] Running '/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'studio' on host 'dante-X55C' (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:35:37 CET 2017
+INFO: [HLS 200-10] On os Linux Mint 18.2 Sonya
+INFO: [HLS 200-10] In directory '/home/studio/Prova_casa/solution1/csim/build'
+../../../testbench/20c-net.c:5:32: warning: '/*' within block comment [-Wcomment]
+* gcc -o 20c-net -I. -I./mxml ./*.c ./mxml/*.c -lm -lpthread -O3
+                               ^
+../../../testbench/20c-net.c:5:43: warning: '/*' within block comment [-Wcomment]
+* gcc -o 20c-net -I. -I./mxml ./*.c ./mxml/*.c -lm -lpthread -O3
+                                          ^
+2 warnings generated.
+../../../testbench/20c-net.c:5:32: warning: '/*' within block comment [-Wcomment]
+* gcc -o 20c-net -I. -I./mxml ./*.c ./mxml/*.c -lm -lpthread -O3
+                               ^
+../../../testbench/20c-net.c:5:43: warning: '/*' within block comment [-Wcomment]
+* gcc -o 20c-net -I. -I./mxml ./*.c ./mxml/*.c -lm -lpthread -O3
+                                          ^
+2 warnings generated.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_studio/202631511865337752093
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../testbench/activation_functions.c in debug mode
+INFO: [HLS 200-10] Running '/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'studio' on host 'dante-X55C' (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:35:45 CET 2017
+INFO: [HLS 200-10] On os Linux Mint 18.2 Sonya
+INFO: [HLS 200-10] In directory '/home/studio/Prova_casa/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_studio/203301511865345972743
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../testbench/activation_module.c in debug mode
+INFO: [HLS 200-10] Running '/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'studio' on host 'dante-X55C' (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:35:54 CET 2017
+INFO: [HLS 200-10] On os Linux Mint 18.2 Sonya
+INFO: [HLS 200-10] In directory '/home/studio/Prova_casa/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_studio/203911511865354106363
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../testbench/container_module.c in debug mode
+INFO: [HLS 200-10] Running '/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'studio' on host 'dante-X55C' (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:36:02 CET 2017
+INFO: [HLS 200-10] On os Linux Mint 18.2 Sonya
+INFO: [HLS 200-10] In directory '/home/studio/Prova_casa/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_studio/204541511865362576069
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../testbench/convolution.c in debug mode
+INFO: [HLS 200-10] Running '/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'studio' on host 'dante-X55C' (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:36:11 CET 2017
+INFO: [HLS 200-10] On os Linux Mint 18.2 Sonya
+INFO: [HLS 200-10] In directory '/home/studio/Prova_casa/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_studio/205161511865371330253
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../testbench/convolutional_module.c in debug mode
+INFO: [HLS 200-10] Running '/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'studio' on host 'dante-X55C' (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:36:19 CET 2017
+INFO: [HLS 200-10] On os Linux Mint 18.2 Sonya
+INFO: [HLS 200-10] In directory '/home/studio/Prova_casa/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_studio/205831511865379684295
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../testbench/module.c in debug mode
+INFO: [HLS 200-10] Running '/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'studio' on host 'dante-X55C' (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:36:28 CET 2017
+INFO: [HLS 200-10] On os Linux Mint 18.2 Sonya
+INFO: [HLS 200-10] In directory '/home/studio/Prova_casa/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_studio/206461511865388572296
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../testbench/net_parser.c in debug mode
+INFO: [HLS 200-10] Running '/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'studio' on host 'dante-X55C' (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:36:37 CET 2017
+INFO: [HLS 200-10] On os Linux Mint 18.2 Sonya
+INFO: [HLS 200-10] In directory '/home/studio/Prova_casa/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_studio/207091511865397712210
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../testbench/pool_module.c in debug mode
+INFO: [HLS 200-10] Running '/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'studio' on host 'dante-X55C' (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:36:46 CET 2017
+INFO: [HLS 200-10] On os Linux Mint 18.2 Sonya
+INFO: [HLS 200-10] In directory '/home/studio/Prova_casa/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_studio/207771511865407008667
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../testbench/tensor.c in debug mode
+INFO: [HLS 200-10] Running '/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'studio' on host 'dante-X55C' (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:36:55 CET 2017
+INFO: [HLS 200-10] On os Linux Mint 18.2 Sonya
+INFO: [HLS 200-10] In directory '/home/studio/Prova_casa/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_studio/208631511865415664185
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../src/zhang_convolution_quant.c in debug mode
+INFO: [HLS 200-10] Running '/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'studio' on host 'dante-X55C' (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:37:04 CET 2017
+INFO: [HLS 200-10] On os Linux Mint 18.2 Sonya
+INFO: [HLS 200-10] In directory '/home/studio/Prova_casa/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_studio/209621511865424898314
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Network loading complete!
+
+---- Forwarding NETWORK ----
+
+NELLA FORWARD, KER CH E' 1 E IN CH E' 1
+LAYER CONFIG:
+in_w: 32 in_h: 32 in_ch: 1 
+out_w: 30 out_h: 30 out_ch: 64 
+ker_w: 3 ker_h: 3 ker_ch: 1 
+INPUT ---- ChooseQuantizationParams
+min: -3.0214462280273437500 --- max: 2.7303562164306640625 
+scale: 0.0225560888648033142 --- zero: 134 
+INPUT ---- Quantize
+WEIGHTS ---- ChooseQuantizationParams
+min: -0.4359969496726989746 --- max: 0.4868228137493133545 
+scale: 0.0036189008969813585 --- zero: 120 
+WEIGHTS ---- Quantize
+OUTPUT ---- ChooseQuantizationParams
+min: -2.8434154987335205078 --- max: 2.7766919136047363281 
+scale: 0.0220396369695663452 --- zero: 129 
+real_multiplier=0.0074074040167033672, s=1
+real_multiplier=0.0148148080334067345, s=2
+real_multiplier=0.0296296160668134689, s=3
+real_multiplier=0.0592592321336269379, s=4
+real_multiplier=0.1185184642672538757, s=5
+real_multiplier=0.2370369285345077515, s=6
+real_multiplier=0.4740738570690155029, s=7
+real_multiplier=0.9481477141380310059, s=8
+------QuantizeMultiplierSmallerThanOne:
+ real_multiplier=0.0037037020083516836, quantized_multiplier=62138, right_shift=8
+NELLA FORWARD, KER CH E' 64 E IN CH E' 64
+LAYER CONFIG:
+in_w: 30 in_h: 30 in_ch: 64 
+out_w: 28 out_h: 28 out_ch: 64 
+ker_w: 3 ker_h: 3 ker_ch: 64 
+INPUT ---- ChooseQuantizationParams
+min: -2.8434154987335205078 --- max: 2.7766919136047363281 
+scale: 0.0220396369695663452 --- zero: 129 
+INPUT ---- Quantize
+WEIGHTS ---- ChooseQuantizationParams
+min: -0.1140221655368804932 --- max: 0.1300301104784011841 
+scale: 0.0009570677648298442 --- zero: 119 
+WEIGHTS ---- Quantize
+OUTPUT ---- ChooseQuantizationParams
+min: -2.3366446495056152344 --- max: 4.2716965675354003906 
+scale: 0.0259150639176368713 --- zero: 90 
+real_multiplier=0.0016278892289847136, s=1
+real_multiplier=0.0032557784579694271, s=2
+real_multiplier=0.0065115569159388542, s=3
+real_multiplier=0.0130231138318777084, s=4
+real_multiplier=0.0260462276637554169, s=5
+real_multiplier=0.0520924553275108337, s=6
+real_multiplier=0.1041849106550216675, s=7
+real_multiplier=0.2083698213100433350, s=8
+real_multiplier=0.4167396426200866699, s=9
+real_multiplier=0.8334792852401733398, s=10
+------QuantizeMultiplierSmallerThanOne:
+ real_multiplier=0.0008139446144923568, quantized_multiplier=54623, right_shift=10
+NELLA FORWARD, KER CH E' 64 E IN CH E' 64
+LAYER CONFIG:
+in_w: 28 in_h: 28 in_ch: 64 
+out_w: 26 out_h: 26 out_ch: 64 
+ker_w: 3 ker_h: 3 ker_ch: 64 
+INPUT ---- ChooseQuantizationParams
+min: -2.3366446495056152344 --- max: 4.2716965675354003906 
+scale: 0.0259150639176368713 --- zero: 90 
+INPUT ---- Quantize
+WEIGHTS ---- ChooseQuantizationParams
+min: -0.1010790467262268066 --- max: 0.1304683685302734375 
+scale: 0.0009080290910787880 --- zero: 111 
+WEIGHTS ---- Quantize
+OUTPUT ---- ChooseQuantizationParams
+min: -2.6052727699279785156 --- max: 5.8517732620239257812 
+scale: 0.0331648886203765869 --- zero: 79 
+real_multiplier=0.0014190688962116838, s=1
+real_multiplier=0.0028381377924233675, s=2
+real_multiplier=0.0056762755848467350, s=3
+real_multiplier=0.0113525511696934700, s=4
+real_multiplier=0.0227051023393869400, s=5
+real_multiplier=0.0454102046787738800, s=6
+real_multiplier=0.0908204093575477600, s=7
+real_multiplier=0.1816408187150955200, s=8
+real_multiplier=0.3632816374301910400, s=9
+real_multiplier=0.7265632748603820801, s=10
+------QuantizeMultiplierSmallerThanOne:
+ real_multiplier=0.0007095344481058419, quantized_multiplier=47616, right_shift=10
+NELLA FORWARD, KER CH E' 64 E IN CH E' 64
+LAYER CONFIG:
+in_w: 26 in_h: 26 in_ch: 64 
+out_w: 24 out_h: 24 out_ch: 64 
+ker_w: 3 ker_h: 3 ker_ch: 64 
+INPUT ---- ChooseQuantizationParams
+min: -2.6052727699279785156 --- max: 5.8517732620239257812 
+scale: 0.0331648886203765869 --- zero: 79 
+INPUT ---- Quantize
+WEIGHTS ---- ChooseQuantizationParams
+min: -0.1334706693887710571 --- max: 0.1324833929538726807 
+scale: 0.0010429571848362684 --- zero: 128 
+WEIGHTS ---- Quantize
+OUTPUT ---- ChooseQuantizationParams
+min: -2.1922154426574707031 --- max: 7.8916015625000000000 
+scale: 0.0395443774759769440 --- zero: 55 
+real_multiplier=0.0017494047060608864, s=1
+real_multiplier=0.0034988094121217728, s=2
+real_multiplier=0.0069976188242435455, s=3
+real_multiplier=0.0139952376484870911, s=4
+real_multiplier=0.0279904752969741821, s=5
+real_multiplier=0.0559809505939483643, s=6
+real_multiplier=0.1119619011878967285, s=7
+real_multiplier=0.2239238023757934570, s=8
+real_multiplier=0.4478476047515869141, s=9
+real_multiplier=0.8956952095031738281, s=10
+------QuantizeMultiplierSmallerThanOne:
+ real_multiplier=0.0008747023530304432, quantized_multiplier=58700, right_shift=10
+NELLA FORWARD, KER CH E' 64 E IN CH E' 64
+LAYER CONFIG:
+in_w: 24 in_h: 24 in_ch: 64 
+out_w: 24 out_h: 24 out_ch: 100 
+ker_w: 1 ker_h: 1 ker_ch: 64 
+INPUT ---- ChooseQuantizationParams
+min: -2.1922154426574707031 --- max: 7.8916015625000000000 
+scale: 0.0395443774759769440 --- zero: 55 
+INPUT ---- Quantize
+WEIGHTS ---- ChooseQuantizationParams
+min: -0.2441322356462478638 --- max: 0.2322227656841278076 
+scale: 0.0018680589273571968 --- zero: 131 
+WEIGHTS ---- Quantize
+OUTPUT ---- ChooseQuantizationParams
+min: -3.7851839065551757812 --- max: 6.6846036911010742188 
+scale: 0.0410579890012741089 --- zero: 92 
+real_multiplier=0.0035983850248157978, s=1
+real_multiplier=0.0071967700496315956, s=2
+real_multiplier=0.0143935400992631912, s=3
+real_multiplier=0.0287870801985263824, s=4
+real_multiplier=0.0575741603970527649, s=5
+real_multiplier=0.1151483207941055298, s=6
+real_multiplier=0.2302966415882110596, s=7
+real_multiplier=0.4605932831764221191, s=8
+real_multiplier=0.9211865663528442383, s=9
+------QuantizeMultiplierSmallerThanOne:
+ real_multiplier=0.0017991925124078989, quantized_multiplier=60371, right_shift=9
+NELLA FORWARD, KER CH E' 100 E IN CH E' 100
+LAYER CONFIG:
+in_w: 24 in_h: 24 in_ch: 100 
+out_w: 24 out_h: 24 out_ch: 100 
+ker_w: 1 ker_h: 1 ker_ch: 100 
+INPUT ---- ChooseQuantizationParams
+min: -3.7851839065551757812 --- max: 6.6846036911010742188 
+scale: 0.0410579890012741089 --- zero: 92 
+INPUT ---- Quantize
+WEIGHTS ---- ChooseQuantizationParams
+min: -0.1631468534469604492 --- max: 0.2258777618408203125 
+scale: 0.0015255867037922144 --- zero: 107 
+WEIGHTS ---- Quantize
+OUTPUT ---- ChooseQuantizationParams
+min: -4.5539436340332031250 --- max: 11.4204711914062500000 
+scale: 0.0626447647809982300 --- zero: 73 
+real_multiplier=0.0019997686613351107, s=1
+real_multiplier=0.0039995373226702213, s=2
+real_multiplier=0.0079990746453404427, s=3
+real_multiplier=0.0159981492906808853, s=4
+real_multiplier=0.0319962985813617706, s=5
+real_multiplier=0.0639925971627235413, s=6
+real_multiplier=0.1279851943254470825, s=7
+real_multiplier=0.2559703886508941650, s=8
+real_multiplier=0.5119407773017883301, s=9
+------QuantizeMultiplierSmallerThanOne:
+ real_multiplier=0.0009998843306675553, quantized_multiplier=33551, right_shift=9
+NELLA FORWARD, KER CH E' 100 E IN CH E' 100
+LAYER CONFIG:
+in_w: 24 in_h: 24 in_ch: 100 
+out_w: 24 out_h: 24 out_ch: 1 
+ker_w: 1 ker_h: 1 ker_ch: 100 
+INPUT ---- ChooseQuantizationParams
+min: -4.5539436340332031250 --- max: 11.4204711914062500000 
+scale: 0.0626447647809982300 --- zero: 73 
+INPUT ---- Quantize
+WEIGHTS ---- ChooseQuantizationParams
+min: -0.6900908946990966797 --- max: 0.5332611799240112305 
+scale: 0.0047974591143429279 --- zero: 144 
+WEIGHTS ---- Quantize
+OUTPUT ---- ChooseQuantizationParams
+min: -34.8895263671875000000 --- max: 23.2205867767333984375 
+scale: 0.2278828024864196777 --- zero: 153 
+real_multiplier=0.0026376338209956884, s=1
+real_multiplier=0.0052752676419913769, s=2
+real_multiplier=0.0105505352839827538, s=3
+real_multiplier=0.0211010705679655075, s=4
+real_multiplier=0.0422021411359310150, s=5
+real_multiplier=0.0844042822718620300, s=6
+real_multiplier=0.1688085645437240601, s=7
+real_multiplier=0.3376171290874481201, s=8
+real_multiplier=0.6752342581748962402, s=9
+------QuantizeMultiplierSmallerThanOne:
+ real_multiplier=0.0013188169104978442, quantized_multiplier=44252, right_shift=9
+CONTAINER MODULE of type SEQUENTIAL:
+Contained Modules: 14
+Input of size	1x32x32
+
+---- MODULE LIST
+
+Module [1]: CONVOLUTIONAL MODULE:
+[64] filters with kernel size: 1x3x3
+bias with size: 64x1x1
+Applying horizontal stride of 1 and vertical stride of 1
+No zero padding
+input of size	1x32x32
+output of size	64x30x30
+
+Module [2]: ACTIVATION MODULE of type RELU:
+input of size	64x30x30
+output of size	64x30x30
+
+Module [3]: CONVOLUTIONAL MODULE:
+[64] filters with kernel size: 64x3x3
+bias with size: 64x1x1
+Applying horizontal stride of 1 and vertical stride of 1
+No zero padding
+input of size	64x30x30
+output of size	64x28x28
+
+Module [4]: ACTIVATION MODULE of type RELU:
+input of size	64x28x28
+output of size	64x28x28
+
+Module [5]: CONVOLUTIONAL MODULE:
+[64] filters with kernel size: 64x3x3
+bias with size: 64x1x1
+Applying horizontal stride of 1 and vertical stride of 1
+No zero padding
+input of size	64x28x28
+output of size	64x26x26
+
+Module [6]: ACTIVATION MODULE of type RELU:
+input of size	64x26x26
+output of size	64x26x26
+
+Module [7]: CONVOLUTIONAL MODULE:
+[64] filters with kernel size: 64x3x3
+bias with size: 64x1x1
+Applying horizontal stride of 1 and vertical stride of 1
+No zero padding
+input of size	64x26x26
+output of size	64x24x24
+
+Module [8]: ACTIVATION MODULE of type RELU:
+input of size	64x24x24
+output of size	64x24x24
+
+Module [9]: CONVOLUTIONAL MODULE:
+[100] filters with kernel size: 64x1x1
+bias with size: 100x1x1
+Applying horizontal stride of 1 and vertical stride of 1
+No zero padding
+input of size	64x24x24
+output of size	100x24x24
+
+Module [10]: ACTIVATION MODULE of type RELU:
+input of size	100x24x24
+output of size	100x24x24
+
+Module [11]: CONVOLUTIONAL MODULE:
+[100] filters with kernel size: 100x1x1
+bias with size: 100x1x1
+Applying horizontal stride of 1 and vertical stride of 1
+No zero padding
+input of size	100x24x24
+output of size	100x24x24
+
+Module [12]: ACTIVATION MODULE of type RELU:
+input of size	100x24x24
+output of size	100x24x24
+
+Module [13]: CONVOLUTIONAL MODULE:
+[1] filters with kernel size: 100x1x1
+bias with size: 1x1x1
+Applying horizontal stride of 1 and vertical stride of 1
+No zero padding
+input of size	100x24x24
+output of size	1x24x24
+
+Module [14]: ACTIVATION MODULE of type SIGMOID:
+input of size	1x24x24
+output of size	1x24x24
+
+
+---- END MODULE LIST
+
+Output of size	1x24x24
+Sono alla fine, error era 
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,376 @@
+***************************************************************************************
+*                      PROJECT ARCHIVE SUMMARY REPORT
+*
+*                      (archive_project_summary.txt)
+*
+*  PLEASE READ THIS REPORT TO GET THE DETAILED INFORMATION ABOUT THE PROJECT DATA THAT
+*  WAS ARCHIVED FOR THE CURRENT PROJECT
+*
+* The report is divided into following five sections:-
+*
+* Section (1) - PROJECT INFORMATION
+*  This section provides the details of the current project that was archived
+*
+* Section (2) - INCLUDED/EXCLUDED RUNS
+*  This section summarizes the list of design runs for which the results were included
+*  or excluded from the archive
+*
+* Section (3) - ARCHIVED SOURCES
+*  This section summarizes the list of files that were added to the archive
+*
+* Section (3.1) - INCLUDE FILES
+*  This section summarizes the list of 'include' files that were added to the archive
+*
+* Section (3.1.1) - INCLUDE_DIRS SETTINGS
+*  This section summarizes the 'verilog include directory' path settings, if any
+*
+* Section (3.2) - REMOTE SOURCES
+*  This section summarizes the list of referenced 'remote' files that were 'imported'
+*  into the archived project
+*
+* Section (3.3) - SOURCES SUMMARY
+*  This section summarizes the list of all the files present in the archive
+*
+* Section (3.4) - REMOTE IP DEFINITIONS
+*  This section summarizes the list of all the remote IP's present in the archive
+*
+* Section (4) - JOURNAL/LOG FILES
+*  This section summarizes the list of journal/log files that were added to the archive
+*
+* Section (5) - CONFIGURATION SETTINGS/FILES
+*  This section summarizes the configuration settings/files that were added to the archive
+*
+***************************************************************************************
+
+Section (1) - PROJECT INFORMATION
+---------------------------------
+Name      = tiled_convolution
+Directory = /home/studio/VIVADO_2017/tiled_convolution_CASA
+
+WARNING: Please verify the compiled library directory path for the following property in the
+         current project. The path may point to an invalid location after opening this project.
+         This could happen if the project was unarchived in a location where this path is not
+         accessible. To resolve this issue, please set this property with the desired path
+         before launching simulation:-
+
+Property = compxlib.xsim_compiled_library_dir
+Path     = 
+
+Section (2) - INCLUDED RUNS
+---------------------------
+The run results were included for the following runs in the archived project:-
+
+<synth_6>
+<impl_2>
+
+Section (3) - ARCHIVED SOURCES
+------------------------------
+The following sub-sections describes the list of sources that were archived for the current project:-
+
+Section (3.1) - INCLUDE FILES
+-----------------------------
+List of referenced 'RTL Include' files that were 'imported' into the archived project:-
+
+None
+
+Section (3.1.1) - INCLUDE_DIRS SETTINGS
+---------------------------------------
+List of the "INCLUDE_DIRS" fileset property settings that may or may not be applicable in the archived
+project, since most the 'RTL Include' files referenced in the original project were 'imported' into the
+archived project.
+
+<sources_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+<sim_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+Section (3.2) - REMOTE SOURCES
+------------------------------
+List of referenced 'remote' design files that were 'imported' into the archived project:-
+
+<constrs_1>
+None
+
+<sim_1>
+None
+
+<sources_1>
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/aesl_mux_load_28_37_s.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/convolve4.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_in_channbEo.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_in_channbEo_memcore.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_in_channels.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_in_channibs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_in_channibs_memcore.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_out_chanbIp.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_out_chanbIp_memcore.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_out_channel.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_out_channel_1.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/fifo_w32_d1_A.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/fifo_w32_d1_A_x.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/read_in_wh45.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/read_input.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/read_weights.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/set_out_buffer_to_0.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/write_output.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_control_s_axi.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_gmem_m_axi.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mac_mulbkb.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mac_mulcud.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mac_mulfYi.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mac_mulg8j.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mac_mulhbi.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mul_64ndEe.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mul_96neOg.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_partialcau.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_srem_32bHp.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_srem_32cCy.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_srem_32cDy.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_0.vh
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/d5d3/hdl/verilog/sc_util_v1_0_2_constants.vh
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/d5d3/hdl/verilog/sc_util_v1_0_2_structs.svh
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/d5d3/hdl/sc_util_v1_0_vl_rfs.sv
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/d5c1/hdl/axi_protocol_checker_v2_0_vl_rfs.sv
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/8b42/hdl/axi_vip_v1_1_vl_rfs.sv
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_local_params.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_vl_rfs.sv
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_reg_params.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_reg_init.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_apis.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_unused_ports.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_axi_gp.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_axi_acp.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_axi_hp.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/8fd3/hdl/verilog/processing_system7_v5_5_aw_atc.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/8fd3/hdl/verilog/processing_system7_v5_5_b_atc.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/8fd3/hdl/verilog/processing_system7_v5_5_w_atc.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/8fd3/hdl/verilog/processing_system7_v5_5_atc.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/8fd3/hdl/verilog/processing_system7_v5_5_trace_buffer.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/simulation/fifo_generator_vlog_beh.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_rfs.vhd
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/74ae/hdl/axi_data_fifo_v2_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_0.vh
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/a259/hdl/axi_register_slice_v2_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/33cc/hdl/axi_protocol_converter_v2_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e50b/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/simulation/fifo_generator_vlog_beh.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_rfs.vhd
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/74ae/hdl/axi_data_fifo_v2_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_0.vh
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/a259/hdl/axi_register_slice_v2_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/33cc/hdl/axi_protocol_converter_v2_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e50b/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/simulation/fifo_generator_vlog_beh.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_rfs.vhd
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/74ae/hdl/axi_data_fifo_v2_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_0.vh
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/a259/hdl/axi_register_slice_v2_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/33cc/hdl/axi_protocol_converter_v2_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/7d05/hdl/axi_clock_converter_v2_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e50b/simulation/blk_mem_gen_v8_4.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/d498/hdl/axi_dwidth_converter_v2_1_vl_rfs.v
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e50b/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd
+/home/studio/.Xil/Vivado-26644-dante-X55C/PrjAr/_X_/tiled_convolution.srcs/sources_1/bd/design_1/ipshared/d498/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v
+
+Section (3.3) - SOURCES SUMMARY
+-------------------------------
+List of all the source files present in the archived project:-
+
+<sources_1>
+./tiled_convolution.srcs/sources_1/bd/design_1/design_1.bd
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_zhang_cnn_0_0/design_1_zhang_cnn_0_0.xci
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/aesl_mux_load_28_37_s.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/convolve4.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_in_channbEo.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_in_channbEo_memcore.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_zhang_cnn_0_0/hdl/verilog/dataflow_in_channbEo_memcore_ram.dat
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_in_channels.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_in_channibs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_in_channibs_memcore.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_zhang_cnn_0_0/hdl/verilog/dataflow_in_channibs_memcore_ram.dat
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_out_chanbIp.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_out_chanbIp_memcore.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_zhang_cnn_0_0/hdl/verilog/dataflow_out_chanbIp_memcore_ram.dat
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_out_channel.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_out_channel_1.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/fifo_w32_d1_A.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/fifo_w32_d1_A_x.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/read_in_wh45.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/read_input.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/read_weights.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/set_out_buffer_to_0.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/write_output.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_control_s_axi.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_gmem_m_axi.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mac_mulbkb.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mac_mulcud.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mac_mulfYi.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mac_mulg8j.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mac_mulhbi.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mul_64ndEe.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mul_96neOg.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_partialcau.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_zhang_cnn_0_0/hdl/verilog/zhang_cnn_partialcau_ram.dat
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_srem_32bHp.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_srem_32cCy.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_srem_32cDy.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_zhang_cnn_0_0/sim/design_1_zhang_cnn_0_0.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_zhang_cnn_0_0/constraints/zhang_cnn_ooc.xdc
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_zhang_cnn_0_0/synth/design_1_zhang_cnn_0_0.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_zhang_cnn_0_0/design_1_zhang_cnn_0_0.xml
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_0.vh
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/d5d3/hdl/verilog/sc_util_v1_0_2_constants.vh
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/d5d3/hdl/verilog/sc_util_v1_0_2_structs.svh
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/d5d3/hdl/sc_util_v1_0_vl_rfs.sv
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/d5c1/hdl/axi_protocol_checker_v2_0_vl_rfs.sv
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/8b42/hdl/axi_vip_v1_1_vl_rfs.sv
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_local_params.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_vl_rfs.sv
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_reg_params.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_reg_init.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_apis.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_unused_ports.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_axi_gp.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_axi_acp.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl/processing_system7_vip_v1_0_2_axi_hp.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/design_1_processing_system7_0_0.hwdef
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/ps7_init.c
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/ps7_init.h
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/ps7_init_gpl.c
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/ps7_init_gpl.h
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/ps7_init.tcl
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/ps7_init.html
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/8fd3/hdl/verilog/processing_system7_v5_5_aw_atc.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/8fd3/hdl/verilog/processing_system7_v5_5_b_atc.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/8fd3/hdl/verilog/processing_system7_v5_5_w_atc.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/8fd3/hdl/verilog/processing_system7_v5_5_atc.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/8fd3/hdl/verilog/processing_system7_v5_5_trace_buffer.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xml
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_axi_periph_0/design_1_processing_system7_0_axi_periph_0.xci
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_axi_periph_0/design_1_processing_system7_0_axi_periph_0.xml
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0.xci
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0_board.xdc
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/sim/design_1_rst_processing_system7_0_100M_0.vhd
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0.xdc
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/synth/design_1_rst_processing_system7_0_100M_0.vhd
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0_ooc.xdc
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0.xml
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_0/design_1_axi_mem_intercon_0.xci
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_0/design_1_axi_mem_intercon_0.xml
+./tiled_convolution.srcs/sources_1/bd/design_1/synth/design_1.v
+./tiled_convolution.srcs/sources_1/bd/design_1/sim/design_1.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.xci
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/simulation/fifo_generator_vlog_beh.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_rfs.vhd
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/74ae/hdl/axi_data_fifo_v2_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_0.vh
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/a259/hdl/axi_register_slice_v2_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/33cc/hdl/axi_protocol_converter_v2_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e50b/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/synth/design_1_auto_pc_1.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.xml
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/simulation/fifo_generator_vlog_beh.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_rfs.vhd
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/74ae/hdl/axi_data_fifo_v2_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_0.vh
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/a259/hdl/axi_register_slice_v2_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/33cc/hdl/axi_protocol_converter_v2_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e50b/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/synth/design_1_auto_pc_0.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xml
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0.xci
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/simulation/fifo_generator_vlog_beh.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_rfs.vhd
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/74ae/hdl/axi_data_fifo_v2_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_0.vh
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/a259/hdl/axi_register_slice_v2_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/33cc/hdl/axi_protocol_converter_v2_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/7d05/hdl/axi_clock_converter_v2_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e50b/simulation/blk_mem_gen_v8_4.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/d498/hdl/axi_dwidth_converter_v2_1_vl_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/sim/design_1_auto_us_0.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e50b/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/0798/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc
+./tiled_convolution.srcs/sources_1/bd/design_1/ipshared/d498/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/synth/design_1_auto_us_0.v
+./tiled_convolution.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0.xml
+./tiled_convolution.srcs/sources_1/bd/design_1/design_1_ooc.xdc
+./tiled_convolution.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+./tiled_convolution.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+./tiled_convolution.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+./tiled_convolution.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+
+<constrs_1>
+None
+
+<sim_1>
+None
+
+Section (3.4) - REMOTE IP DEFINITIONS
+-------------------------------------
+List of all the remote IP's present in the archived project:-
+
+<sources_1>
+./tiled_convolution.ipdefs/Prova_casa_0/solution1/impl/ip
+
+None
+
+Section (4) - JOURNAL/LOG FILES
+-------------------------------
+List of Journal/Log files that were added to the archived project:-
+
+Source File = /home/studio/vivado.jou
+Archived Location = ./tiled_convolution/vivado.jou
+
+Source File = /home/studio/vivado.log
+Archived Location = ./tiled_convolution/vivado.log
+
+Section (5) - CONFIGURATION SETTINGS/FILES
+------------------------------------------
+List of configuration settings/files that were added to the archived project:-
+
+

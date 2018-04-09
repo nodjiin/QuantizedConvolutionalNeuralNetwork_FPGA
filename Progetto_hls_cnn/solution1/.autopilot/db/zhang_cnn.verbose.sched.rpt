@@ -1,0 +1,1327 @@
+
+
+================================================================
+== Vivado HLS Report for 'zhang_cnn'
+================================================================
+* Date:           Tue Nov 28 10:42:32 2017
+
+* Version:        2017.3 (Build 2018833 on Wed Oct 04 20:30:40 MDT 2017)
+* Project:        Prova_casa
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      9.63|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +----------+------------+----------+------------+---------+
+    |        Latency        |        Interval       | Pipeline|
+    |    min   |     max    |    min   |     max    |   Type  |
+    +----------+------------+----------+------------+---------+
+    |  81159900|  2612824446|  81159901|  2612824447|   none  |
+    +----------+------------+----------+------------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------+----------+------------+--------------------+-----------+-----------+----------+----------+
+        |              |        Latency        |      Iteration     |  Initiation Interval  |   Trip   |          |
+        |   Loop Name  |    min   |     max    |       Latency      |  achieved |   target  |   Count  | Pipelined|
+        +--------------+----------+------------+--------------------+-----------+-----------+----------+----------+
+        |- row_loop    |  81159864|  2612824410| 3381661 ~ 87094147 |          -|          -|  24 ~ 30 |    no    |
+        | + col_loop   |   3381624|    87094110|  140901 ~ 2903137  |          -|          -|  24 ~ 30 |    no    |
+        |  ++ to_loop  |    140864|     2903100|    2201 ~ 29031    |          -|          -| 64 ~ 100 |    no    |
+        +--------------+----------+------------+--------------------+-----------+-----------+----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 112
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / (!tmp_10)
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	74  / (!tmp_14)
+	37  / (tmp_14)
+74 --> 
+	75  / true
+75 --> 
+	76  / true
+76 --> 
+	77  / true
+77 --> 
+	78  / true
+78 --> 
+	79  / true
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	84  / true
+84 --> 
+	85  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	88  / true
+88 --> 
+	89  / true
+89 --> 
+	90  / true
+90 --> 
+	91  / true
+91 --> 
+	92  / true
+92 --> 
+	93  / true
+93 --> 
+	94  / true
+94 --> 
+	95  / true
+95 --> 
+	96  / true
+96 --> 
+	97  / true
+97 --> 
+	98  / true
+98 --> 
+	99  / true
+99 --> 
+	100  / true
+100 --> 
+	101  / true
+101 --> 
+	102  / true
+102 --> 
+	103  / true
+103 --> 
+	104  / true
+104 --> 
+	105  / true
+105 --> 
+	106  / true
+106 --> 
+	107  / true
+107 --> 
+	108  / true
+108 --> 
+	109  / true
+109 --> 
+	110  / (!tmp_18)
+	73  / (tmp_18)
+110 --> 
+	111  / true
+111 --> 
+	112  / true
+112 --> 
+	109  / true
+
+* FSM state operations: 
+
+ <State 1> : 7.69ns
+ST_1 : Operation 113 [1/1] (1.00ns)   --->   "%right_shift_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %right_shift)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 114 [1/1] (1.00ns)   --->   "%quantized_multiplier_1 = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %quantized_multiplier)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 115 [1/1] (1.00ns)   --->   "%output_offset_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %output_offset)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 116 [1/1] (1.00ns)   --->   "%weights_offset_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %weights_offset)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 117 [1/1] (1.00ns)   --->   "%input_offset_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %input_offset)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 118 [1/1] (1.00ns)   --->   "%curr_layer_in_str_h_s = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %curr_layer_in_str_h)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 119 [1/1] (1.00ns)   --->   "%curr_layer_in_str_w_s = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %curr_layer_in_str_w)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 120 [1/1] (1.00ns)   --->   "%curr_layer_in_ker_h_s = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %curr_layer_in_ker_h)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 121 [1/1] (1.00ns)   --->   "%curr_layer_in_ker_w_s = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %curr_layer_in_ker_w)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 122 [1/1] (1.00ns)   --->   "%curr_layer_in_out_ch_1 = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %curr_layer_in_out_ch)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 123 [1/1] (1.00ns)   --->   "%curr_layer_in_in_ch_s = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %curr_layer_in_in_ch)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 124 [1/1] (1.00ns)   --->   "%curr_layer_in_out_h_s = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %curr_layer_in_out_h)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 125 [1/1] (1.00ns)   --->   "%curr_layer_in_out_w_s = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %curr_layer_in_out_w)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 126 [1/1] (1.00ns)   --->   "%curr_layer_in_in_h_r = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %curr_layer_in_in_h)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 127 [1/1] (1.00ns)   --->   "%curr_layer_in_in_w_r = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %curr_layer_in_in_w)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 128 [1/1] (1.00ns)   --->   "%out_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %out_r)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 129 [1/1] (1.00ns)   --->   "%weights_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %weights)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 130 [1/1] (1.00ns)   --->   "%image_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %image_r)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 131 [1/1] (2.55ns)   --->   "%tmp_4 = add i32 %curr_layer_in_out_h_s, 36"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 132 [36/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 2> : 4.13ns
+ST_2 : Operation 133 [35/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 3> : 4.13ns
+ST_3 : Operation 134 [34/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 4> : 4.13ns
+ST_4 : Operation 135 [33/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 5> : 4.13ns
+ST_5 : Operation 136 [32/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 6> : 4.13ns
+ST_6 : Operation 137 [31/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 7> : 4.13ns
+ST_7 : Operation 138 [30/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 8> : 4.13ns
+ST_8 : Operation 139 [29/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 9> : 4.13ns
+ST_9 : Operation 140 [28/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 10> : 4.13ns
+ST_10 : Operation 141 [27/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 11> : 4.13ns
+ST_11 : Operation 142 [26/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 12> : 4.13ns
+ST_12 : Operation 143 [25/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 13> : 4.13ns
+ST_13 : Operation 144 [24/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 14> : 4.13ns
+ST_14 : Operation 145 [23/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 15> : 4.13ns
+ST_15 : Operation 146 [22/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 16> : 4.13ns
+ST_16 : Operation 147 [21/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 17> : 4.13ns
+ST_17 : Operation 148 [20/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 18> : 4.13ns
+ST_18 : Operation 149 [19/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 19> : 4.13ns
+ST_19 : Operation 150 [18/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 20> : 4.13ns
+ST_20 : Operation 151 [17/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 21> : 4.13ns
+ST_21 : Operation 152 [16/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 22> : 4.13ns
+ST_22 : Operation 153 [15/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 23> : 4.13ns
+ST_23 : Operation 154 [14/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 24> : 4.13ns
+ST_24 : Operation 155 [13/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 25> : 4.13ns
+ST_25 : Operation 156 [12/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 26> : 4.13ns
+ST_26 : Operation 157 [11/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 27> : 4.13ns
+ST_27 : Operation 158 [10/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 28> : 4.13ns
+ST_28 : Operation 159 [9/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 29> : 4.13ns
+ST_29 : Operation 160 [8/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 30> : 4.13ns
+ST_30 : Operation 161 [7/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 31> : 4.13ns
+ST_31 : Operation 162 [6/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 32> : 4.13ns
+ST_32 : Operation 163 [5/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 33> : 4.13ns
+ST_33 : Operation 164 [4/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 34> : 4.13ns
+ST_34 : Operation 165 [3/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 35> : 4.13ns
+ST_35 : Operation 166 [2/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 36> : 6.97ns
+ST_36 : Operation 167 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %gmem), !map !89"
+ST_36 : Operation 168 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_n_layer), !map !97"
+ST_36 : Operation 169 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_in_w), !map !103"
+ST_36 : Operation 170 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_in_h), !map !107"
+ST_36 : Operation 171 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_out_w), !map !111"
+ST_36 : Operation 172 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_out_h), !map !115"
+ST_36 : Operation 173 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_in_ch), !map !119"
+ST_36 : Operation 174 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_out_ch), !map !123"
+ST_36 : Operation 175 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_ker_w), !map !127"
+ST_36 : Operation 176 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_ker_h), !map !131"
+ST_36 : Operation 177 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_ker_ch), !map !135"
+ST_36 : Operation 178 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_str_w), !map !139"
+ST_36 : Operation 179 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_str_h), !map !143"
+ST_36 : Operation 180 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_pad_w), !map !147"
+ST_36 : Operation 181 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_pad_h), !map !151"
+ST_36 : Operation 182 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_relu), !map !155"
+ST_36 : Operation 183 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %curr_layer_in_has_bias), !map !159"
+ST_36 : Operation 184 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4 %curr_layer_in_act_type), !map !163"
+ST_36 : Operation 185 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %input_offset), !map !167"
+ST_36 : Operation 186 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %weights_offset), !map !171"
+ST_36 : Operation 187 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %output_offset), !map !175"
+ST_36 : Operation 188 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %quantized_multiplier), !map !179"
+ST_36 : Operation 189 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %right_shift), !map !183"
+ST_36 : Operation 190 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @zhang_cnn_str) nounwind"
+ST_36 : Operation 191 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %gmem, [6 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 102400, [5 x i8]* @p_str19, [6 x i8]* @p_str20, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:303]
+ST_36 : Operation 192 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %image_r, [10 x i8]* @p_str21, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [8 x i8]* @p_str22, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:307]
+ST_36 : Operation 193 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %weights, [10 x i8]* @p_str21, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [8 x i8]* @p_str22, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:308]
+ST_36 : Operation 194 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %out_r, [10 x i8]* @p_str21, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [8 x i8]* @p_str22, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:309]
+ST_36 : Operation 195 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %curr_layer_in_n_layer, i32 %curr_layer_in_in_w, i32 %curr_layer_in_in_h, i32 %curr_layer_in_out_w, i32 %curr_layer_in_out_h, i32 %curr_layer_in_in_ch, i32 %curr_layer_in_out_ch, i32 %curr_layer_in_ker_w, i32 %curr_layer_in_ker_h, i32 %curr_layer_in_ker_ch, i32 %curr_layer_in_str_w, i32 %curr_layer_in_str_h, i32 %curr_layer_in_pad_w, i32 %curr_layer_in_pad_h, i32 %curr_layer_in_relu, i32 %curr_layer_in_has_bias, i4 %curr_layer_in_act_type, [10 x i8]* @p_str21, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [8 x i8]* @p_str22, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:310]
+ST_36 : Operation 196 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %input_offset, [10 x i8]* @p_str21, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [8 x i8]* @p_str22, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:311]
+ST_36 : Operation 197 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %weights_offset, [10 x i8]* @p_str21, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [8 x i8]* @p_str22, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:312]
+ST_36 : Operation 198 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %output_offset, [10 x i8]* @p_str21, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [8 x i8]* @p_str22, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:313]
+ST_36 : Operation 199 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %quantized_multiplier, [10 x i8]* @p_str21, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [8 x i8]* @p_str22, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:314]
+ST_36 : Operation 200 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %right_shift, [10 x i8]* @p_str21, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [8 x i8]* @p_str22, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:315]
+ST_36 : Operation 201 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str21, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [8 x i8]* @p_str22, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:316]
+ST_36 : Operation 202 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([999 x i27]* @partial_outputfm_0, [999 x i27]* @partial_outputfm_1, [999 x i27]* @partial_outputfm_2, [999 x i27]* @partial_outputfm_3, [999 x i27]* @partial_outputfm_4, [999 x i27]* @partial_outputfm_5, [999 x i27]* @partial_outputfm_6, [999 x i27]* @partial_outputfm_7, [999 x i27]* @partial_outputfm_8, [999 x i27]* @partial_outputfm_9, [999 x i27]* @partial_outputfm_10, [999 x i27]* @partial_outputfm_11, [999 x i27]* @partial_outputfm_12, [999 x i27]* @partial_outputfm_13, [999 x i27]* @partial_outputfm_14, [999 x i27]* @partial_outputfm_15, [999 x i27]* @partial_outputfm_16, [999 x i27]* @partial_outputfm_17, [999 x i27]* @partial_outputfm_18, [999 x i27]* @partial_outputfm_19, [999 x i27]* @partial_outputfm_20, [999 x i27]* @partial_outputfm_21, [999 x i27]* @partial_outputfm_22, [999 x i27]* @partial_outputfm_23, [999 x i27]* @partial_outputfm_24, [999 x i27]* @partial_outputfm_25, [999 x i27]* @partial_outputfm_26, [999 x i27]* @partial_outputfm_27, [1 x i8]* @p_str, [12 x i8]* @p_str24, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)" [Prova_casa/src/zhang_convolution_quant.c:331]
+ST_36 : Operation 203 [1/1] (2.47ns)   --->   "%tmp = icmp slt i32 %right_shift_read, 1" [Prova_casa/src/zhang_convolution_quant.c:334]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 204 [1/1] (2.55ns)   --->   "%tmp_1 = add nsw i32 %right_shift_read, -1" [Prova_casa/src/zhang_convolution_quant.c:334]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 205 [1/1] (0.00ns) (grouped into LUT with out node tmp_3)   --->   "%tmp_2 = shl i32 1, %tmp_1" [Prova_casa/src/zhang_convolution_quant.c:334]   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 206 [1/1] (4.42ns) (out node of the LUT)   --->   "%tmp_3 = select i1 %tmp, i32 0, i32 %tmp_2" [Prova_casa/src/zhang_convolution_quant.c:334]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_36 : Operation 207 [1/1] (0.00ns)   --->   "store i32 %tmp_3, i32* @rounding, align 4" [Prova_casa/src/zhang_convolution_quant.c:334]
+ST_36 : Operation 208 [1/36] (4.13ns)   --->   "%tmp_5 = srem i32 %tmp_4, 37"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 209 [1/1] (2.55ns)   --->   "%tmp_7 = sub i32 %tmp_4, %tmp_5"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 210 [1/1] (1.76ns)   --->   "br label %0" [Prova_casa/src/zhang_convolution_quant.c:336]
+
+ <State 37> : 6.69ns
+ST_37 : Operation 211 [1/1] (0.00ns)   --->   "%row = phi i32 [ 0, %_ifconv ], [ %row_1, %7 ]"
+ST_37 : Operation 212 [1/1] (2.47ns)   --->   "%tmp_10 = icmp eq i32 %row, %tmp_7" [Prova_casa/src/zhang_convolution_quant.c:336]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 213 [1/1] (0.00ns)   --->   "br i1 %tmp_10, label %8, label %1" [Prova_casa/src/zhang_convolution_quant.c:336]
+ST_37 : Operation 214 [1/1] (2.55ns)   --->   "%tmp_11 = add i32 %curr_layer_in_out_w_s, 26"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 215 [36/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 216 [1/1] (0.00ns)   --->   "ret void" [Prova_casa/src/zhang_convolution_quant.c:354]
+
+ <State 38> : 4.13ns
+ST_38 : Operation 217 [35/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 39> : 4.13ns
+ST_39 : Operation 218 [34/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 40> : 4.13ns
+ST_40 : Operation 219 [33/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 41> : 4.13ns
+ST_41 : Operation 220 [32/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 42> : 4.13ns
+ST_42 : Operation 221 [31/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 43> : 4.13ns
+ST_43 : Operation 222 [30/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 44> : 4.13ns
+ST_44 : Operation 223 [29/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 45> : 4.13ns
+ST_45 : Operation 224 [28/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 46> : 4.13ns
+ST_46 : Operation 225 [27/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 47> : 4.13ns
+ST_47 : Operation 226 [26/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 48> : 4.13ns
+ST_48 : Operation 227 [25/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 49> : 4.13ns
+ST_49 : Operation 228 [24/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 50> : 4.13ns
+ST_50 : Operation 229 [23/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 51> : 4.13ns
+ST_51 : Operation 230 [22/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 52> : 4.13ns
+ST_52 : Operation 231 [21/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 53> : 4.13ns
+ST_53 : Operation 232 [20/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 54> : 4.13ns
+ST_54 : Operation 233 [19/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 55> : 4.13ns
+ST_55 : Operation 234 [18/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 56> : 4.13ns
+ST_56 : Operation 235 [17/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 57> : 4.13ns
+ST_57 : Operation 236 [16/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 58> : 4.13ns
+ST_58 : Operation 237 [15/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 59> : 4.13ns
+ST_59 : Operation 238 [14/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 60> : 4.13ns
+ST_60 : Operation 239 [13/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 61> : 4.13ns
+ST_61 : Operation 240 [12/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 62> : 4.13ns
+ST_62 : Operation 241 [11/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 63> : 4.13ns
+ST_63 : Operation 242 [10/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 64> : 4.13ns
+ST_64 : Operation 243 [9/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 65> : 4.13ns
+ST_65 : Operation 244 [8/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 66> : 4.13ns
+ST_66 : Operation 245 [7/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 67> : 4.13ns
+ST_67 : Operation 246 [6/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 68> : 4.13ns
+ST_68 : Operation 247 [5/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 69> : 4.13ns
+ST_69 : Operation 248 [4/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 70> : 4.13ns
+ST_70 : Operation 249 [3/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 71> : 4.13ns
+ST_71 : Operation 250 [2/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 72> : 6.69ns
+ST_72 : Operation 251 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str25) nounwind" [Prova_casa/src/zhang_convolution_quant.c:336]
+ST_72 : Operation 252 [1/1] (0.00ns)   --->   "%tmp_6 = call i32 (...)* @_ssdm_op_SpecRegionBegin([9 x i8]* @p_str25)" [Prova_casa/src/zhang_convolution_quant.c:336]
+ST_72 : Operation 253 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 24, i32 30, i32 27, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:337]
+ST_72 : Operation 254 [1/36] (4.13ns)   --->   "%tmp_12 = srem i32 %tmp_11, 27"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_72 : Operation 255 [1/1] (2.55ns)   --->   "%tmp_13 = sub i32 %tmp_11, %tmp_12"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_72 : Operation 256 [1/1] (1.76ns)   --->   "br label %2" [Prova_casa/src/zhang_convolution_quant.c:339]
+
+ <State 73> : 6.69ns
+ST_73 : Operation 257 [1/1] (0.00ns)   --->   "%col = phi i32 [ 0, %1 ], [ %col_1, %6 ]"
+ST_73 : Operation 258 [1/1] (2.47ns)   --->   "%tmp_14 = icmp eq i32 %col, %tmp_13" [Prova_casa/src/zhang_convolution_quant.c:339]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_73 : Operation 259 [1/1] (0.00ns)   --->   "br i1 %tmp_14, label %7, label %3" [Prova_casa/src/zhang_convolution_quant.c:339]
+ST_73 : Operation 260 [1/1] (2.55ns)   --->   "%tmp_15 = add i32 %curr_layer_in_out_ch_1, 27"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_73 : Operation 261 [36/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_73 : Operation 262 [1/1] (0.00ns)   --->   "%empty_16 = call i32 (...)* @_ssdm_op_SpecRegionEnd([9 x i8]* @p_str25, i32 %tmp_6)" [Prova_casa/src/zhang_convolution_quant.c:351]
+ST_73 : Operation 263 [1/1] (2.55ns)   --->   "%row_1 = add nsw i32 %row, 37" [Prova_casa/src/zhang_convolution_quant.c:336]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_73 : Operation 264 [1/1] (0.00ns)   --->   "br label %0" [Prova_casa/src/zhang_convolution_quant.c:336]
+
+ <State 74> : 4.13ns
+ST_74 : Operation 265 [35/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 75> : 4.13ns
+ST_75 : Operation 266 [34/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 76> : 4.13ns
+ST_76 : Operation 267 [33/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 77> : 4.13ns
+ST_77 : Operation 268 [32/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 78> : 4.13ns
+ST_78 : Operation 269 [31/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 79> : 4.13ns
+ST_79 : Operation 270 [30/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 80> : 4.13ns
+ST_80 : Operation 271 [29/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 81> : 4.13ns
+ST_81 : Operation 272 [28/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 82> : 4.13ns
+ST_82 : Operation 273 [27/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 83> : 4.13ns
+ST_83 : Operation 274 [26/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 84> : 4.13ns
+ST_84 : Operation 275 [25/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 85> : 4.13ns
+ST_85 : Operation 276 [24/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 86> : 4.13ns
+ST_86 : Operation 277 [23/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 87> : 4.13ns
+ST_87 : Operation 278 [22/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 88> : 4.13ns
+ST_88 : Operation 279 [21/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 89> : 4.13ns
+ST_89 : Operation 280 [20/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 90> : 4.13ns
+ST_90 : Operation 281 [19/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 91> : 4.13ns
+ST_91 : Operation 282 [18/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 92> : 4.13ns
+ST_92 : Operation 283 [17/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 93> : 4.13ns
+ST_93 : Operation 284 [16/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 94> : 4.13ns
+ST_94 : Operation 285 [15/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 95> : 4.13ns
+ST_95 : Operation 286 [14/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 96> : 4.13ns
+ST_96 : Operation 287 [13/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 97> : 4.13ns
+ST_97 : Operation 288 [12/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 98> : 4.13ns
+ST_98 : Operation 289 [11/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 99> : 4.13ns
+ST_99 : Operation 290 [10/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 100> : 4.13ns
+ST_100 : Operation 291 [9/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 101> : 4.13ns
+ST_101 : Operation 292 [8/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 102> : 4.13ns
+ST_102 : Operation 293 [7/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 103> : 4.13ns
+ST_103 : Operation 294 [6/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 104> : 4.13ns
+ST_104 : Operation 295 [5/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 105> : 4.13ns
+ST_105 : Operation 296 [4/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 106> : 4.13ns
+ST_106 : Operation 297 [3/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 107> : 4.13ns
+ST_107 : Operation 298 [2/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 108> : 6.69ns
+ST_108 : Operation 299 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str26) nounwind" [Prova_casa/src/zhang_convolution_quant.c:339]
+ST_108 : Operation 300 [1/1] (0.00ns)   --->   "%tmp_8 = call i32 (...)* @_ssdm_op_SpecRegionBegin([9 x i8]* @p_str26)" [Prova_casa/src/zhang_convolution_quant.c:339]
+ST_108 : Operation 301 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 24, i32 30, i32 27, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:340]
+ST_108 : Operation 302 [1/36] (4.13ns)   --->   "%tmp_16 = srem i32 %tmp_15, 28"   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_108 : Operation 303 [1/1] (2.55ns)   --->   "%tmp_17 = sub i32 %tmp_15, %tmp_16"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_108 : Operation 304 [1/1] (1.76ns)   --->   "br label %4" [Prova_casa/src/zhang_convolution_quant.c:341]
+
+ <State 109> : 2.55ns
+ST_109 : Operation 305 [1/1] (0.00ns)   --->   "%to = phi i32 [ 0, %3 ], [ %to_1, %5 ]"
+ST_109 : Operation 306 [1/1] (2.47ns)   --->   "%tmp_18 = icmp eq i32 %to, %tmp_17" [Prova_casa/src/zhang_convolution_quant.c:341]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_109 : Operation 307 [1/1] (0.00ns)   --->   "br i1 %tmp_18, label %6, label %5" [Prova_casa/src/zhang_convolution_quant.c:341]
+ST_109 : Operation 308 [2/2] (0.00ns)   --->   "call fastcc void @dataflow_out_channel.1(i8* %gmem, i32 %weights_read, i32 %image_read, i32 %curr_layer_in_in_w_r, i32 %curr_layer_in_in_h_r, i32 %curr_layer_in_out_w_s, i32 %curr_layer_in_out_h_s, i32 %curr_layer_in_in_ch_s, i32 %curr_layer_in_out_ch_1, i32 %curr_layer_in_ker_w_s, i32 %curr_layer_in_ker_h_s, i32 %curr_layer_in_str_w_s, i32 %curr_layer_in_str_h_s, i32 %out_read, i32 %to, i32 %row, i32 %col, [999 x i27]* @partial_outputfm_0, [999 x i27]* @partial_outputfm_1, [999 x i27]* @partial_outputfm_2, [999 x i27]* @partial_outputfm_3, [999 x i27]* @partial_outputfm_4, [999 x i27]* @partial_outputfm_5, [999 x i27]* @partial_outputfm_6, [999 x i27]* @partial_outputfm_7, [999 x i27]* @partial_outputfm_8, [999 x i27]* @partial_outputfm_9, [999 x i27]* @partial_outputfm_10, [999 x i27]* @partial_outputfm_11, [999 x i27]* @partial_outputfm_12, [999 x i27]* @partial_outputfm_13, [999 x i27]* @partial_outputfm_14, [999 x i27]* @partial_outputfm_15, [999 x i27]* @partial_outputfm_16, [999 x i27]* @partial_outputfm_17, [999 x i27]* @partial_outputfm_18, [999 x i27]* @partial_outputfm_19, [999 x i27]* @partial_outputfm_20, [999 x i27]* @partial_outputfm_21, [999 x i27]* @partial_outputfm_22, [999 x i27]* @partial_outputfm_23, [999 x i27]* @partial_outputfm_24, [999 x i27]* @partial_outputfm_25, [999 x i27]* @partial_outputfm_26, [999 x i27]* @partial_outputfm_27, i32 %input_offset_read, i32 %weights_offset_read, i32 %output_offset_read, i32 %quantized_multiplier_1, i32 %right_shift_read)" [Prova_casa/src/zhang_convolution_quant.c:344]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_109 : Operation 309 [1/1] (2.55ns)   --->   "%to_1 = add nsw i32 %to, 28" [Prova_casa/src/zhang_convolution_quant.c:341]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_109 : Operation 310 [1/1] (0.00ns)   --->   "%empty_15 = call i32 (...)* @_ssdm_op_SpecRegionEnd([9 x i8]* @p_str26, i32 %tmp_8)" [Prova_casa/src/zhang_convolution_quant.c:349]
+ST_109 : Operation 311 [1/1] (2.55ns)   --->   "%col_1 = add nsw i32 %col, 27" [Prova_casa/src/zhang_convolution_quant.c:339]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_109 : Operation 312 [1/1] (0.00ns)   --->   "br label %2" [Prova_casa/src/zhang_convolution_quant.c:339]
+
+ <State 110> : 0.00ns
+ST_110 : Operation 313 [1/2] (0.00ns)   --->   "call fastcc void @dataflow_out_channel.1(i8* %gmem, i32 %weights_read, i32 %image_read, i32 %curr_layer_in_in_w_r, i32 %curr_layer_in_in_h_r, i32 %curr_layer_in_out_w_s, i32 %curr_layer_in_out_h_s, i32 %curr_layer_in_in_ch_s, i32 %curr_layer_in_out_ch_1, i32 %curr_layer_in_ker_w_s, i32 %curr_layer_in_ker_h_s, i32 %curr_layer_in_str_w_s, i32 %curr_layer_in_str_h_s, i32 %out_read, i32 %to, i32 %row, i32 %col, [999 x i27]* @partial_outputfm_0, [999 x i27]* @partial_outputfm_1, [999 x i27]* @partial_outputfm_2, [999 x i27]* @partial_outputfm_3, [999 x i27]* @partial_outputfm_4, [999 x i27]* @partial_outputfm_5, [999 x i27]* @partial_outputfm_6, [999 x i27]* @partial_outputfm_7, [999 x i27]* @partial_outputfm_8, [999 x i27]* @partial_outputfm_9, [999 x i27]* @partial_outputfm_10, [999 x i27]* @partial_outputfm_11, [999 x i27]* @partial_outputfm_12, [999 x i27]* @partial_outputfm_13, [999 x i27]* @partial_outputfm_14, [999 x i27]* @partial_outputfm_15, [999 x i27]* @partial_outputfm_16, [999 x i27]* @partial_outputfm_17, [999 x i27]* @partial_outputfm_18, [999 x i27]* @partial_outputfm_19, [999 x i27]* @partial_outputfm_20, [999 x i27]* @partial_outputfm_21, [999 x i27]* @partial_outputfm_22, [999 x i27]* @partial_outputfm_23, [999 x i27]* @partial_outputfm_24, [999 x i27]* @partial_outputfm_25, [999 x i27]* @partial_outputfm_26, [999 x i27]* @partial_outputfm_27, i32 %input_offset_read, i32 %weights_offset_read, i32 %output_offset_read, i32 %quantized_multiplier_1, i32 %right_shift_read)" [Prova_casa/src/zhang_convolution_quant.c:344]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 111> : 0.00ns
+ST_111 : Operation 314 [2/2] (0.00ns)   --->   "call fastcc void @set_out_buffer_to_0()" [Prova_casa/src/zhang_convolution_quant.c:346]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 112> : 0.00ns
+ST_112 : Operation 315 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str27) nounwind" [Prova_casa/src/zhang_convolution_quant.c:341]
+ST_112 : Operation 316 [1/1] (0.00ns)   --->   "%tmp_9 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str27)" [Prova_casa/src/zhang_convolution_quant.c:341]
+ST_112 : Operation 317 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 64, i32 100, i32 82, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:342]
+ST_112 : Operation 318 [1/2] (0.00ns)   --->   "call fastcc void @set_out_buffer_to_0()" [Prova_casa/src/zhang_convolution_quant.c:346]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_112 : Operation 319 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str27, i32 %tmp_9)" [Prova_casa/src/zhang_convolution_quant.c:347]
+ST_112 : Operation 320 [1/1] (0.00ns)   --->   "br label %4" [Prova_casa/src/zhang_convolution_quant.c:341]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 7.69ns
+The critical path consists of the following:
+	s_axi read on port 'curr_layer_in_out_h' [206]  (1 ns)
+	'add' operation ('tmp_4') [230]  (2.55 ns)
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 2>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 3>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 4>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 5>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 6>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 7>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 8>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 9>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 10>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 11>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 12>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 13>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 14>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 15>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 16>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 17>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 18>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 19>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 20>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 21>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 22>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 23>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 24>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 25>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 26>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 27>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 28>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 29>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 30>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 31>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 32>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 33>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 34>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 35>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_5') [231]  (4.13 ns)
+
+ <State 36>: 6.97ns
+The critical path consists of the following:
+	'add' operation ('tmp_1', Prova_casa/src/zhang_convolution_quant.c:334) [226]  (2.55 ns)
+	'shl' operation ('tmp_2', Prova_casa/src/zhang_convolution_quant.c:334) [227]  (0 ns)
+	'select' operation ('tmp_3', Prova_casa/src/zhang_convolution_quant.c:334) [228]  (4.42 ns)
+
+ <State 37>: 6.69ns
+The critical path consists of the following:
+	'add' operation ('tmp_11') [242]  (2.55 ns)
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 38>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 39>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 40>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 41>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 42>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 43>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 44>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 45>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 46>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 47>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 48>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 49>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 50>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 51>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 52>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 53>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 54>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 55>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 56>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 57>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 58>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 59>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 60>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 61>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 62>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 63>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 64>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 65>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 66>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 67>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 68>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 69>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 70>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 71>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+
+ <State 72>: 6.69ns
+The critical path consists of the following:
+	'srem' operation ('tmp_12') [243]  (4.13 ns)
+	'sub' operation ('tmp_13') [244]  (2.55 ns)
+
+ <State 73>: 6.69ns
+The critical path consists of the following:
+	'add' operation ('tmp_15') [254]  (2.55 ns)
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 74>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 75>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 76>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 77>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 78>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 79>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 80>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 81>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 82>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 83>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 84>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 85>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 86>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 87>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 88>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 89>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 90>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 91>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 92>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 93>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 94>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 95>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 96>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 97>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 98>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 99>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 100>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 101>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 102>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 103>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 104>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 105>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 106>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 107>: 4.13ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+
+ <State 108>: 6.69ns
+The critical path consists of the following:
+	'srem' operation ('tmp_16') [255]  (4.13 ns)
+	'sub' operation ('tmp_17') [256]  (2.55 ns)
+
+ <State 109>: 2.55ns
+The critical path consists of the following:
+	'phi' operation ('to') with incoming values : ('to', Prova_casa/src/zhang_convolution_quant.c:341) [259]  (0 ns)
+	'add' operation ('to', Prova_casa/src/zhang_convolution_quant.c:341) [269]  (2.55 ns)
+
+ <State 110>: 0ns
+The critical path consists of the following:
+
+ <State 111>: 0ns
+The critical path consists of the following:
+
+ <State 112>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

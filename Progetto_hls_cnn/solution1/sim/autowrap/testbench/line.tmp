@@ -1,0 +1,293 @@
+#pragma line 1 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: -10
+#pragma line 1 "<built-in>" ::: -9
+#pragma line 1 "<command-line>" ::: -8
+#pragma line 1 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: -7
+#pragma line 1 "/home/studio/Prova_casa/src/net_config.h" 1 ::: -6
+#pragma line 66 "/home/studio/Prova_casa/src/net_config.h" ::: -5
+#pragma line 2 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" 2 ::: 0
+#pragma line 1 "/home/studio/Prova_casa/src/net_types.h" 1 ::: 1
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdint.h" 1 3 4 ::: 2
+#pragma line 1 "/usr/include/stdint.h" 1 3 4 ::: 5
+#pragma line 25 "/usr/include/stdint.h" 3 4 ::: 6
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 1 3 4 ::: 7
+#pragma line 339 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 3 4 ::: 8
+#pragma line 1 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 1 3 4 ::: 9
+#pragma line 410 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 3 4 ::: 10
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4 ::: 11
+#pragma line 411 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 2 3 4 ::: 12
+#pragma line 340 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 2 3 4 ::: 13
+#pragma line 362 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 3 4 ::: 14
+#pragma line 1 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 1 3 4 ::: 15
+#pragma line 10 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 3 4 ::: 16
+#pragma line 1 "/usr/include/x86_64-linux-gnu/gnu/stubs-64.h" 1 3 4 ::: 17
+#pragma line 11 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 2 3 4 ::: 18
+#pragma line 363 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h" 2 3 4 ::: 19
+#pragma line 26 "/usr/include/stdint.h" 2 3 4 ::: 20
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/wchar.h" 1 3 4 ::: 21
+#pragma line 27 "/usr/include/stdint.h" 2 3 4 ::: 22
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4 ::: 23
+#pragma line 28 "/usr/include/stdint.h" 2 3 4 ::: 24
+#pragma line 36 "/usr/include/stdint.h" 3 4 ::: 25
+#pragma line 65 "/usr/include/stdint.h" 3 4 ::: 46
+#pragma line 90 "/usr/include/stdint.h" 3 4 ::: 63
+#pragma line 103 "/usr/include/stdint.h" 3 4 ::: 69
+#pragma line 119 "/usr/include/stdint.h" 3 4 ::: 75
+#pragma line 134 "/usr/include/stdint.h" 3 4 ::: 80
+#pragma line 4 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdint.h" 2 3 4 ::: 83
+#pragma line 2 "/home/studio/Prova_casa/src/net_types.h" 2 ::: 84
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/include/ap_cint.h" 1 ::: 85
+#pragma line 62 "/media/dati/dante/Xilinx/Vivado/2017.3/include/ap_cint.h" ::: 86
+#pragma line 1 "/usr/include/string.h" 1 3 4 ::: 87
+#pragma line 27 "/usr/include/string.h" 3 4 ::: 88
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4 ::: 94
+#pragma line 212 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4 ::: 95
+#pragma line 33 "/usr/include/string.h" 2 3 4 ::: 97
+#pragma line 92 "/usr/include/string.h" 3 4 ::: 132
+#pragma line 123 "/usr/include/string.h" 3 4 ::: 137
+#pragma line 1 "/usr/include/xlocale.h" 1 3 4 ::: 174
+#pragma line 27 "/usr/include/xlocale.h" 3 4 ::: 175
+#pragma line 160 "/usr/include/string.h" 2 3 4 ::: 192
+#pragma line 206 "/usr/include/string.h" 3 4 ::: 214
+#pragma line 231 "/usr/include/string.h" 3 4 ::: 216
+#pragma line 258 "/usr/include/string.h" 3 4 ::: 219
+#pragma line 277 "/usr/include/string.h" 3 4 ::: 224
+#pragma line 310 "/usr/include/string.h" 3 4 ::: 234
+#pragma line 337 "/usr/include/string.h" 3 4 ::: 237
+#pragma line 392 "/usr/include/string.h" 3 4 ::: 258
+#pragma line 422 "/usr/include/string.h" 3 4 ::: 277
+#pragma line 440 "/usr/include/string.h" 3 4 ::: 281
+#pragma line 484 "/usr/include/string.h" 3 4 ::: 301
+#pragma line 512 "/usr/include/string.h" 3 4 ::: 304
+#pragma line 529 "/usr/include/string.h" 3 4 ::: 312
+#pragma line 552 "/usr/include/string.h" 3 4 ::: 319
+#pragma line 658 "/usr/include/string.h" 3 4 ::: 343
+#pragma line 63 "/media/dati/dante/Xilinx/Vivado/2017.3/include/ap_cint.h" 2 ::: 345
+#pragma line 1 "/usr/include/stdio.h" 1 3 4 ::: 346
+#pragma line 29 "/usr/include/stdio.h" 3 4 ::: 347
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4 ::: 352
+#pragma line 34 "/usr/include/stdio.h" 2 3 4 ::: 353
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/types.h" 1 3 4 ::: 355
+#pragma line 27 "/usr/include/x86_64-linux-gnu/bits/types.h" 3 4 ::: 356
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4 ::: 357
+#pragma line 28 "/usr/include/x86_64-linux-gnu/bits/types.h" 2 3 4 ::: 358
+#pragma line 121 "/usr/include/x86_64-linux-gnu/bits/types.h" 3 4 ::: 385
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/typesizes.h" 1 3 4 ::: 386
+#pragma line 122 "/usr/include/x86_64-linux-gnu/bits/types.h" 2 3 4 ::: 387
+#pragma line 36 "/usr/include/stdio.h" 2 3 4 ::: 456
+#pragma line 44 "/usr/include/stdio.h" 3 4 ::: 457
+#pragma line 64 "/usr/include/stdio.h" 3 4 ::: 468
+#pragma line 74 "/usr/include/stdio.h" 3 4 ::: 470
+#pragma line 1 "/usr/include/libio.h" 1 3 4 ::: 471
+#pragma line 31 "/usr/include/libio.h" 3 4 ::: 472
+#pragma line 1 "/usr/include/_G_config.h" 1 3 4 ::: 473
+#pragma line 15 "/usr/include/_G_config.h" 3 4 ::: 474
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4 ::: 475
+#pragma line 16 "/usr/include/_G_config.h" 2 3 4 ::: 476
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 1 3 4 ::: 481
+#pragma line 57 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4 ::: 482
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4 ::: 483
+#pragma line 353 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4 ::: 484
+#pragma line 58 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 2 3 4 ::: 486
+#pragma line 85 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h" 3 4 ::: 487
+#pragma line 21 "/usr/include/_G_config.h" 2 3 4 ::: 497
+#pragma line 32 "/usr/include/libio.h" 2 3 4 ::: 508
+#pragma line 49 "/usr/include/libio.h" 3 4 ::: 509
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 1 3 4 ::: 510
+#pragma line 40 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stdarg.h" 3 4 ::: 511
+#pragma line 50 "/usr/include/libio.h" 2 3 4 ::: 513
+#pragma line 144 "/usr/include/libio.h" 3 4 ::: 514
+#pragma line 173 "/usr/include/libio.h" 3 4 ::: 534
+#pragma line 241 "/usr/include/libio.h" 3 4 ::: 545
+#pragma line 289 "/usr/include/libio.h" 3 4 ::: 586
+#pragma line 333 "/usr/include/libio.h" 3 4 ::: 616
+#pragma line 385 "/usr/include/libio.h" 3 4 ::: 638
+#pragma line 429 "/usr/include/libio.h" 3 4 ::: 642
+#pragma line 459 "/usr/include/libio.h" 3 4 ::: 657
+#pragma line 75 "/usr/include/stdio.h" 2 3 4 ::: 669
+#pragma line 90 "/usr/include/stdio.h" 3 4 ::: 675
+#pragma line 102 "/usr/include/stdio.h" 3 4 ::: 677
+#pragma line 164 "/usr/include/stdio.h" 3 4 ::: 691
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/stdio_lim.h" 1 3 4 ::: 692
+#pragma line 165 "/usr/include/stdio.h" 2 3 4 ::: 693
+#pragma line 209 "/usr/include/stdio.h" 3 4 ::: 725
+#pragma line 227 "/usr/include/stdio.h" 3 4 ::: 733
+#pragma line 252 "/usr/include/stdio.h" 3 4 ::: 751
+#pragma line 266 "/usr/include/stdio.h" 3 4 ::: 753
+#pragma line 295 "/usr/include/stdio.h" 3 4 ::: 769
+#pragma line 306 "/usr/include/stdio.h" 3 4 ::: 771
+#pragma line 319 "/usr/include/stdio.h" 3 4 ::: 773
+#pragma line 412 "/usr/include/stdio.h" 3 4 ::: 837
+#pragma line 463 "/usr/include/stdio.h" 3 4 ::: 861
+#pragma line 526 "/usr/include/stdio.h" 3 4 ::: 863
+#pragma line 550 "/usr/include/stdio.h" 3 4 ::: 878
+#pragma line 561 "/usr/include/stdio.h" 3 4 ::: 881
+#pragma line 594 "/usr/include/stdio.h" 3 4 ::: 903
+#pragma line 638 "/usr/include/stdio.h" 3 4 ::: 934
+#pragma line 665 "/usr/include/stdio.h" 3 4 ::: 938
+#pragma line 737 "/usr/include/stdio.h" 3 4 ::: 992
+#pragma line 773 "/usr/include/stdio.h" 3 4 ::: 1017
+#pragma line 792 "/usr/include/stdio.h" 3 4 ::: 1024
+#pragma line 815 "/usr/include/stdio.h" 3 4 ::: 1037
+#pragma line 824 "/usr/include/stdio.h" 3 4 ::: 1039
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 1 3 4 ::: 1069
+#pragma line 26 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3 4 ::: 1070
+#pragma line 854 "/usr/include/stdio.h" 2 3 4 ::: 1073
+#pragma line 872 "/usr/include/stdio.h" 3 4 ::: 1084
+#pragma line 912 "/usr/include/stdio.h" 3 4 ::: 1098
+#pragma line 942 "/usr/include/stdio.h" 3 4 ::: 1107
+#pragma line 64 "/media/dati/dante/Xilinx/Vivado/2017.3/include/ap_cint.h" 2 ::: 1109
+#pragma line 77 "/media/dati/dante/Xilinx/Vivado/2017.3/include/ap_cint.h" ::: 1110
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_apint.h" 1 ::: 1111
+#pragma line 57 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_apint.h" ::: 1112
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_dt.h" 1 ::: 1113
+#pragma line 97 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_dt.h" ::: 1114
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_dt.def" 1 ::: 1115
+#pragma line 98 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_dt.h" 2 ::: 2154
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_dt_ext.def" 1 ::: 2155
+#pragma line 99 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_dt.h" 2 ::: 3182
+#pragma line 108 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_dt.h" ::: 3183
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_dt.def" 1 ::: 3184
+#pragma line 109 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_dt.h" 2 ::: 4223
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_dt_ext.def" 1 ::: 4224
+#pragma line 110 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_dt.h" 2 ::: 5251
+#pragma line 131 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_dt.h" ::: 5252
+#pragma line 58 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_apint.h" 2 ::: 5255
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_ssdm_bits.h" 1 ::: 5256
+#pragma line 64 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_ssdm_bits.h" ::: 5257
+#pragma line 1 "/usr/include/assert.h" 1 3 4 ::: 5258
+#pragma line 66 "/usr/include/assert.h" 3 4 ::: 5259
+#pragma line 65 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_ssdm_bits.h" 2 ::: 5280
+#pragma line 1 "/usr/include/stdlib.h" 1 3 4 ::: 5288
+#pragma line 32 "/usr/include/stdlib.h" 3 4 ::: 5289
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4 ::: 5290
+#pragma line 324 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 3 4 ::: 5291
+#pragma line 33 "/usr/include/stdlib.h" 2 3 4 ::: 5293
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/waitflags.h" 1 3 4 ::: 5302
+#pragma line 50 "/usr/include/x86_64-linux-gnu/bits/waitflags.h" 3 4 ::: 5303
+#pragma line 42 "/usr/include/stdlib.h" 2 3 4 ::: 5310
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/waitstatus.h" 1 3 4 ::: 5311
+#pragma line 64 "/usr/include/x86_64-linux-gnu/bits/waitstatus.h" 3 4 ::: 5312
+#pragma line 1 "/usr/include/endian.h" 1 3 4 ::: 5313
+#pragma line 36 "/usr/include/endian.h" 3 4 ::: 5314
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/endian.h" 1 3 4 ::: 5315
+#pragma line 37 "/usr/include/endian.h" 2 3 4 ::: 5316
+#pragma line 60 "/usr/include/endian.h" 3 4 ::: 5317
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 1 3 4 ::: 5318
+#pragma line 28 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 3 4 ::: 5319
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4 ::: 5320
+#pragma line 29 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 2 3 4 ::: 5321
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/byteswap-16.h" 1 3 4 ::: 5328
+#pragma line 36 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 2 3 4 ::: 5329
+#pragma line 44 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 3 4 ::: 5330
+#pragma line 108 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 3 4 ::: 5336
+#pragma line 61 "/usr/include/endian.h" 2 3 4 ::: 5342
+#pragma line 65 "/usr/include/x86_64-linux-gnu/bits/waitstatus.h" 2 3 4 ::: 5343
+#pragma line 43 "/usr/include/stdlib.h" 2 3 4 ::: 5377
+#pragma line 67 "/usr/include/stdlib.h" 3 4 ::: 5378
+#pragma line 95 "/usr/include/stdlib.h" 3 4 ::: 5384
+#pragma line 139 "/usr/include/stdlib.h" 3 4 ::: 5403
+#pragma line 162 "/usr/include/stdlib.h" 3 4 ::: 5418
+#pragma line 181 "/usr/include/stdlib.h" 3 4 ::: 5425
+#pragma line 305 "/usr/include/stdlib.h" 3 4 ::: 5448
+#pragma line 1 "/usr/include/x86_64-linux-gnu/sys/types.h" 1 3 4 ::: 5458
+#pragma line 27 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4 ::: 5459
+#pragma line 60 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4 ::: 5482
+#pragma line 98 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4 ::: 5504
+#pragma line 115 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4 ::: 5512
+#pragma line 132 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4 ::: 5521
+#pragma line 1 "/usr/include/time.h" 1 3 4 ::: 5522
+#pragma line 57 "/usr/include/time.h" 3 4 ::: 5523
+#pragma line 73 "/usr/include/time.h" 3 4 ::: 5530
+#pragma line 91 "/usr/include/time.h" 3 4 ::: 5537
+#pragma line 103 "/usr/include/time.h" 3 4 ::: 5539
+#pragma line 133 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4 ::: 5541
+#pragma line 146 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4 ::: 5542
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4 ::: 5543
+#pragma line 147 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4 ::: 5544
+#pragma line 200 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4 ::: 5551
+#pragma line 219 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4 ::: 5558
+#pragma line 1 "/usr/include/x86_64-linux-gnu/sys/select.h" 1 3 4 ::: 5559
+#pragma line 30 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4 ::: 5560
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/select.h" 1 3 4 ::: 5561
+#pragma line 22 "/usr/include/x86_64-linux-gnu/bits/select.h" 3 4 ::: 5562
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4 ::: 5563
+#pragma line 23 "/usr/include/x86_64-linux-gnu/bits/select.h" 2 3 4 ::: 5564
+#pragma line 31 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4 ::: 5565
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/sigset.h" 1 3 4 ::: 5568
+#pragma line 22 "/usr/include/x86_64-linux-gnu/bits/sigset.h" 3 4 ::: 5569
+#pragma line 34 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4 ::: 5579
+#pragma line 1 "/usr/include/time.h" 1 3 4 ::: 5589
+#pragma line 120 "/usr/include/time.h" 3 4 ::: 5590
+#pragma line 44 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4 ::: 5596
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/time.h" 1 3 4 ::: 5598
+#pragma line 30 "/usr/include/x86_64-linux-gnu/bits/time.h" 3 4 ::: 5599
+#pragma line 46 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4 ::: 5605
+#pragma line 64 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4 ::: 5615
+#pragma line 96 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4 ::: 5635
+#pragma line 106 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4 ::: 5637
+#pragma line 118 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4 ::: 5642
+#pragma line 131 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4 ::: 5648
+#pragma line 220 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4 ::: 5650
+#pragma line 1 "/usr/include/x86_64-linux-gnu/sys/sysmacros.h" 1 3 4 ::: 5653
+#pragma line 24 "/usr/include/x86_64-linux-gnu/sys/sysmacros.h" 3 4 ::: 5654
+#pragma line 58 "/usr/include/x86_64-linux-gnu/sys/sysmacros.h" 3 4 ::: 5667
+#pragma line 223 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4 ::: 5669
+#pragma line 270 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4 ::: 5691
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 1 3 4 ::: 5692
+#pragma line 21 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 3 4 ::: 5693
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4 ::: 5694
+#pragma line 22 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 2 3 4 ::: 5695
+#pragma line 60 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 3 4 ::: 5696
+#pragma line 90 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 3 4 ::: 5717
+#pragma line 125 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 3 4 ::: 5735
+#pragma line 220 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 3 4 ::: 5812
+#pragma line 271 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4 ::: 5843
+#pragma line 315 "/usr/include/stdlib.h" 2 3 4 ::: 5847
+#pragma line 1 "/usr/include/alloca.h" 1 3 4 ::: 6025
+#pragma line 24 "/usr/include/alloca.h" 3 4 ::: 6026
+#pragma line 1 "/media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include/stddef.h" 1 3 4 ::: 6027
+#pragma line 25 "/usr/include/alloca.h" 2 3 4 ::: 6028
+#pragma line 493 "/usr/include/stdlib.h" 2 3 4 ::: 6043
+#pragma line 513 "/usr/include/stdlib.h" 3 4 ::: 6056
+#pragma line 530 "/usr/include/stdlib.h" 3 4 ::: 6064
+#pragma line 562 "/usr/include/stdlib.h" 3 4 ::: 6087
+#pragma line 578 "/usr/include/stdlib.h" 3 4 ::: 6092
+#pragma line 606 "/usr/include/stdlib.h" 3 4 ::: 6111
+#pragma line 619 "/usr/include/stdlib.h" 3 4 ::: 6113
+#pragma line 641 "/usr/include/stdlib.h" 3 4 ::: 6115
+#pragma line 662 "/usr/include/stdlib.h" 3 4 ::: 6117
+#pragma line 711 "/usr/include/stdlib.h" 3 4 ::: 6119
+#pragma line 733 "/usr/include/stdlib.h" 3 4 ::: 6127
+#pragma line 751 "/usr/include/stdlib.h" 3 4 ::: 6137
+#pragma line 774 "/usr/include/stdlib.h" 3 4 ::: 6153
+#pragma line 811 "/usr/include/stdlib.h" 3 4 ::: 6173
+#pragma line 898 "/usr/include/stdlib.h" 3 4 ::: 6251
+#pragma line 950 "/usr/include/stdlib.h" 3 4 ::: 6256
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 1 3 4 ::: 6261
+#pragma line 955 "/usr/include/stdlib.h" 2 3 4 ::: 6262
+#pragma line 967 "/usr/include/stdlib.h" 3 4 ::: 6263
+#pragma line 73 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_ssdm_bits.h" 2 ::: 6265
+#pragma line 59 "/media/dati/dante/Xilinx/Vivado/2017.3/include/etc/autopilot_apint.h" 2 ::: 6266
+#pragma line 78 "/media/dati/dante/Xilinx/Vivado/2017.3/include/ap_cint.h" 2 ::: 6267
+#pragma line 3 "/home/studio/Prova_casa/src/net_types.h" 2 ::: 6268
+#pragma line 21 "/home/studio/Prova_casa/src/net_types.h" ::: 6269
+#pragma line 3 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" 2 ::: 6370
+#pragma line 1 "/home/studio/Prova_casa/src/zhang_convolution_quant.h" 1 ::: 6371
+#pragma line 4 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" 2 ::: 6385
+#pragma line 25 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6386
+#pragma line 107 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6470
+#pragma line 107 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6472
+#pragma line 146 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6513
+#pragma line 146 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6515
+#pragma line 175 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6546
+#pragma line 175 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6548
+#pragma line 177 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6552
+#pragma line 177 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6554
+#pragma line 179 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6558
+#pragma line 179 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6560
+#pragma line 183 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6566
+#pragma line 183 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6568
+#pragma line 233 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6620
+#pragma line 233 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6622
+#pragma line 281 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6672
+#pragma line 281 "/home/studio/Prova_casa/src/zhang_convolution_quant.c" ::: 6674

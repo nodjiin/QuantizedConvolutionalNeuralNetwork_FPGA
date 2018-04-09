@@ -1,0 +1,654 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'dataflow_out_channel_1'" level="0">
+<item name = "Date">Tue Nov 28 10:42:56 2017
+</item>
+<item name = "Version">2017.3 (Build 2018833 on Wed Oct 04 20:30:40 MDT 2017)</item>
+<item name = "Project">Prova_casa</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.63, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">1196, 28026, 1197, 27991, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="dataflow_out_channel_U0">dataflow_out_channel, 1196, 27078, 1196, 27078, none</column>
+<column name="write_output_U0">write_output, 5, 27990, 5, 27990, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 548</column>
+<column name="FIFO">0, -, 50, 440</column>
+<column name="Instance">6, 191, 12151, 21147</column>
+<column name="Memory">56, -, 0, 0</column>
+<column name="Multiplexer">-, -, -, 306</column>
+<column name="Register">-, -, 36, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">22, 86, 11, 42</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="dataflow_out_channel_U0">dataflow_out_channel, 6, 164, 10432, 18683</column>
+<column name="write_output_U0">write_output, 0, 27, 1719, 2464</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="outputfm_0_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_1_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_2_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_3_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_4_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_5_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_6_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_7_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_8_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_9_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_10_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_11_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_12_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_13_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_14_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_15_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_16_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_17_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_18_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_19_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_20_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_21_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_22_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_23_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_24_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_25_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_26_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+<column name="outputfm_27_U">dataflow_out_chanbIp, 2, 0, 0, 999, 27, 2, 53946</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+<column name="col_c_U">0, 5, 44, 1, 32, 32</column>
+<column name="curr_layer_out_ch_c_U">0, 5, 44, 1, 32, 32</column>
+<column name="curr_layer_out_h_c_U">0, 5, 44, 1, 32, 32</column>
+<column name="curr_layer_out_w_c_U">0, 5, 44, 1, 32, 32</column>
+<column name="out_offset_c_U">0, 5, 44, 1, 32, 32</column>
+<column name="output_offset_c_U">0, 5, 44, 1, 32, 32</column>
+<column name="quantized_multiplier_2_U">0, 5, 44, 1, 32, 32</column>
+<column name="right_shift_c_U">0, 5, 44, 1, 32, 32</column>
+<column name="row_c_U">0, 5, 44, 1, 32, 32</column>
+<column name="to_c_U">0, 5, 44, 1, 32, 32</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="dataflow_out_channel_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
+<column name="write_output_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
+<column name="ap_channel_done_outputfm_0">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_1">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_10">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_11">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_12">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_13">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_14">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_15">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_16">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_17">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_18">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_19">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_2">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_20">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_21">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_22">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_23">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_24">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_25">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_26">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_27">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_3">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_4">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_5">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_6">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_7">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_8">and, 0, 0, 8, 1, 1</column>
+<column name="ap_channel_done_outputfm_9">and, 0, 0, 8, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_done">and, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_ready">and, 0, 0, 8, 1, 1</column>
+<column name="dataflow_out_channel_U0_ap_continue">and, 0, 0, 8, 1, 1</column>
+<column name="dataflow_out_channel_U0_ap_start">and, 0, 0, 8, 1, 1</column>
+<column name="write_output_U0_ap_start">and, 0, 0, 8, 1, 1</column>
+<column name="ap_reg_dataflow_out_channel_U0_ap_done">or, 0, 0, 8, 1, 1</column>
+<column name="ap_reg_write_output_U0_ap_done">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_0">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_1">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_10">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_11">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_12">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_13">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_14">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_15">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_16">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_17">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_18">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_19">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_2">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_20">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_21">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_22">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_23">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_24">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_25">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_26">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_27">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_3">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_4">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_5">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_6">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_7">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_8">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_channel_write_outputfm_9">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_dataflow_out_channel_U0_ap_ready">or, 0, 0, 8, 1, 1</column>
+<column name="ap_sync_write_output_U0_ap_ready">or, 0, 0, 8, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_reg_dataflow_out_channel_U0_ap_done">9, 2, 1, 2</column>
+<column name="ap_reg_write_output_U0_ap_done">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_0">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_1">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_10">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_11">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_12">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_13">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_14">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_15">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_16">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_17">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_18">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_19">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_2">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_20">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_21">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_22">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_23">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_24">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_25">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_26">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_27">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_3">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_4">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_5">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_6">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_7">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_8">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_outputfm_9">9, 2, 1, 2</column>
+<column name="ap_sync_reg_dataflow_out_channel_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_write_output_U0_ap_ready">9, 2, 1, 2</column>
+<column name="dataflow_out_channel_U0_ap_ready_count">9, 2, 2, 4</column>
+<column name="write_output_U0_ap_ready_count">9, 2, 2, 4</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_reg_dataflow_out_channel_U0_ap_done">1, 0, 1, 0</column>
+<column name="ap_reg_write_output_U0_ap_done">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_0">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_1">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_10">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_11">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_12">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_13">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_14">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_15">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_16">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_17">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_18">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_19">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_2">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_20">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_21">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_22">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_23">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_24">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_25">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_26">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_27">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_3">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_4">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_5">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_6">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_7">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_8">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_outputfm_9">1, 0, 1, 0</column>
+<column name="ap_sync_reg_dataflow_out_channel_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_write_output_U0_ap_ready">1, 0, 1, 0</column>
+<column name="dataflow_out_channel_U0_ap_ready_count">2, 0, 2, 0</column>
+<column name="write_output_U0_ap_ready_count">2, 0, 2, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="m_axi_weights_AWVALID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWREADY">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWADDR">out, 32, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWLEN">out, 32, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWSIZE">out, 3, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWBURST">out, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWLOCK">out, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWCACHE">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWPROT">out, 3, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWQOS">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWREGION">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_AWUSER">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WVALID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WREADY">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WDATA">out, 8, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WSTRB">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WLAST">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_WUSER">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARVALID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARREADY">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARADDR">out, 32, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARID">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARLEN">out, 32, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARSIZE">out, 3, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARBURST">out, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARLOCK">out, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARCACHE">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARPROT">out, 3, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARQOS">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARREGION">out, 4, m_axi, weights, pointer</column>
+<column name="m_axi_weights_ARUSER">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RVALID">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RREADY">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RDATA">in, 8, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RLAST">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RID">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RUSER">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_RRESP">in, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_BVALID">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_BREADY">out, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_BRESP">in, 2, m_axi, weights, pointer</column>
+<column name="m_axi_weights_BID">in, 1, m_axi, weights, pointer</column>
+<column name="m_axi_weights_BUSER">in, 1, m_axi, weights, pointer</column>
+<column name="weights_offset">in, 32, ap_none, weights_offset, scalar</column>
+<column name="weights_offset_ap_vld">in, 1, ap_none, weights_offset, scalar</column>
+<column name="image_offset">in, 32, ap_none, image_offset, scalar</column>
+<column name="image_offset_ap_vld">in, 1, ap_none, image_offset, scalar</column>
+<column name="curr_layer_in_w">in, 32, ap_none, curr_layer_in_w, scalar</column>
+<column name="curr_layer_in_w_ap_vld">in, 1, ap_none, curr_layer_in_w, scalar</column>
+<column name="curr_layer_in_h">in, 32, ap_none, curr_layer_in_h, scalar</column>
+<column name="curr_layer_in_h_ap_vld">in, 1, ap_none, curr_layer_in_h, scalar</column>
+<column name="curr_layer_out_w">in, 32, ap_none, curr_layer_out_w, scalar</column>
+<column name="curr_layer_out_w_ap_vld">in, 1, ap_none, curr_layer_out_w, scalar</column>
+<column name="curr_layer_out_h">in, 32, ap_none, curr_layer_out_h, scalar</column>
+<column name="curr_layer_out_h_ap_vld">in, 1, ap_none, curr_layer_out_h, scalar</column>
+<column name="curr_layer_in_ch">in, 32, ap_none, curr_layer_in_ch, scalar</column>
+<column name="curr_layer_in_ch_ap_vld">in, 1, ap_none, curr_layer_in_ch, scalar</column>
+<column name="curr_layer_out_ch">in, 32, ap_none, curr_layer_out_ch, scalar</column>
+<column name="curr_layer_out_ch_ap_vld">in, 1, ap_none, curr_layer_out_ch, scalar</column>
+<column name="curr_layer_ker_w">in, 32, ap_none, curr_layer_ker_w, scalar</column>
+<column name="curr_layer_ker_w_ap_vld">in, 1, ap_none, curr_layer_ker_w, scalar</column>
+<column name="curr_layer_ker_h">in, 32, ap_none, curr_layer_ker_h, scalar</column>
+<column name="curr_layer_ker_h_ap_vld">in, 1, ap_none, curr_layer_ker_h, scalar</column>
+<column name="curr_layer_str_w">in, 32, ap_none, curr_layer_str_w, scalar</column>
+<column name="curr_layer_str_w_ap_vld">in, 1, ap_none, curr_layer_str_w, scalar</column>
+<column name="curr_layer_str_h">in, 32, ap_none, curr_layer_str_h, scalar</column>
+<column name="curr_layer_str_h_ap_vld">in, 1, ap_none, curr_layer_str_h, scalar</column>
+<column name="out_offset">in, 32, ap_none, out_offset, scalar</column>
+<column name="out_offset_ap_vld">in, 1, ap_none, out_offset, scalar</column>
+<column name="to_r">in, 32, ap_none, to_r, scalar</column>
+<column name="to_r_ap_vld">in, 1, ap_none, to_r, scalar</column>
+<column name="row">in, 32, ap_none, row, scalar</column>
+<column name="row_ap_vld">in, 1, ap_none, row, scalar</column>
+<column name="col">in, 32, ap_none, col, scalar</column>
+<column name="col_ap_vld">in, 1, ap_none, col, scalar</column>
+<column name="partial_outputfm_0_address0">out, 10, ap_memory, partial_outputfm_0, array</column>
+<column name="partial_outputfm_0_ce0">out, 1, ap_memory, partial_outputfm_0, array</column>
+<column name="partial_outputfm_0_d0">out, 27, ap_memory, partial_outputfm_0, array</column>
+<column name="partial_outputfm_0_q0">in, 27, ap_memory, partial_outputfm_0, array</column>
+<column name="partial_outputfm_0_we0">out, 1, ap_memory, partial_outputfm_0, array</column>
+<column name="partial_outputfm_0_address1">out, 10, ap_memory, partial_outputfm_0, array</column>
+<column name="partial_outputfm_0_ce1">out, 1, ap_memory, partial_outputfm_0, array</column>
+<column name="partial_outputfm_0_d1">out, 27, ap_memory, partial_outputfm_0, array</column>
+<column name="partial_outputfm_0_q1">in, 27, ap_memory, partial_outputfm_0, array</column>
+<column name="partial_outputfm_0_we1">out, 1, ap_memory, partial_outputfm_0, array</column>
+<column name="partial_outputfm_1_address0">out, 10, ap_memory, partial_outputfm_1, array</column>
+<column name="partial_outputfm_1_ce0">out, 1, ap_memory, partial_outputfm_1, array</column>
+<column name="partial_outputfm_1_d0">out, 27, ap_memory, partial_outputfm_1, array</column>
+<column name="partial_outputfm_1_q0">in, 27, ap_memory, partial_outputfm_1, array</column>
+<column name="partial_outputfm_1_we0">out, 1, ap_memory, partial_outputfm_1, array</column>
+<column name="partial_outputfm_1_address1">out, 10, ap_memory, partial_outputfm_1, array</column>
+<column name="partial_outputfm_1_ce1">out, 1, ap_memory, partial_outputfm_1, array</column>
+<column name="partial_outputfm_1_d1">out, 27, ap_memory, partial_outputfm_1, array</column>
+<column name="partial_outputfm_1_q1">in, 27, ap_memory, partial_outputfm_1, array</column>
+<column name="partial_outputfm_1_we1">out, 1, ap_memory, partial_outputfm_1, array</column>
+<column name="partial_outputfm_2_address0">out, 10, ap_memory, partial_outputfm_2, array</column>
+<column name="partial_outputfm_2_ce0">out, 1, ap_memory, partial_outputfm_2, array</column>
+<column name="partial_outputfm_2_d0">out, 27, ap_memory, partial_outputfm_2, array</column>
+<column name="partial_outputfm_2_q0">in, 27, ap_memory, partial_outputfm_2, array</column>
+<column name="partial_outputfm_2_we0">out, 1, ap_memory, partial_outputfm_2, array</column>
+<column name="partial_outputfm_2_address1">out, 10, ap_memory, partial_outputfm_2, array</column>
+<column name="partial_outputfm_2_ce1">out, 1, ap_memory, partial_outputfm_2, array</column>
+<column name="partial_outputfm_2_d1">out, 27, ap_memory, partial_outputfm_2, array</column>
+<column name="partial_outputfm_2_q1">in, 27, ap_memory, partial_outputfm_2, array</column>
+<column name="partial_outputfm_2_we1">out, 1, ap_memory, partial_outputfm_2, array</column>
+<column name="partial_outputfm_3_address0">out, 10, ap_memory, partial_outputfm_3, array</column>
+<column name="partial_outputfm_3_ce0">out, 1, ap_memory, partial_outputfm_3, array</column>
+<column name="partial_outputfm_3_d0">out, 27, ap_memory, partial_outputfm_3, array</column>
+<column name="partial_outputfm_3_q0">in, 27, ap_memory, partial_outputfm_3, array</column>
+<column name="partial_outputfm_3_we0">out, 1, ap_memory, partial_outputfm_3, array</column>
+<column name="partial_outputfm_3_address1">out, 10, ap_memory, partial_outputfm_3, array</column>
+<column name="partial_outputfm_3_ce1">out, 1, ap_memory, partial_outputfm_3, array</column>
+<column name="partial_outputfm_3_d1">out, 27, ap_memory, partial_outputfm_3, array</column>
+<column name="partial_outputfm_3_q1">in, 27, ap_memory, partial_outputfm_3, array</column>
+<column name="partial_outputfm_3_we1">out, 1, ap_memory, partial_outputfm_3, array</column>
+<column name="partial_outputfm_4_address0">out, 10, ap_memory, partial_outputfm_4, array</column>
+<column name="partial_outputfm_4_ce0">out, 1, ap_memory, partial_outputfm_4, array</column>
+<column name="partial_outputfm_4_d0">out, 27, ap_memory, partial_outputfm_4, array</column>
+<column name="partial_outputfm_4_q0">in, 27, ap_memory, partial_outputfm_4, array</column>
+<column name="partial_outputfm_4_we0">out, 1, ap_memory, partial_outputfm_4, array</column>
+<column name="partial_outputfm_4_address1">out, 10, ap_memory, partial_outputfm_4, array</column>
+<column name="partial_outputfm_4_ce1">out, 1, ap_memory, partial_outputfm_4, array</column>
+<column name="partial_outputfm_4_d1">out, 27, ap_memory, partial_outputfm_4, array</column>
+<column name="partial_outputfm_4_q1">in, 27, ap_memory, partial_outputfm_4, array</column>
+<column name="partial_outputfm_4_we1">out, 1, ap_memory, partial_outputfm_4, array</column>
+<column name="partial_outputfm_5_address0">out, 10, ap_memory, partial_outputfm_5, array</column>
+<column name="partial_outputfm_5_ce0">out, 1, ap_memory, partial_outputfm_5, array</column>
+<column name="partial_outputfm_5_d0">out, 27, ap_memory, partial_outputfm_5, array</column>
+<column name="partial_outputfm_5_q0">in, 27, ap_memory, partial_outputfm_5, array</column>
+<column name="partial_outputfm_5_we0">out, 1, ap_memory, partial_outputfm_5, array</column>
+<column name="partial_outputfm_5_address1">out, 10, ap_memory, partial_outputfm_5, array</column>
+<column name="partial_outputfm_5_ce1">out, 1, ap_memory, partial_outputfm_5, array</column>
+<column name="partial_outputfm_5_d1">out, 27, ap_memory, partial_outputfm_5, array</column>
+<column name="partial_outputfm_5_q1">in, 27, ap_memory, partial_outputfm_5, array</column>
+<column name="partial_outputfm_5_we1">out, 1, ap_memory, partial_outputfm_5, array</column>
+<column name="partial_outputfm_6_address0">out, 10, ap_memory, partial_outputfm_6, array</column>
+<column name="partial_outputfm_6_ce0">out, 1, ap_memory, partial_outputfm_6, array</column>
+<column name="partial_outputfm_6_d0">out, 27, ap_memory, partial_outputfm_6, array</column>
+<column name="partial_outputfm_6_q0">in, 27, ap_memory, partial_outputfm_6, array</column>
+<column name="partial_outputfm_6_we0">out, 1, ap_memory, partial_outputfm_6, array</column>
+<column name="partial_outputfm_6_address1">out, 10, ap_memory, partial_outputfm_6, array</column>
+<column name="partial_outputfm_6_ce1">out, 1, ap_memory, partial_outputfm_6, array</column>
+<column name="partial_outputfm_6_d1">out, 27, ap_memory, partial_outputfm_6, array</column>
+<column name="partial_outputfm_6_q1">in, 27, ap_memory, partial_outputfm_6, array</column>
+<column name="partial_outputfm_6_we1">out, 1, ap_memory, partial_outputfm_6, array</column>
+<column name="partial_outputfm_7_address0">out, 10, ap_memory, partial_outputfm_7, array</column>
+<column name="partial_outputfm_7_ce0">out, 1, ap_memory, partial_outputfm_7, array</column>
+<column name="partial_outputfm_7_d0">out, 27, ap_memory, partial_outputfm_7, array</column>
+<column name="partial_outputfm_7_q0">in, 27, ap_memory, partial_outputfm_7, array</column>
+<column name="partial_outputfm_7_we0">out, 1, ap_memory, partial_outputfm_7, array</column>
+<column name="partial_outputfm_7_address1">out, 10, ap_memory, partial_outputfm_7, array</column>
+<column name="partial_outputfm_7_ce1">out, 1, ap_memory, partial_outputfm_7, array</column>
+<column name="partial_outputfm_7_d1">out, 27, ap_memory, partial_outputfm_7, array</column>
+<column name="partial_outputfm_7_q1">in, 27, ap_memory, partial_outputfm_7, array</column>
+<column name="partial_outputfm_7_we1">out, 1, ap_memory, partial_outputfm_7, array</column>
+<column name="partial_outputfm_8_address0">out, 10, ap_memory, partial_outputfm_8, array</column>
+<column name="partial_outputfm_8_ce0">out, 1, ap_memory, partial_outputfm_8, array</column>
+<column name="partial_outputfm_8_d0">out, 27, ap_memory, partial_outputfm_8, array</column>
+<column name="partial_outputfm_8_q0">in, 27, ap_memory, partial_outputfm_8, array</column>
+<column name="partial_outputfm_8_we0">out, 1, ap_memory, partial_outputfm_8, array</column>
+<column name="partial_outputfm_8_address1">out, 10, ap_memory, partial_outputfm_8, array</column>
+<column name="partial_outputfm_8_ce1">out, 1, ap_memory, partial_outputfm_8, array</column>
+<column name="partial_outputfm_8_d1">out, 27, ap_memory, partial_outputfm_8, array</column>
+<column name="partial_outputfm_8_q1">in, 27, ap_memory, partial_outputfm_8, array</column>
+<column name="partial_outputfm_8_we1">out, 1, ap_memory, partial_outputfm_8, array</column>
+<column name="partial_outputfm_9_address0">out, 10, ap_memory, partial_outputfm_9, array</column>
+<column name="partial_outputfm_9_ce0">out, 1, ap_memory, partial_outputfm_9, array</column>
+<column name="partial_outputfm_9_d0">out, 27, ap_memory, partial_outputfm_9, array</column>
+<column name="partial_outputfm_9_q0">in, 27, ap_memory, partial_outputfm_9, array</column>
+<column name="partial_outputfm_9_we0">out, 1, ap_memory, partial_outputfm_9, array</column>
+<column name="partial_outputfm_9_address1">out, 10, ap_memory, partial_outputfm_9, array</column>
+<column name="partial_outputfm_9_ce1">out, 1, ap_memory, partial_outputfm_9, array</column>
+<column name="partial_outputfm_9_d1">out, 27, ap_memory, partial_outputfm_9, array</column>
+<column name="partial_outputfm_9_q1">in, 27, ap_memory, partial_outputfm_9, array</column>
+<column name="partial_outputfm_9_we1">out, 1, ap_memory, partial_outputfm_9, array</column>
+<column name="partial_outputfm_10_address0">out, 10, ap_memory, partial_outputfm_10, array</column>
+<column name="partial_outputfm_10_ce0">out, 1, ap_memory, partial_outputfm_10, array</column>
+<column name="partial_outputfm_10_d0">out, 27, ap_memory, partial_outputfm_10, array</column>
+<column name="partial_outputfm_10_q0">in, 27, ap_memory, partial_outputfm_10, array</column>
+<column name="partial_outputfm_10_we0">out, 1, ap_memory, partial_outputfm_10, array</column>
+<column name="partial_outputfm_10_address1">out, 10, ap_memory, partial_outputfm_10, array</column>
+<column name="partial_outputfm_10_ce1">out, 1, ap_memory, partial_outputfm_10, array</column>
+<column name="partial_outputfm_10_d1">out, 27, ap_memory, partial_outputfm_10, array</column>
+<column name="partial_outputfm_10_q1">in, 27, ap_memory, partial_outputfm_10, array</column>
+<column name="partial_outputfm_10_we1">out, 1, ap_memory, partial_outputfm_10, array</column>
+<column name="partial_outputfm_11_address0">out, 10, ap_memory, partial_outputfm_11, array</column>
+<column name="partial_outputfm_11_ce0">out, 1, ap_memory, partial_outputfm_11, array</column>
+<column name="partial_outputfm_11_d0">out, 27, ap_memory, partial_outputfm_11, array</column>
+<column name="partial_outputfm_11_q0">in, 27, ap_memory, partial_outputfm_11, array</column>
+<column name="partial_outputfm_11_we0">out, 1, ap_memory, partial_outputfm_11, array</column>
+<column name="partial_outputfm_11_address1">out, 10, ap_memory, partial_outputfm_11, array</column>
+<column name="partial_outputfm_11_ce1">out, 1, ap_memory, partial_outputfm_11, array</column>
+<column name="partial_outputfm_11_d1">out, 27, ap_memory, partial_outputfm_11, array</column>
+<column name="partial_outputfm_11_q1">in, 27, ap_memory, partial_outputfm_11, array</column>
+<column name="partial_outputfm_11_we1">out, 1, ap_memory, partial_outputfm_11, array</column>
+<column name="partial_outputfm_12_address0">out, 10, ap_memory, partial_outputfm_12, array</column>
+<column name="partial_outputfm_12_ce0">out, 1, ap_memory, partial_outputfm_12, array</column>
+<column name="partial_outputfm_12_d0">out, 27, ap_memory, partial_outputfm_12, array</column>
+<column name="partial_outputfm_12_q0">in, 27, ap_memory, partial_outputfm_12, array</column>
+<column name="partial_outputfm_12_we0">out, 1, ap_memory, partial_outputfm_12, array</column>
+<column name="partial_outputfm_12_address1">out, 10, ap_memory, partial_outputfm_12, array</column>
+<column name="partial_outputfm_12_ce1">out, 1, ap_memory, partial_outputfm_12, array</column>
+<column name="partial_outputfm_12_d1">out, 27, ap_memory, partial_outputfm_12, array</column>
+<column name="partial_outputfm_12_q1">in, 27, ap_memory, partial_outputfm_12, array</column>
+<column name="partial_outputfm_12_we1">out, 1, ap_memory, partial_outputfm_12, array</column>
+<column name="partial_outputfm_13_address0">out, 10, ap_memory, partial_outputfm_13, array</column>
+<column name="partial_outputfm_13_ce0">out, 1, ap_memory, partial_outputfm_13, array</column>
+<column name="partial_outputfm_13_d0">out, 27, ap_memory, partial_outputfm_13, array</column>
+<column name="partial_outputfm_13_q0">in, 27, ap_memory, partial_outputfm_13, array</column>
+<column name="partial_outputfm_13_we0">out, 1, ap_memory, partial_outputfm_13, array</column>
+<column name="partial_outputfm_13_address1">out, 10, ap_memory, partial_outputfm_13, array</column>
+<column name="partial_outputfm_13_ce1">out, 1, ap_memory, partial_outputfm_13, array</column>
+<column name="partial_outputfm_13_d1">out, 27, ap_memory, partial_outputfm_13, array</column>
+<column name="partial_outputfm_13_q1">in, 27, ap_memory, partial_outputfm_13, array</column>
+<column name="partial_outputfm_13_we1">out, 1, ap_memory, partial_outputfm_13, array</column>
+<column name="partial_outputfm_14_address0">out, 10, ap_memory, partial_outputfm_14, array</column>
+<column name="partial_outputfm_14_ce0">out, 1, ap_memory, partial_outputfm_14, array</column>
+<column name="partial_outputfm_14_d0">out, 27, ap_memory, partial_outputfm_14, array</column>
+<column name="partial_outputfm_14_q0">in, 27, ap_memory, partial_outputfm_14, array</column>
+<column name="partial_outputfm_14_we0">out, 1, ap_memory, partial_outputfm_14, array</column>
+<column name="partial_outputfm_14_address1">out, 10, ap_memory, partial_outputfm_14, array</column>
+<column name="partial_outputfm_14_ce1">out, 1, ap_memory, partial_outputfm_14, array</column>
+<column name="partial_outputfm_14_d1">out, 27, ap_memory, partial_outputfm_14, array</column>
+<column name="partial_outputfm_14_q1">in, 27, ap_memory, partial_outputfm_14, array</column>
+<column name="partial_outputfm_14_we1">out, 1, ap_memory, partial_outputfm_14, array</column>
+<column name="partial_outputfm_15_address0">out, 10, ap_memory, partial_outputfm_15, array</column>
+<column name="partial_outputfm_15_ce0">out, 1, ap_memory, partial_outputfm_15, array</column>
+<column name="partial_outputfm_15_d0">out, 27, ap_memory, partial_outputfm_15, array</column>
+<column name="partial_outputfm_15_q0">in, 27, ap_memory, partial_outputfm_15, array</column>
+<column name="partial_outputfm_15_we0">out, 1, ap_memory, partial_outputfm_15, array</column>
+<column name="partial_outputfm_15_address1">out, 10, ap_memory, partial_outputfm_15, array</column>
+<column name="partial_outputfm_15_ce1">out, 1, ap_memory, partial_outputfm_15, array</column>
+<column name="partial_outputfm_15_d1">out, 27, ap_memory, partial_outputfm_15, array</column>
+<column name="partial_outputfm_15_q1">in, 27, ap_memory, partial_outputfm_15, array</column>
+<column name="partial_outputfm_15_we1">out, 1, ap_memory, partial_outputfm_15, array</column>
+<column name="partial_outputfm_16_address0">out, 10, ap_memory, partial_outputfm_16, array</column>
+<column name="partial_outputfm_16_ce0">out, 1, ap_memory, partial_outputfm_16, array</column>
+<column name="partial_outputfm_16_d0">out, 27, ap_memory, partial_outputfm_16, array</column>
+<column name="partial_outputfm_16_q0">in, 27, ap_memory, partial_outputfm_16, array</column>
+<column name="partial_outputfm_16_we0">out, 1, ap_memory, partial_outputfm_16, array</column>
+<column name="partial_outputfm_16_address1">out, 10, ap_memory, partial_outputfm_16, array</column>
+<column name="partial_outputfm_16_ce1">out, 1, ap_memory, partial_outputfm_16, array</column>
+<column name="partial_outputfm_16_d1">out, 27, ap_memory, partial_outputfm_16, array</column>
+<column name="partial_outputfm_16_q1">in, 27, ap_memory, partial_outputfm_16, array</column>
+<column name="partial_outputfm_16_we1">out, 1, ap_memory, partial_outputfm_16, array</column>
+<column name="partial_outputfm_17_address0">out, 10, ap_memory, partial_outputfm_17, array</column>
+<column name="partial_outputfm_17_ce0">out, 1, ap_memory, partial_outputfm_17, array</column>
+<column name="partial_outputfm_17_d0">out, 27, ap_memory, partial_outputfm_17, array</column>
+<column name="partial_outputfm_17_q0">in, 27, ap_memory, partial_outputfm_17, array</column>
+<column name="partial_outputfm_17_we0">out, 1, ap_memory, partial_outputfm_17, array</column>
+<column name="partial_outputfm_17_address1">out, 10, ap_memory, partial_outputfm_17, array</column>
+<column name="partial_outputfm_17_ce1">out, 1, ap_memory, partial_outputfm_17, array</column>
+<column name="partial_outputfm_17_d1">out, 27, ap_memory, partial_outputfm_17, array</column>
+<column name="partial_outputfm_17_q1">in, 27, ap_memory, partial_outputfm_17, array</column>
+<column name="partial_outputfm_17_we1">out, 1, ap_memory, partial_outputfm_17, array</column>
+<column name="partial_outputfm_18_address0">out, 10, ap_memory, partial_outputfm_18, array</column>
+<column name="partial_outputfm_18_ce0">out, 1, ap_memory, partial_outputfm_18, array</column>
+<column name="partial_outputfm_18_d0">out, 27, ap_memory, partial_outputfm_18, array</column>
+<column name="partial_outputfm_18_q0">in, 27, ap_memory, partial_outputfm_18, array</column>
+<column name="partial_outputfm_18_we0">out, 1, ap_memory, partial_outputfm_18, array</column>
+<column name="partial_outputfm_18_address1">out, 10, ap_memory, partial_outputfm_18, array</column>
+<column name="partial_outputfm_18_ce1">out, 1, ap_memory, partial_outputfm_18, array</column>
+<column name="partial_outputfm_18_d1">out, 27, ap_memory, partial_outputfm_18, array</column>
+<column name="partial_outputfm_18_q1">in, 27, ap_memory, partial_outputfm_18, array</column>
+<column name="partial_outputfm_18_we1">out, 1, ap_memory, partial_outputfm_18, array</column>
+<column name="partial_outputfm_19_address0">out, 10, ap_memory, partial_outputfm_19, array</column>
+<column name="partial_outputfm_19_ce0">out, 1, ap_memory, partial_outputfm_19, array</column>
+<column name="partial_outputfm_19_d0">out, 27, ap_memory, partial_outputfm_19, array</column>
+<column name="partial_outputfm_19_q0">in, 27, ap_memory, partial_outputfm_19, array</column>
+<column name="partial_outputfm_19_we0">out, 1, ap_memory, partial_outputfm_19, array</column>
+<column name="partial_outputfm_19_address1">out, 10, ap_memory, partial_outputfm_19, array</column>
+<column name="partial_outputfm_19_ce1">out, 1, ap_memory, partial_outputfm_19, array</column>
+<column name="partial_outputfm_19_d1">out, 27, ap_memory, partial_outputfm_19, array</column>
+<column name="partial_outputfm_19_q1">in, 27, ap_memory, partial_outputfm_19, array</column>
+<column name="partial_outputfm_19_we1">out, 1, ap_memory, partial_outputfm_19, array</column>
+<column name="partial_outputfm_20_address0">out, 10, ap_memory, partial_outputfm_20, array</column>
+<column name="partial_outputfm_20_ce0">out, 1, ap_memory, partial_outputfm_20, array</column>
+<column name="partial_outputfm_20_d0">out, 27, ap_memory, partial_outputfm_20, array</column>
+<column name="partial_outputfm_20_q0">in, 27, ap_memory, partial_outputfm_20, array</column>
+<column name="partial_outputfm_20_we0">out, 1, ap_memory, partial_outputfm_20, array</column>
+<column name="partial_outputfm_20_address1">out, 10, ap_memory, partial_outputfm_20, array</column>
+<column name="partial_outputfm_20_ce1">out, 1, ap_memory, partial_outputfm_20, array</column>
+<column name="partial_outputfm_20_d1">out, 27, ap_memory, partial_outputfm_20, array</column>
+<column name="partial_outputfm_20_q1">in, 27, ap_memory, partial_outputfm_20, array</column>
+<column name="partial_outputfm_20_we1">out, 1, ap_memory, partial_outputfm_20, array</column>
+<column name="partial_outputfm_21_address0">out, 10, ap_memory, partial_outputfm_21, array</column>
+<column name="partial_outputfm_21_ce0">out, 1, ap_memory, partial_outputfm_21, array</column>
+<column name="partial_outputfm_21_d0">out, 27, ap_memory, partial_outputfm_21, array</column>
+<column name="partial_outputfm_21_q0">in, 27, ap_memory, partial_outputfm_21, array</column>
+<column name="partial_outputfm_21_we0">out, 1, ap_memory, partial_outputfm_21, array</column>
+<column name="partial_outputfm_21_address1">out, 10, ap_memory, partial_outputfm_21, array</column>
+<column name="partial_outputfm_21_ce1">out, 1, ap_memory, partial_outputfm_21, array</column>
+<column name="partial_outputfm_21_d1">out, 27, ap_memory, partial_outputfm_21, array</column>
+<column name="partial_outputfm_21_q1">in, 27, ap_memory, partial_outputfm_21, array</column>
+<column name="partial_outputfm_21_we1">out, 1, ap_memory, partial_outputfm_21, array</column>
+<column name="partial_outputfm_22_address0">out, 10, ap_memory, partial_outputfm_22, array</column>
+<column name="partial_outputfm_22_ce0">out, 1, ap_memory, partial_outputfm_22, array</column>
+<column name="partial_outputfm_22_d0">out, 27, ap_memory, partial_outputfm_22, array</column>
+<column name="partial_outputfm_22_q0">in, 27, ap_memory, partial_outputfm_22, array</column>
+<column name="partial_outputfm_22_we0">out, 1, ap_memory, partial_outputfm_22, array</column>
+<column name="partial_outputfm_22_address1">out, 10, ap_memory, partial_outputfm_22, array</column>
+<column name="partial_outputfm_22_ce1">out, 1, ap_memory, partial_outputfm_22, array</column>
+<column name="partial_outputfm_22_d1">out, 27, ap_memory, partial_outputfm_22, array</column>
+<column name="partial_outputfm_22_q1">in, 27, ap_memory, partial_outputfm_22, array</column>
+<column name="partial_outputfm_22_we1">out, 1, ap_memory, partial_outputfm_22, array</column>
+<column name="partial_outputfm_23_address0">out, 10, ap_memory, partial_outputfm_23, array</column>
+<column name="partial_outputfm_23_ce0">out, 1, ap_memory, partial_outputfm_23, array</column>
+<column name="partial_outputfm_23_d0">out, 27, ap_memory, partial_outputfm_23, array</column>
+<column name="partial_outputfm_23_q0">in, 27, ap_memory, partial_outputfm_23, array</column>
+<column name="partial_outputfm_23_we0">out, 1, ap_memory, partial_outputfm_23, array</column>
+<column name="partial_outputfm_23_address1">out, 10, ap_memory, partial_outputfm_23, array</column>
+<column name="partial_outputfm_23_ce1">out, 1, ap_memory, partial_outputfm_23, array</column>
+<column name="partial_outputfm_23_d1">out, 27, ap_memory, partial_outputfm_23, array</column>
+<column name="partial_outputfm_23_q1">in, 27, ap_memory, partial_outputfm_23, array</column>
+<column name="partial_outputfm_23_we1">out, 1, ap_memory, partial_outputfm_23, array</column>
+<column name="partial_outputfm_24_address0">out, 10, ap_memory, partial_outputfm_24, array</column>
+<column name="partial_outputfm_24_ce0">out, 1, ap_memory, partial_outputfm_24, array</column>
+<column name="partial_outputfm_24_d0">out, 27, ap_memory, partial_outputfm_24, array</column>
+<column name="partial_outputfm_24_q0">in, 27, ap_memory, partial_outputfm_24, array</column>
+<column name="partial_outputfm_24_we0">out, 1, ap_memory, partial_outputfm_24, array</column>
+<column name="partial_outputfm_24_address1">out, 10, ap_memory, partial_outputfm_24, array</column>
+<column name="partial_outputfm_24_ce1">out, 1, ap_memory, partial_outputfm_24, array</column>
+<column name="partial_outputfm_24_d1">out, 27, ap_memory, partial_outputfm_24, array</column>
+<column name="partial_outputfm_24_q1">in, 27, ap_memory, partial_outputfm_24, array</column>
+<column name="partial_outputfm_24_we1">out, 1, ap_memory, partial_outputfm_24, array</column>
+<column name="partial_outputfm_25_address0">out, 10, ap_memory, partial_outputfm_25, array</column>
+<column name="partial_outputfm_25_ce0">out, 1, ap_memory, partial_outputfm_25, array</column>
+<column name="partial_outputfm_25_d0">out, 27, ap_memory, partial_outputfm_25, array</column>
+<column name="partial_outputfm_25_q0">in, 27, ap_memory, partial_outputfm_25, array</column>
+<column name="partial_outputfm_25_we0">out, 1, ap_memory, partial_outputfm_25, array</column>
+<column name="partial_outputfm_25_address1">out, 10, ap_memory, partial_outputfm_25, array</column>
+<column name="partial_outputfm_25_ce1">out, 1, ap_memory, partial_outputfm_25, array</column>
+<column name="partial_outputfm_25_d1">out, 27, ap_memory, partial_outputfm_25, array</column>
+<column name="partial_outputfm_25_q1">in, 27, ap_memory, partial_outputfm_25, array</column>
+<column name="partial_outputfm_25_we1">out, 1, ap_memory, partial_outputfm_25, array</column>
+<column name="partial_outputfm_26_address0">out, 10, ap_memory, partial_outputfm_26, array</column>
+<column name="partial_outputfm_26_ce0">out, 1, ap_memory, partial_outputfm_26, array</column>
+<column name="partial_outputfm_26_d0">out, 27, ap_memory, partial_outputfm_26, array</column>
+<column name="partial_outputfm_26_q0">in, 27, ap_memory, partial_outputfm_26, array</column>
+<column name="partial_outputfm_26_we0">out, 1, ap_memory, partial_outputfm_26, array</column>
+<column name="partial_outputfm_26_address1">out, 10, ap_memory, partial_outputfm_26, array</column>
+<column name="partial_outputfm_26_ce1">out, 1, ap_memory, partial_outputfm_26, array</column>
+<column name="partial_outputfm_26_d1">out, 27, ap_memory, partial_outputfm_26, array</column>
+<column name="partial_outputfm_26_q1">in, 27, ap_memory, partial_outputfm_26, array</column>
+<column name="partial_outputfm_26_we1">out, 1, ap_memory, partial_outputfm_26, array</column>
+<column name="partial_outputfm_27_address0">out, 10, ap_memory, partial_outputfm_27, array</column>
+<column name="partial_outputfm_27_ce0">out, 1, ap_memory, partial_outputfm_27, array</column>
+<column name="partial_outputfm_27_d0">out, 27, ap_memory, partial_outputfm_27, array</column>
+<column name="partial_outputfm_27_q0">in, 27, ap_memory, partial_outputfm_27, array</column>
+<column name="partial_outputfm_27_we0">out, 1, ap_memory, partial_outputfm_27, array</column>
+<column name="partial_outputfm_27_address1">out, 10, ap_memory, partial_outputfm_27, array</column>
+<column name="partial_outputfm_27_ce1">out, 1, ap_memory, partial_outputfm_27, array</column>
+<column name="partial_outputfm_27_d1">out, 27, ap_memory, partial_outputfm_27, array</column>
+<column name="partial_outputfm_27_q1">in, 27, ap_memory, partial_outputfm_27, array</column>
+<column name="partial_outputfm_27_we1">out, 1, ap_memory, partial_outputfm_27, array</column>
+<column name="input_offset">in, 32, ap_none, input_offset, scalar</column>
+<column name="input_offset_ap_vld">in, 1, ap_none, input_offset, scalar</column>
+<column name="weights_offset_9">in, 32, ap_none, weights_offset_9, scalar</column>
+<column name="weights_offset_9_ap_vld">in, 1, ap_none, weights_offset_9, scalar</column>
+<column name="output_offset">in, 32, ap_none, output_offset, scalar</column>
+<column name="output_offset_ap_vld">in, 1, ap_none, output_offset, scalar</column>
+<column name="quantized_multiplier">in, 32, ap_none, quantized_multiplier, scalar</column>
+<column name="quantized_multiplier_ap_vld">in, 1, ap_none, quantized_multiplier, scalar</column>
+<column name="right_shift">in, 32, ap_none, right_shift, scalar</column>
+<column name="right_shift_ap_vld">in, 1, ap_none, right_shift, scalar</column>
+<column name="rounding">in, 32, ap_none, rounding, pointer</column>
+<column name="rounding_ap_vld">in, 1, ap_none, rounding, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, dataflow_out_channel.1, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, dataflow_out_channel.1, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, dataflow_out_channel.1, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, dataflow_out_channel.1, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, dataflow_out_channel.1, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, dataflow_out_channel.1, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, dataflow_out_channel.1, return value</column>
+</table>
+</item>
+</section>
+</profile>

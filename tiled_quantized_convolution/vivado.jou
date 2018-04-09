@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Mon Nov 27 18:28:59 2017
+# Process ID: 26644
+# Current directory: /home/studio
+# Command line: vivado
+# Log file: /home/studio/vivado.log
+# Journal file: /home/studio/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/studio/VIVADO_2017/tiled_convolution_CASA/tiled_convolution.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace /home/studio/VIVADO_2017/tiled_convolution_CASA/tiled_convolution.sdk -hwspec /home/studio/VIVADO_2017/tiled_convolution_CASA/tiled_convolution.sdk/design_1_wrapper.hdf
+archive_project /home/studio/Progetto_vivado_e_sdk_quantizzazione.xpr.zip -force -include_local_ip_cache -include_config_settings

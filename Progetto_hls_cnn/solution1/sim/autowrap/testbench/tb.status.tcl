@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName zhang_convolution_quant.c_pre.c.tb.c

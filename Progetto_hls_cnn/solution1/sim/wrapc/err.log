@@ -1,0 +1,36 @@
+which: /media/dati/dante/Xilinx/Vivado/2017.3/lnx64/tools/gcc/bin/g++: u k ow  comma d
+In file included from apatb_zhang_cnn.cpp:18:0:
+/media/dati/dante/Xilinx/Vivado/2017.3/include/ap_stream.h:70:2: warning: #warning AP_STREAM macros are deprecated. Please use hls::stream<> from "hls_stream.h" instead. [-Wcpp]
+obj/net_parser.c_pre.c.tb.o: nella funzione "parse_network":
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:792: riferimento non definito a "mxml_opaque_cb"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:792: riferimento non definito a "mxmlLoadFile"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:804: riferimento non definito a "mxmlWalkNext"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:811: riferimento non definito a "mxmlGetElement"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:1089: riferimento non definito a "mxmlDelete"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:1353: riferimento non definito a "mxmlDelete"
+obj/net_parser.c_pre.c.tb.o: nella funzione "aesl_internal_parse_container":
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:2090: riferimento non definito a "mxmlElementGetAttr"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:2106: riferimento non definito a "mxmlElementGetAttr"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:2130: riferimento non definito a "mxmlElementGetAttr"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:2646: riferimento non definito a "mxmlWalkNext"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:3114: riferimento non definito a "mxmlGetElement"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:3137: riferimento non definito a "mxmlWalkNext"
+obj/net_parser.c_pre.c.tb.o: nella funzione "aesl_internal_parse_module":
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:4700: riferimento non definito a "mxmlElementGetAttr"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:5366: riferimento non definito a "mxmlElementGetAttr"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:5382: riferimento non definito a "mxmlElementGetAttr"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:5398: riferimento non definito a "mxmlElementGetAttr"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:5414: riferimento non definito a "mxmlElementGetAttr"
+obj/net_parser.c_pre.c.tb.o:/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:5430: seguono ulteriori riferimenti non definiti a "mxmlElementGetAttr"
+obj/net_parser.c_pre.c.tb.o: nella funzione "aesl_internal_parse_convolutional_mod":
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:6479: riferimento non definito a "mxmlWalkNext"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:6513: riferimento non definito a "mxmlWalkNext"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:6526: riferimento non definito a "mxmlGetOpaque"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:6532: riferimento non definito a "mxmlElementGetAttr"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:6560: riferimento non definito a "mxmlGetElement"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:6583: riferimento non definito a "mxmlGetElement"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:6606: riferimento non definito a "mxmlGetElement"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:6631: riferimento non definito a "mxmlGetOpaque"
+/tmp/apcc_db_studio/174141511864652524162/net_parser.c_pre.c.tb.c:6637: riferimento non definito a "mxmlElementGetAttr"
+collect2: ld returned 1 exit status
+make: *** [cosim.tv.exe] Errore 1

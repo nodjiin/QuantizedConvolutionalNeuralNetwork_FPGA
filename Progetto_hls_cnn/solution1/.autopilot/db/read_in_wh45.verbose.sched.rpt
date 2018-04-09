@@ -1,0 +1,468 @@
+
+
+================================================================
+== Vivado HLS Report for 'read_in_wh45'
+================================================================
+* Date:           Tue Nov 28 10:42:16 2017
+
+* Version:        2017.3 (Build 2018833 on Wed Oct 04 20:30:40 MDT 2017)
+* Project:        Prova_casa
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      9.63|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  1158|  2125|  1158|  2125|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |          |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |     9|     9|         1|          1|          1|     9|    yes   |
+        |- Loop 2  |  1131|  1131|         2|          1|          1|  1131|    yes   |
+        +----------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+  * Pipeline-1: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 2
+  Pipeline-0 : II = 1, D = 1, States = { 2 }
+  Pipeline-1 : II = 1, D = 2, States = { 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (exitcond_flatten)
+	2  / (!exitcond_flatten)
+3 --> 
+	4  / true
+4 --> 
+	6  / (exitcond_flatten8)
+	5  / (!exitcond_flatten8)
+5 --> 
+	4  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+
+* FSM state operations: 
+
+ <State 1> : 3.63ns
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %weights, [6 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 102400, [5 x i8]* @p_str19, [6 x i8]* @p_str20, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %weights, [6 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 102400, [5 x i8]* @p_str19, [6 x i8]* @p_str20, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %weights, [6 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 102400, [5 x i8]* @p_str19, [6 x i8]* @p_str20, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %weights, [6 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 102400, [5 x i8]* @p_str19, [6 x i8]* @p_str20, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %curr_layer_ker_w_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%curr_layer_out_h_rea = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_out_h)"
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%curr_layer_out_w_rea = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_out_w)"
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%weights_offset_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %weights_offset_2)"
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%input_offset_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %input_offset)"
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%col_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %col)"
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%row_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %row)"
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%ti_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %ti)"
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%to_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %to_r)"
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%curr_layer_str_h_rea = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_str_h)"
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%curr_layer_str_w_rea = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_str_w)"
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%curr_layer_ker_h_rea = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_ker_h)"
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%curr_layer_ker_w_rea = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_ker_w)"
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%curr_layer_out_ch_re = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_out_ch)"
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%curr_layer_in_ch_rea = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_in_ch)"
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%curr_layer_in_h_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_in_h)"
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%curr_layer_in_w_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_in_w)"
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%image_offset_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %image_offset)"
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%weights_offset_read_20 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %weights_offset)"
+ST_1 : Operation 33 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %curr_layer_ker_w_out, i32 %curr_layer_ker_w_rea)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %curr_layer_ker_h_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 35 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %curr_layer_ker_h_out, i32 %curr_layer_ker_h_rea)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %curr_layer_str_w_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 37 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %curr_layer_str_w_out, i32 %curr_layer_str_w_rea)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %curr_layer_str_h_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 39 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %curr_layer_str_h_out, i32 %curr_layer_str_h_rea)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %row_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 41 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %row_out, i32 %row_read)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %col_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 43 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %col_out, i32 %col_read)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %curr_layer_out_w_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 45 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %curr_layer_out_w_out, i32 %curr_layer_out_w_rea)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %curr_layer_out_h_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 47 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %curr_layer_out_h_out, i32 %curr_layer_out_h_rea)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %weights, [6 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 102400, [5 x i8]* @p_str19, [6 x i8]* @p_str20, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %weights, [6 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 102400, [5 x i8]* @p_str19, [6 x i8]* @p_str20, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %weights, [6 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 102400, [5 x i8]* @p_str19, [6 x i8]* @p_str20, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %weights, [6 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 102400, [5 x i8]* @p_str19, [6 x i8]* @p_str20, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 52 [1/1] (1.76ns)   --->   "br label %.preheader8.i.i.i" [Prova_casa/src/zhang_convolution_quant.c:66->Prova_casa/src/zhang_convolution_quant.c:253]
+
+ <State 2> : 8.66ns
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i4 [ 0, %entry ], [ %indvar_flatten_next, %.preheader8.preheader.i.i.i ]"
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%kh_0_i_i_i = phi i2 [ 0, %entry ], [ %tmp_i_i_mid2_v, %.preheader8.preheader.i.i.i ]" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%kw_0_i_i_i = phi i2 [ 0, %entry ], [ %kw, %.preheader8.preheader.i.i.i ]"
+ST_2 : Operation 56 [1/1] (1.30ns)   --->   "%exitcond_flatten = icmp eq i4 %indvar_flatten, -7"   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 57 [1/1] (1.73ns)   --->   "%indvar_flatten_next = add i4 %indvar_flatten, 1"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "br i1 %exitcond_flatten, label %.preheader.i.i.i.preheader, label %.preheader8.preheader.i.i.i"
+ST_2 : Operation 59 [1/1] (1.56ns)   --->   "%kh = add i2 %kh_0_i_i_i, 1" [Prova_casa/src/zhang_convolution_quant.c:66->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 9, i64 9, i64 9)"
+ST_2 : Operation 61 [1/1] (0.95ns)   --->   "%exitcond5_i_i_i = icmp eq i2 %kw_0_i_i_i, -1" [Prova_casa/src/zhang_convolution_quant.c:67->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 62 [1/1] (1.37ns)   --->   "%kw_0_i_i_i_mid2 = select i1 %exitcond5_i_i_i, i2 0, i2 %kw_0_i_i_i" [Prova_casa/src/zhang_convolution_quant.c:67->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 63 [1/1] (1.37ns)   --->   "%tmp_i_i_mid2_v = select i1 %exitcond5_i_i_i, i2 %kh, i2 %kh_0_i_i_i" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_i_i_mid2_cast = zext i2 %tmp_i_i_mid2_v to i5" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%tmp = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %tmp_i_i_mid2_v, i2 0)" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i4 %tmp to i5" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 67 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_s = sub i5 %p_shl_cast, %tmp_i_i_mid2_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 79 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.70> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_51_i_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str3)" [Prova_casa/src/zhang_convolution_quant.c:67->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:68->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_105_i_i_cast = zext i2 %kw_0_i_i_i_mid2 to i5" [Prova_casa/src/zhang_convolution_quant.c:67->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 71 [1/1] (3.40ns) (root node of TernaryAdder)   --->   "%tmp_52 = add i5 %tmp_s, %tmp_105_i_i_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 79 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.70> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_62_cast = sext i5 %tmp_52 to i64" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%weightsbuf_0_0_addr = getelementptr [9 x i10]* @weightsbuf_0_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%weightsbuf_0_1_addr = getelementptr [9 x i10]* @weightsbuf_0_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%weightsbuf_0_2_addr = getelementptr [9 x i10]* @weightsbuf_0_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%weightsbuf_1_0_addr = getelementptr [9 x i10]* @weightsbuf_1_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%weightsbuf_1_1_addr = getelementptr [9 x i10]* @weightsbuf_1_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%weightsbuf_1_2_addr = getelementptr [9 x i10]* @weightsbuf_1_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%weightsbuf_10_0_addr = getelementptr [9 x i10]* @weightsbuf_10_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%weightsbuf_10_1_addr = getelementptr [9 x i10]* @weightsbuf_10_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%weightsbuf_10_2_addr = getelementptr [9 x i10]* @weightsbuf_10_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%weightsbuf_11_0_addr = getelementptr [9 x i10]* @weightsbuf_11_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%weightsbuf_11_1_addr = getelementptr [9 x i10]* @weightsbuf_11_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%weightsbuf_11_2_addr = getelementptr [9 x i10]* @weightsbuf_11_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%weightsbuf_12_0_addr = getelementptr [9 x i10]* @weightsbuf_12_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%weightsbuf_12_1_addr = getelementptr [9 x i10]* @weightsbuf_12_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%weightsbuf_12_2_addr = getelementptr [9 x i10]* @weightsbuf_12_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%weightsbuf_13_0_addr = getelementptr [9 x i10]* @weightsbuf_13_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "%weightsbuf_13_1_addr = getelementptr [9 x i10]* @weightsbuf_13_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%weightsbuf_13_2_addr = getelementptr [9 x i10]* @weightsbuf_13_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%weightsbuf_14_0_addr = getelementptr [9 x i10]* @weightsbuf_14_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%weightsbuf_14_1_addr = getelementptr [9 x i10]* @weightsbuf_14_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "%weightsbuf_14_2_addr = getelementptr [9 x i10]* @weightsbuf_14_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%weightsbuf_15_0_addr = getelementptr [9 x i10]* @weightsbuf_15_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%weightsbuf_15_1_addr = getelementptr [9 x i10]* @weightsbuf_15_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%weightsbuf_15_2_addr = getelementptr [9 x i10]* @weightsbuf_15_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 97 [1/1] (0.00ns)   --->   "%weightsbuf_16_0_addr = getelementptr [9 x i10]* @weightsbuf_16_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%weightsbuf_16_1_addr = getelementptr [9 x i10]* @weightsbuf_16_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%weightsbuf_16_2_addr = getelementptr [9 x i10]* @weightsbuf_16_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%weightsbuf_17_0_addr = getelementptr [9 x i10]* @weightsbuf_17_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%weightsbuf_17_1_addr = getelementptr [9 x i10]* @weightsbuf_17_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%weightsbuf_17_2_addr = getelementptr [9 x i10]* @weightsbuf_17_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%weightsbuf_18_0_addr = getelementptr [9 x i10]* @weightsbuf_18_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%weightsbuf_18_1_addr = getelementptr [9 x i10]* @weightsbuf_18_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%weightsbuf_18_2_addr = getelementptr [9 x i10]* @weightsbuf_18_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%weightsbuf_19_0_addr = getelementptr [9 x i10]* @weightsbuf_19_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%weightsbuf_19_1_addr = getelementptr [9 x i10]* @weightsbuf_19_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 108 [1/1] (0.00ns)   --->   "%weightsbuf_19_2_addr = getelementptr [9 x i10]* @weightsbuf_19_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 109 [1/1] (0.00ns)   --->   "%weightsbuf_2_0_addr = getelementptr [9 x i10]* @weightsbuf_2_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%weightsbuf_2_1_addr = getelementptr [9 x i10]* @weightsbuf_2_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 111 [1/1] (0.00ns)   --->   "%weightsbuf_2_2_addr = getelementptr [9 x i10]* @weightsbuf_2_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 112 [1/1] (0.00ns)   --->   "%weightsbuf_20_0_addr = getelementptr [9 x i10]* @weightsbuf_20_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 113 [1/1] (0.00ns)   --->   "%weightsbuf_20_1_addr = getelementptr [9 x i10]* @weightsbuf_20_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 114 [1/1] (0.00ns)   --->   "%weightsbuf_20_2_addr = getelementptr [9 x i10]* @weightsbuf_20_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 115 [1/1] (0.00ns)   --->   "%weightsbuf_21_0_addr = getelementptr [9 x i10]* @weightsbuf_21_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 116 [1/1] (0.00ns)   --->   "%weightsbuf_21_1_addr = getelementptr [9 x i10]* @weightsbuf_21_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 117 [1/1] (0.00ns)   --->   "%weightsbuf_21_2_addr = getelementptr [9 x i10]* @weightsbuf_21_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 118 [1/1] (0.00ns)   --->   "%weightsbuf_22_0_addr = getelementptr [9 x i10]* @weightsbuf_22_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 119 [1/1] (0.00ns)   --->   "%weightsbuf_22_1_addr = getelementptr [9 x i10]* @weightsbuf_22_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 120 [1/1] (0.00ns)   --->   "%weightsbuf_22_2_addr = getelementptr [9 x i10]* @weightsbuf_22_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 121 [1/1] (0.00ns)   --->   "%weightsbuf_23_0_addr = getelementptr [9 x i10]* @weightsbuf_23_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 122 [1/1] (0.00ns)   --->   "%weightsbuf_23_1_addr = getelementptr [9 x i10]* @weightsbuf_23_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 123 [1/1] (0.00ns)   --->   "%weightsbuf_23_2_addr = getelementptr [9 x i10]* @weightsbuf_23_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 124 [1/1] (0.00ns)   --->   "%weightsbuf_24_0_addr = getelementptr [9 x i10]* @weightsbuf_24_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 125 [1/1] (0.00ns)   --->   "%weightsbuf_24_1_addr = getelementptr [9 x i10]* @weightsbuf_24_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 126 [1/1] (0.00ns)   --->   "%weightsbuf_24_2_addr = getelementptr [9 x i10]* @weightsbuf_24_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 127 [1/1] (0.00ns)   --->   "%weightsbuf_25_0_addr = getelementptr [9 x i10]* @weightsbuf_25_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 128 [1/1] (0.00ns)   --->   "%weightsbuf_25_1_addr = getelementptr [9 x i10]* @weightsbuf_25_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 129 [1/1] (0.00ns)   --->   "%weightsbuf_25_2_addr = getelementptr [9 x i10]* @weightsbuf_25_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 130 [1/1] (0.00ns)   --->   "%weightsbuf_26_0_addr = getelementptr [9 x i10]* @weightsbuf_26_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 131 [1/1] (0.00ns)   --->   "%weightsbuf_26_1_addr = getelementptr [9 x i10]* @weightsbuf_26_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 132 [1/1] (0.00ns)   --->   "%weightsbuf_26_2_addr = getelementptr [9 x i10]* @weightsbuf_26_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 133 [1/1] (0.00ns)   --->   "%weightsbuf_27_0_addr = getelementptr [9 x i10]* @weightsbuf_27_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 134 [1/1] (0.00ns)   --->   "%weightsbuf_27_1_addr = getelementptr [9 x i10]* @weightsbuf_27_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 135 [1/1] (0.00ns)   --->   "%weightsbuf_27_2_addr = getelementptr [9 x i10]* @weightsbuf_27_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 136 [1/1] (0.00ns)   --->   "%weightsbuf_3_0_addr = getelementptr [9 x i10]* @weightsbuf_3_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 137 [1/1] (0.00ns)   --->   "%weightsbuf_3_1_addr = getelementptr [9 x i10]* @weightsbuf_3_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 138 [1/1] (0.00ns)   --->   "%weightsbuf_3_2_addr = getelementptr [9 x i10]* @weightsbuf_3_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 139 [1/1] (0.00ns)   --->   "%weightsbuf_4_0_addr = getelementptr [9 x i10]* @weightsbuf_4_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 140 [1/1] (0.00ns)   --->   "%weightsbuf_4_1_addr = getelementptr [9 x i10]* @weightsbuf_4_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 141 [1/1] (0.00ns)   --->   "%weightsbuf_4_2_addr = getelementptr [9 x i10]* @weightsbuf_4_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 142 [1/1] (0.00ns)   --->   "%weightsbuf_5_0_addr = getelementptr [9 x i10]* @weightsbuf_5_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 143 [1/1] (0.00ns)   --->   "%weightsbuf_5_1_addr = getelementptr [9 x i10]* @weightsbuf_5_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 144 [1/1] (0.00ns)   --->   "%weightsbuf_5_2_addr = getelementptr [9 x i10]* @weightsbuf_5_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 145 [1/1] (0.00ns)   --->   "%weightsbuf_6_0_addr = getelementptr [9 x i10]* @weightsbuf_6_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 146 [1/1] (0.00ns)   --->   "%weightsbuf_6_1_addr = getelementptr [9 x i10]* @weightsbuf_6_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 147 [1/1] (0.00ns)   --->   "%weightsbuf_6_2_addr = getelementptr [9 x i10]* @weightsbuf_6_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 148 [1/1] (0.00ns)   --->   "%weightsbuf_7_0_addr = getelementptr [9 x i10]* @weightsbuf_7_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 149 [1/1] (0.00ns)   --->   "%weightsbuf_7_1_addr = getelementptr [9 x i10]* @weightsbuf_7_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 150 [1/1] (0.00ns)   --->   "%weightsbuf_7_2_addr = getelementptr [9 x i10]* @weightsbuf_7_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 151 [1/1] (0.00ns)   --->   "%weightsbuf_8_0_addr = getelementptr [9 x i10]* @weightsbuf_8_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 152 [1/1] (0.00ns)   --->   "%weightsbuf_8_1_addr = getelementptr [9 x i10]* @weightsbuf_8_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 153 [1/1] (0.00ns)   --->   "%weightsbuf_8_2_addr = getelementptr [9 x i10]* @weightsbuf_8_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 154 [1/1] (0.00ns)   --->   "%weightsbuf_9_0_addr = getelementptr [9 x i10]* @weightsbuf_9_0, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 155 [1/1] (0.00ns)   --->   "%weightsbuf_9_1_addr = getelementptr [9 x i10]* @weightsbuf_9_1, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 156 [1/1] (0.00ns)   --->   "%weightsbuf_9_2_addr = getelementptr [9 x i10]* @weightsbuf_9_2, i64 0, i64 %tmp_62_cast" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 157 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_0_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 158 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_0_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 159 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_0_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 160 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_1_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 161 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_1_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 162 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_1_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 163 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_2_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 164 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_2_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 165 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_2_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 166 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_3_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 167 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_3_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 168 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_3_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 169 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_4_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 170 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_4_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 171 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_4_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 172 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_5_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 173 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_5_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 174 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_5_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 175 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_6_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 176 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_6_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 177 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_6_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 178 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_7_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 179 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_7_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 180 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_7_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 181 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_8_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 182 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_8_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 183 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_8_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 184 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_9_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 185 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_9_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 186 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_9_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 187 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_10_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 188 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_10_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 189 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_10_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 190 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_11_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 191 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_11_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 192 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_11_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 193 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_12_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 194 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_12_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 195 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_12_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 196 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_13_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 197 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_13_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 198 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_13_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 199 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_14_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 200 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_14_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 201 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_14_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 202 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_15_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 203 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_15_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 204 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_15_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 205 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_16_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 206 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_16_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 207 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_16_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 208 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_17_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 209 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_17_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 210 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_17_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 211 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_18_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 212 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_18_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 213 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_18_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 214 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_19_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 215 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_19_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 216 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_19_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 217 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_20_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 218 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_20_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 219 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_20_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 220 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_21_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 221 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_21_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 222 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_21_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 223 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_22_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 224 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_22_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 225 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_22_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 226 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_23_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 227 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_23_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 228 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_23_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 229 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_24_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 230 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_24_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 231 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_24_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 232 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_25_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 233 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_25_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 234 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_25_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 235 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_26_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 236 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_26_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 237 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_26_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 238 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_27_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 239 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_27_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 240 [1/1] (2.32ns)   --->   "store i10 0, i10* %weightsbuf_27_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_2 : Operation 241 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str3, i32 %tmp_51_i_i)" [Prova_casa/src/zhang_convolution_quant.c:76->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_2 : Operation 242 [1/1] (1.56ns)   --->   "%kw = add i2 %kw_0_i_i_i_mid2, 1" [Prova_casa/src/zhang_convolution_quant.c:67->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 243 [1/1] (0.00ns)   --->   "br label %.preheader8.i.i.i" [Prova_casa/src/zhang_convolution_quant.c:67->Prova_casa/src/zhang_convolution_quant.c:253]
+
+ <State 3> : 1.77ns
+ST_3 : Operation 244 [1/1] (1.76ns)   --->   "br label %.preheader.i.i.i" [Prova_casa/src/zhang_convolution_quant.c:78->Prova_casa/src/zhang_convolution_quant.c:253]
+
+ <State 4> : 4.51ns
+ST_4 : Operation 245 [1/1] (0.00ns)   --->   "%indvar_flatten6 = phi i11 [ %indvar_flatten_next7, %.preheader7.i.i.i ], [ 0, %.preheader.i.i.i.preheader ]"
+ST_4 : Operation 246 [1/1] (0.00ns)   --->   "%r_0_i_i_i = phi i6 [ %tmp_i_i_mid2_v_21, %.preheader7.i.i.i ], [ 0, %.preheader.i.i.i.preheader ]" [Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_4 : Operation 247 [1/1] (0.00ns)   --->   "%c_0_i_i_i = phi i5 [ %c, %.preheader7.i.i.i ], [ 0, %.preheader.i.i.i.preheader ]"
+ST_4 : Operation 248 [1/1] (1.88ns)   --->   "%exitcond_flatten8 = icmp eq i11 %indvar_flatten6, -917"   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 249 [1/1] (1.97ns)   --->   "%indvar_flatten_next7 = add i11 %indvar_flatten6, 1"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 250 [1/1] (0.00ns)   --->   "br i1 %exitcond_flatten8, label %.exit, label %.preheader7.i.i.i"
+ST_4 : Operation 251 [1/1] (1.82ns)   --->   "%r = add i6 %r_0_i_i_i, 1" [Prova_casa/src/zhang_convolution_quant.c:78->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 252 [1/1] (1.36ns)   --->   "%exitcond1_i_i_i = icmp eq i5 %c_0_i_i_i, -3" [Prova_casa/src/zhang_convolution_quant.c:79->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 253 [1/1] (1.37ns)   --->   "%c_0_i_i_i_mid2 = select i1 %exitcond1_i_i_i, i5 0, i5 %c_0_i_i_i" [Prova_casa/src/zhang_convolution_quant.c:79->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 254 [1/1] (1.37ns)   --->   "%tmp_i_i_mid2_v_21 = select i1 %exitcond1_i_i_i, i6 %r, i6 %r_0_i_i_i" [Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 255 [1/1] (1.78ns)   --->   "%c = add i5 %c_0_i_i_i_mid2, 1" [Prova_casa/src/zhang_convolution_quant.c:79->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 5> : 9.63ns
+ST_5 : Operation 256 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1131, i64 1131, i64 1131)"
+ST_5 : Operation 257 [1/1] (0.00ns)   --->   "%tmp_i_i_mid2_cast_22 = zext i6 %tmp_i_i_mid2_v_21 to i11" [Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_5 : Operation 258 [1/1] (3.36ns)   --->   "%tmp_53 = mul i11 %tmp_i_i_mid2_cast_22, 29" [Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 6.38> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 259 [1/1] (0.00ns)   --->   "%tmp_52_i_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str6)" [Prova_casa/src/zhang_convolution_quant.c:79->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_5 : Operation 260 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:80->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_5 : Operation 261 [1/1] (0.00ns)   --->   "%tmp_106_i_i_cast = zext i5 %c_0_i_i_i_mid2 to i11" [Prova_casa/src/zhang_convolution_quant.c:79->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_5 : Operation 262 [1/1] (3.02ns)   --->   "%tmp_54 = add i11 %tmp_53, %tmp_106_i_i_cast" [Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 6.38> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 263 [1/1] (0.00ns)   --->   "%tmp_64_cast = zext i11 %tmp_54 to i64" [Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_5 : Operation 264 [1/1] (0.00ns)   --->   "%inputfm_0_addr = getelementptr [1131 x i10]* @inputfm_0, i64 0, i64 %tmp_64_cast" [Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_5 : Operation 265 [1/1] (0.00ns)   --->   "%inputfm_1_addr = getelementptr [1131 x i10]* @inputfm_1, i64 0, i64 %tmp_64_cast" [Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_5 : Operation 266 [1/1] (0.00ns)   --->   "%inputfm_2_addr = getelementptr [1131 x i10]* @inputfm_2, i64 0, i64 %tmp_64_cast" [Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_5 : Operation 267 [1/1] (3.25ns)   --->   "store i10 0, i10* %inputfm_0_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_5 : Operation 268 [1/1] (3.25ns)   --->   "store i10 0, i10* %inputfm_1_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_5 : Operation 269 [1/1] (3.25ns)   --->   "store i10 0, i10* %inputfm_2_addr, align 2" [Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 10> <Depth = 1131> <RAM>
+ST_5 : Operation 270 [1/1] (0.00ns)   --->   "%empty_23 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str6, i32 %tmp_52_i_i)" [Prova_casa/src/zhang_convolution_quant.c:85->Prova_casa/src/zhang_convolution_quant.c:253]
+ST_5 : Operation 271 [1/1] (0.00ns)   --->   "br label %.preheader.i.i.i" [Prova_casa/src/zhang_convolution_quant.c:79->Prova_casa/src/zhang_convolution_quant.c:253]
+
+ <State 6> : 8.51ns
+ST_6 : Operation 272 [2/2] (8.51ns)   --->   "call fastcc void @read_input(i8* %weights, i32 %image_offset_read, i32 %curr_layer_in_w_read, i32 %curr_layer_in_h_read, i32 %curr_layer_in_ch_rea, i32 %curr_layer_ker_w_rea, i32 %curr_layer_ker_h_rea, i32 %curr_layer_str_w_rea, i32 %curr_layer_str_h_rea, i32 %ti_read, i32 %row_read, i32 %col_read, [1131 x i10]* nocapture @inputfm_0, [1131 x i10]* nocapture @inputfm_1, [1131 x i10]* nocapture @inputfm_2, i32 %input_offset_read)" [Prova_casa/src/zhang_convolution_quant.c:254]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 7> : 0.00ns
+ST_7 : Operation 273 [1/2] (0.00ns)   --->   "call fastcc void @read_input(i8* %weights, i32 %image_offset_read, i32 %curr_layer_in_w_read, i32 %curr_layer_in_h_read, i32 %curr_layer_in_ch_rea, i32 %curr_layer_ker_w_rea, i32 %curr_layer_ker_h_rea, i32 %curr_layer_str_w_rea, i32 %curr_layer_str_h_rea, i32 %ti_read, i32 %row_read, i32 %col_read, [1131 x i10]* nocapture @inputfm_0, [1131 x i10]* nocapture @inputfm_1, [1131 x i10]* nocapture @inputfm_2, i32 %input_offset_read)" [Prova_casa/src/zhang_convolution_quant.c:254]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 8> : 8.51ns
+ST_8 : Operation 274 [2/2] (8.51ns)   --->   "call fastcc void @read_weights(i8* %weights, i32 %weights_offset_read_20, i32 %curr_layer_in_ch_rea, i32 %curr_layer_out_ch_re, i32 %curr_layer_ker_w_rea, i32 %curr_layer_ker_h_rea, i32 %to_read, i32 %ti_read, [9 x i10]* nocapture @weightsbuf_0_0, [9 x i10]* nocapture @weightsbuf_0_1, [9 x i10]* nocapture @weightsbuf_0_2, [9 x i10]* nocapture @weightsbuf_1_0, [9 x i10]* nocapture @weightsbuf_1_1, [9 x i10]* nocapture @weightsbuf_1_2, [9 x i10]* nocapture @weightsbuf_2_0, [9 x i10]* nocapture @weightsbuf_2_1, [9 x i10]* nocapture @weightsbuf_2_2, [9 x i10]* nocapture @weightsbuf_3_0, [9 x i10]* nocapture @weightsbuf_3_1, [9 x i10]* nocapture @weightsbuf_3_2, [9 x i10]* nocapture @weightsbuf_4_0, [9 x i10]* nocapture @weightsbuf_4_1, [9 x i10]* nocapture @weightsbuf_4_2, [9 x i10]* nocapture @weightsbuf_5_0, [9 x i10]* nocapture @weightsbuf_5_1, [9 x i10]* nocapture @weightsbuf_5_2, [9 x i10]* nocapture @weightsbuf_6_0, [9 x i10]* nocapture @weightsbuf_6_1, [9 x i10]* nocapture @weightsbuf_6_2, [9 x i10]* nocapture @weightsbuf_7_0, [9 x i10]* nocapture @weightsbuf_7_1, [9 x i10]* nocapture @weightsbuf_7_2, [9 x i10]* nocapture @weightsbuf_8_0, [9 x i10]* nocapture @weightsbuf_8_1, [9 x i10]* nocapture @weightsbuf_8_2, [9 x i10]* nocapture @weightsbuf_9_0, [9 x i10]* nocapture @weightsbuf_9_1, [9 x i10]* nocapture @weightsbuf_9_2, [9 x i10]* nocapture @weightsbuf_10_0, [9 x i10]* nocapture @weightsbuf_10_1, [9 x i10]* nocapture @weightsbuf_10_2, [9 x i10]* nocapture @weightsbuf_11_0, [9 x i10]* nocapture @weightsbuf_11_1, [9 x i10]* nocapture @weightsbuf_11_2, [9 x i10]* nocapture @weightsbuf_12_0, [9 x i10]* nocapture @weightsbuf_12_1, [9 x i10]* nocapture @weightsbuf_12_2, [9 x i10]* nocapture @weightsbuf_13_0, [9 x i10]* nocapture @weightsbuf_13_1, [9 x i10]* nocapture @weightsbuf_13_2, [9 x i10]* nocapture @weightsbuf_14_0, [9 x i10]* nocapture @weightsbuf_14_1, [9 x i10]* nocapture @weightsbuf_14_2, [9 x i10]* nocapture @weightsbuf_15_0, [9 x i10]* nocapture @weightsbuf_15_1, [9 x i10]* nocapture @weightsbuf_15_2, [9 x i10]* nocapture @weightsbuf_16_0, [9 x i10]* nocapture @weightsbuf_16_1, [9 x i10]* nocapture @weightsbuf_16_2, [9 x i10]* nocapture @weightsbuf_17_0, [9 x i10]* nocapture @weightsbuf_17_1, [9 x i10]* nocapture @weightsbuf_17_2, [9 x i10]* nocapture @weightsbuf_18_0, [9 x i10]* nocapture @weightsbuf_18_1, [9 x i10]* nocapture @weightsbuf_18_2, [9 x i10]* nocapture @weightsbuf_19_0, [9 x i10]* nocapture @weightsbuf_19_1, [9 x i10]* nocapture @weightsbuf_19_2, [9 x i10]* nocapture @weightsbuf_20_0, [9 x i10]* nocapture @weightsbuf_20_1, [9 x i10]* nocapture @weightsbuf_20_2, [9 x i10]* nocapture @weightsbuf_21_0, [9 x i10]* nocapture @weightsbuf_21_1, [9 x i10]* nocapture @weightsbuf_21_2, [9 x i10]* nocapture @weightsbuf_22_0, [9 x i10]* nocapture @weightsbuf_22_1, [9 x i10]* nocapture @weightsbuf_22_2, [9 x i10]* nocapture @weightsbuf_23_0, [9 x i10]* nocapture @weightsbuf_23_1, [9 x i10]* nocapture @weightsbuf_23_2, [9 x i10]* nocapture @weightsbuf_24_0, [9 x i10]* nocapture @weightsbuf_24_1, [9 x i10]* nocapture @weightsbuf_24_2, [9 x i10]* nocapture @weightsbuf_25_0, [9 x i10]* nocapture @weightsbuf_25_1, [9 x i10]* nocapture @weightsbuf_25_2, [9 x i10]* nocapture @weightsbuf_26_0, [9 x i10]* nocapture @weightsbuf_26_1, [9 x i10]* nocapture @weightsbuf_26_2, [9 x i10]* nocapture @weightsbuf_27_0, [9 x i10]* nocapture @weightsbuf_27_1, [9 x i10]* nocapture @weightsbuf_27_2, i32 %weights_offset_read)" [Prova_casa/src/zhang_convolution_quant.c:255]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 9> : 0.00ns
+ST_9 : Operation 275 [1/2] (0.00ns)   --->   "call fastcc void @read_weights(i8* %weights, i32 %weights_offset_read_20, i32 %curr_layer_in_ch_rea, i32 %curr_layer_out_ch_re, i32 %curr_layer_ker_w_rea, i32 %curr_layer_ker_h_rea, i32 %to_read, i32 %ti_read, [9 x i10]* nocapture @weightsbuf_0_0, [9 x i10]* nocapture @weightsbuf_0_1, [9 x i10]* nocapture @weightsbuf_0_2, [9 x i10]* nocapture @weightsbuf_1_0, [9 x i10]* nocapture @weightsbuf_1_1, [9 x i10]* nocapture @weightsbuf_1_2, [9 x i10]* nocapture @weightsbuf_2_0, [9 x i10]* nocapture @weightsbuf_2_1, [9 x i10]* nocapture @weightsbuf_2_2, [9 x i10]* nocapture @weightsbuf_3_0, [9 x i10]* nocapture @weightsbuf_3_1, [9 x i10]* nocapture @weightsbuf_3_2, [9 x i10]* nocapture @weightsbuf_4_0, [9 x i10]* nocapture @weightsbuf_4_1, [9 x i10]* nocapture @weightsbuf_4_2, [9 x i10]* nocapture @weightsbuf_5_0, [9 x i10]* nocapture @weightsbuf_5_1, [9 x i10]* nocapture @weightsbuf_5_2, [9 x i10]* nocapture @weightsbuf_6_0, [9 x i10]* nocapture @weightsbuf_6_1, [9 x i10]* nocapture @weightsbuf_6_2, [9 x i10]* nocapture @weightsbuf_7_0, [9 x i10]* nocapture @weightsbuf_7_1, [9 x i10]* nocapture @weightsbuf_7_2, [9 x i10]* nocapture @weightsbuf_8_0, [9 x i10]* nocapture @weightsbuf_8_1, [9 x i10]* nocapture @weightsbuf_8_2, [9 x i10]* nocapture @weightsbuf_9_0, [9 x i10]* nocapture @weightsbuf_9_1, [9 x i10]* nocapture @weightsbuf_9_2, [9 x i10]* nocapture @weightsbuf_10_0, [9 x i10]* nocapture @weightsbuf_10_1, [9 x i10]* nocapture @weightsbuf_10_2, [9 x i10]* nocapture @weightsbuf_11_0, [9 x i10]* nocapture @weightsbuf_11_1, [9 x i10]* nocapture @weightsbuf_11_2, [9 x i10]* nocapture @weightsbuf_12_0, [9 x i10]* nocapture @weightsbuf_12_1, [9 x i10]* nocapture @weightsbuf_12_2, [9 x i10]* nocapture @weightsbuf_13_0, [9 x i10]* nocapture @weightsbuf_13_1, [9 x i10]* nocapture @weightsbuf_13_2, [9 x i10]* nocapture @weightsbuf_14_0, [9 x i10]* nocapture @weightsbuf_14_1, [9 x i10]* nocapture @weightsbuf_14_2, [9 x i10]* nocapture @weightsbuf_15_0, [9 x i10]* nocapture @weightsbuf_15_1, [9 x i10]* nocapture @weightsbuf_15_2, [9 x i10]* nocapture @weightsbuf_16_0, [9 x i10]* nocapture @weightsbuf_16_1, [9 x i10]* nocapture @weightsbuf_16_2, [9 x i10]* nocapture @weightsbuf_17_0, [9 x i10]* nocapture @weightsbuf_17_1, [9 x i10]* nocapture @weightsbuf_17_2, [9 x i10]* nocapture @weightsbuf_18_0, [9 x i10]* nocapture @weightsbuf_18_1, [9 x i10]* nocapture @weightsbuf_18_2, [9 x i10]* nocapture @weightsbuf_19_0, [9 x i10]* nocapture @weightsbuf_19_1, [9 x i10]* nocapture @weightsbuf_19_2, [9 x i10]* nocapture @weightsbuf_20_0, [9 x i10]* nocapture @weightsbuf_20_1, [9 x i10]* nocapture @weightsbuf_20_2, [9 x i10]* nocapture @weightsbuf_21_0, [9 x i10]* nocapture @weightsbuf_21_1, [9 x i10]* nocapture @weightsbuf_21_2, [9 x i10]* nocapture @weightsbuf_22_0, [9 x i10]* nocapture @weightsbuf_22_1, [9 x i10]* nocapture @weightsbuf_22_2, [9 x i10]* nocapture @weightsbuf_23_0, [9 x i10]* nocapture @weightsbuf_23_1, [9 x i10]* nocapture @weightsbuf_23_2, [9 x i10]* nocapture @weightsbuf_24_0, [9 x i10]* nocapture @weightsbuf_24_1, [9 x i10]* nocapture @weightsbuf_24_2, [9 x i10]* nocapture @weightsbuf_25_0, [9 x i10]* nocapture @weightsbuf_25_1, [9 x i10]* nocapture @weightsbuf_25_2, [9 x i10]* nocapture @weightsbuf_26_0, [9 x i10]* nocapture @weightsbuf_26_1, [9 x i10]* nocapture @weightsbuf_26_2, [9 x i10]* nocapture @weightsbuf_27_0, [9 x i10]* nocapture @weightsbuf_27_1, [9 x i10]* nocapture @weightsbuf_27_2, i32 %weights_offset_read)" [Prova_casa/src/zhang_convolution_quant.c:255]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 276 [1/1] (0.00ns)   --->   "ret void"
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 3.63ns
+The critical path consists of the following:
+	wire read on port 'curr_layer_out_h' [120]  (0 ns)
+	fifo write on port 'curr_layer_out_h_out' [152]  (3.63 ns)
+
+ <State 2>: 8.66ns
+The critical path consists of the following:
+	'phi' operation ('kh_0_i_i_i', Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253) with incoming values : ('tmp_i_i_mid2_v', Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253) [160]  (0 ns)
+	'add' operation ('kh', Prova_casa/src/zhang_convolution_quant.c:66->Prova_casa/src/zhang_convolution_quant.c:253) [166]  (1.56 ns)
+	'select' operation ('tmp_i_i_mid2_v', Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253) [170]  (1.37 ns)
+	'sub' operation ('tmp_s', Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253) [174]  (0 ns)
+	'add' operation ('tmp_52', Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253) [178]  (3.4 ns)
+	'getelementptr' operation ('weightsbuf_6_0_addr', Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253) [252]  (0 ns)
+	'store' operation (Prova_casa/src/zhang_convolution_quant.c:73->Prova_casa/src/zhang_convolution_quant.c:253) of constant 0 on array 'weightsbuf_6_0' [282]  (2.32 ns)
+
+ <State 3>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten6') with incoming values : ('indvar_flatten_next7') [354]  (1.77 ns)
+
+ <State 4>: 4.51ns
+The critical path consists of the following:
+	'phi' operation ('c') with incoming values : ('c', Prova_casa/src/zhang_convolution_quant.c:79->Prova_casa/src/zhang_convolution_quant.c:253) [356]  (0 ns)
+	'icmp' operation ('exitcond1_i_i_i', Prova_casa/src/zhang_convolution_quant.c:79->Prova_casa/src/zhang_convolution_quant.c:253) [363]  (1.36 ns)
+	'select' operation ('c_0_i_i_i_mid2', Prova_casa/src/zhang_convolution_quant.c:79->Prova_casa/src/zhang_convolution_quant.c:253) [364]  (1.37 ns)
+	'add' operation ('c', Prova_casa/src/zhang_convolution_quant.c:79->Prova_casa/src/zhang_convolution_quant.c:253) [380]  (1.78 ns)
+
+ <State 5>: 9.63ns
+The critical path consists of the following:
+	'mul' operation ('tmp_53', Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253) [367]  (3.36 ns)
+	'add' operation ('tmp_54', Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253) [371]  (3.02 ns)
+	'getelementptr' operation ('inputfm_0_addr', Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253) [373]  (0 ns)
+	'store' operation (Prova_casa/src/zhang_convolution_quant.c:83->Prova_casa/src/zhang_convolution_quant.c:253) of constant 0 on array 'inputfm_0' [376]  (3.25 ns)
+
+ <State 6>: 8.51ns
+The critical path consists of the following:
+	'call' operation (Prova_casa/src/zhang_convolution_quant.c:254) to 'read_input' [383]  (8.51 ns)
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 8.51ns
+The critical path consists of the following:
+	'call' operation (Prova_casa/src/zhang_convolution_quant.c:255) to 'read_weights' [384]  (8.51 ns)
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

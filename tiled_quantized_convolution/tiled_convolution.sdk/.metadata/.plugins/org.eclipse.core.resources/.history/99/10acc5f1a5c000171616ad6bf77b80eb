@@ -1,0 +1,290 @@
+/*
+* Alessandro Maragno - 09/11/2016
+* convolutional_module.c
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "convolutional_module.h"
+#include "xtime_l.h"
+//#define MARAGNO
+//#define TEST
+#define PRINT
+module init_convolutional_mod(	int n_fil, 
+								int ker_h, 
+								int ker_w, 
+								int pad_h, 
+								int pad_w, 
+								int stride_h, 
+								int stride_w,
+								int input_depth,
+								tensor_data_t *weights,
+								tensor_data_t *bias	)
+{
+	module new_conv_mod = {0};
+	
+	new_conv_mod.stride_h = stride_h < 1 ? 1 : stride_h; // default is 1
+	new_conv_mod.stride_w = stride_w < 1 ? 1 : stride_w; // default is 1
+	
+	new_conv_mod.pad_h = pad_h < 0 ? 0 : pad_h; // default is 0
+	new_conv_mod.pad_w = pad_w < 0 ? 0 : pad_w; // default is 0
+	
+	new_conv_mod.ker_h = ker_h;
+	new_conv_mod.ker_w = ker_w;
+	
+	new_conv_mod.filters = calloc(n_fil, sizeof(tensor));
+	
+	// TEST
+	_mem_alloc_by_model += n_fil*sizeof(tensor);
+	
+	int fil;
+	if(weights)
+	{
+		tensor_data_t *weights_ptr = weights;
+		int i;
+		
+		for(fil = 0; fil < n_fil; fil++)
+		{
+			new_conv_mod.filters[fil] = init_tensor(input_depth, ker_w, ker_h, 0);
+			// TEST
+			_mem_alloc_by_model += input_depth*ker_w*ker_h*sizeof(tensor_data_t);
+			
+			for(i = 0; i < input_depth*ker_w*ker_h; i++)
+			{
+				new_conv_mod.filters[fil].data[i] = *weights_ptr;
+				
+				weights_ptr++;
+			}
+		}
+		
+		free(weights);
+	}
+	else for(fil = 0; fil < n_fil; fil++) new_conv_mod.filters[fil] = init_tensor(input_depth, ker_w, ker_h, 1);
+	
+	if(bias)
+	{
+		new_conv_mod.bias.d = n_fil;
+		new_conv_mod.bias.w = 1;
+		new_conv_mod.bias.h = 1;
+		
+		// TEST
+		_mem_alloc_by_model += n_fil*sizeof(tensor_data_t);
+		
+		new_conv_mod.bias.data = bias; 
+	} 
+	else new_conv_mod.bias = init_tensor(n_fil, 1, 1, 1);
+	
+	new_conv_mod.n_filters = n_fil;
+	
+	return new_conv_mod;
+}
+
+void inline forward_convolutional_mod(module *cm)
+{
+	tensor out_vol;
+	
+	out_vol.w = (cm->input[0].w - cm->filters[0].w + 2*cm->pad_w)/cm->stride_w + 1;
+	out_vol.h = (cm->input[0].h - cm->filters[0].h + 2*cm->pad_h)/cm->stride_h + 1;
+	out_vol.d = cm->n_filters;
+
+	int out_len = out_vol.d*out_vol.w*out_vol.h;
+
+	out_vol.data = calloc(out_vol.w*out_vol.h*out_vol.d, sizeof(tensor_data_t));
+	
+	// TEST
+	_mem_alloc_by_volumes += out_vol.d*out_vol.w*out_vol.h*sizeof(tensor_data_t);
+
+    layer_config curr_layer;
+      
+      curr_layer.in_ch = (short) cm->input[0].d;
+	  curr_layer.in_h = (short) cm->input[0].h;
+	  curr_layer.in_w = (short) cm->input[0].w;
+	  curr_layer.ker_w = (short) cm->filters[0].w;
+	  curr_layer.ker_h = (short) cm->filters[0].h;
+      curr_layer.ker_ch = (short) cm->n_filters;
+	  //layer.n_layer = 1;
+	  curr_layer.pad_w = (short) cm->pad_w;
+	  curr_layer.pad_h = (short) cm->pad_h;
+	  curr_layer.relu = (short) 0;
+	  curr_layer.str_w = (short) cm->stride_w;
+	  curr_layer.str_h = (short) cm->stride_h;
+	  curr_layer.out_ch = (short) cm->n_filters;
+	  curr_layer.out_h = (short) (cm->input[0].h - cm->filters[0].h + 2*cm->pad_h)/cm->stride_h + 1;
+	  curr_layer.out_w = (short) (cm->input[0].w - cm->filters[0].w + 2*cm->pad_w)/cm->stride_w + 1;
+	  curr_layer.has_bias = (short) 0;
+	
+      if(cm->bias.data)
+	    curr_layer.has_bias = (short) 1;
+
+
+       //MI SERVE UN UNICO VETTORONE CON TUTTI I PESI, NON UN VETTORE DI TENSORI
+        
+        tensor_data_t *weights_ptr = calloc(curr_layer.ker_w*curr_layer.ker_h*curr_layer.in_ch*cm->n_filters, sizeof(tensor_data_t));
+		int fil,i, pos = 0;
+		
+		//printf("Ho %d pesi:\n",curr_layer.ker_w*curr_layer.ker_h*curr_layer.in_ch*cm->n_filters);
+		for(fil = 0; fil < cm->n_filters; fil++)
+		{
+			//printf("Depth %d\n",fil);
+
+			for(i = 0; i < curr_layer.in_ch*curr_layer.ker_w*curr_layer.ker_h; i++)
+			{
+				weights_ptr[pos] = cm->filters[fil].data[i];
+		//	printf("%.19f ",weights_ptr[pos]);
+				pos++;
+			}
+		}
+		
+	/*	printf("BIAS:\n");
+		for(i = 0; i < cm->n_filters; i++){
+			printf("%f ", cm->bias.data[i]);
+		}
+*/
+#ifdef TEST
+    printf("\nLAYER CONFIG:\n");
+    printf("in_w: %d in_h: %d in_ch: %d \n", curr_layer.in_w, curr_layer.in_h, curr_layer.in_ch);
+    printf("out_w: %d out_h: %d out_ch: %d \n", curr_layer.out_w, curr_layer.out_h, curr_layer.out_ch);
+    printf("ker_w: %d ker_h: %d ker_ch: %d \n", curr_layer.ker_w, curr_layer.ker_h, curr_layer.ker_ch);
+    printf("str_w: %d str_h: %d pad_w: %d pad_h: %d\n",curr_layer.str_w, curr_layer.str_h,curr_layer.pad_w, curr_layer.pad_h);
+#endif TEST
+/*	printf("123INPUT SIZE %d\n",curr_layer.in_w*curr_layer.in_h*curr_layer.in_ch );
+    printf("123OUTPUT SIZE %d\n",curr_layer.out_w*curr_layer.out_h*curr_layer.out_ch );
+    printf("123FILTERS SIZE %d\n",curr_layer.ker_w*curr_layer.ker_h*curr_layer.ker_ch );
+    printf("123BIAS SIZE %d\n",curr_layer.out_ch );
+*/
+/*
+	XConvolve_tensors InstancePtr;
+    u16 DeviceId = 0;
+
+    XConvolve_tensors_Initialize(&InstancePtr, DeviceId);
+*/
+	//tensor_data_t *output_test = (tensor_data_t *) calloc( curr_layer.out_h* curr_layer.out_w* curr_layer.out_ch,sizeof(float) );
+
+
+//    set_fpga_test(InstancePtr,output_test);
+
+   // set_fpga(InstancePtr, curr_layer, (*cm->input).data, out_vol.data,weights_ptr,cm->bias.data);
+	XZhang_cnn InstancePtr;
+    u16 DeviceId = 0;
+    XZhang_cnn_Config* ConfigPtr;
+
+
+	ConfigPtr = XZhang_cnn_LookupConfig(DeviceId);
+	XZhang_cnn_CfgInitialize(&InstancePtr, ConfigPtr);
+
+	set_fpga_cnn(InstancePtr, curr_layer, (*cm->input).data, out_vol.data,weights_ptr,cm->bias.data);
+/*
+	printf("Input addr: %p\n",(*cm->input).data);
+    printf("Output addr: %p\n",out_vol.data);
+    printf("Pesi addr: %p\n",weights_ptr);
+    printf("Bias addr: %p\n",cm->bias.data);
+*/
+  //  print_tensors_config(InstancePtr);
+
+#ifdef PRINT
+    XTime tStart, tEnd;
+
+
+
+    // XConvolve_tensors_Start(&InstancePtr);
+    Xil_DCacheFlush();
+    XTime_GetTime(&tStart);
+#else
+    Xil_DCacheFlush();
+#endif
+#ifdef MARAGNO
+    convolve_tensors(out_vol.data,(*cm->input).data,weights_ptr,cm->bias.data,curr_layer);
+#else
+    XZhang_cnn_Start(&InstancePtr);
+
+
+   // printf("Controllo isDone\n");
+   // while(!XConvolve_tensors_IsDone(&InstancePtr)){ };//printf("Sto aspettando\n"); }
+    while(!XZhang_cnn_IsDone(&InstancePtr)){ };//printf("Sto aspettando\n"); }
+#endif
+#ifdef PRINT
+    XTime_GetTime(&tEnd);
+
+    printf("Finito isDone\n");
+    Xil_DCacheFlush();
+
+    printf("Output took %llu clock cycles.\n", 2*(tEnd - tStart));
+    float time =  1.0 * (tEnd - tStart) / (COUNTS_PER_SECOND/1000000);
+
+    printf("Output took %.2f us.\n",time);
+#else
+   Xil_DCacheFlush();
+#endif
+    //XCnn_Start(&InstancePtr);
+
+    //XTime_GetTime(&tEnd);
+
+   // printf("Output took %llu clock cycles.\n", 2*(tEnd - tStart));
+  //  printf("MARAGNO Output took %.2f us.\n",
+  //         1.0 * (tEnd - tStart) / (COUNTS_PER_SECOND/1000000));
+    /*
+    printf("\n\nOUTPUT PROVAAAAA\n\n");
+    printf("%f %f %f %f %f %f\n", output_test[0],output_test[1],output_test[2],
+    							output_test[3],output_test[4],output_test[5]);
+*/
+	//convolve_tensors(out_vol.data,cm->input[0].data, weights_ptr, cm->bias.data, curr_layer);
+	
+    //tensor_data_t *ptr_prova = ( tensor_data_t *) out_vol.data_addr;
+
+	cm->output = out_vol;
+	print_tensor(out_vol);
+
+	//printf("\nTENSORE BIAS: \n");
+	//print_tensor(cm->bias);
+	//printf("\nTENSORE DI INPUT: \n");
+	//print_tensor(*cm->input);
+	//printf("\nTENSORE DI OUTPUT CON ADDRESS: \n");
+	//printf("%.19f %.19f %.19f \n", ptr_prova[0], ptr_prova[1], ptr_prova[3]);
+#ifdef TEST
+printf("\nTENSORE DI OUTPUT: \n");
+print_tensor(out_vol);
+#endif
+	//free_tensor(&out_vol);
+}
+
+void print_convolutional_mod(module cm, int print_tensors)
+{
+	printf("CONVOLUTIONAL MODULE:\n");
+	printf("[%d] filters with kernel size: %dx%dx%d\n", cm.n_filters, cm.filters[0].d, cm.ker_w, cm.ker_h);
+	printf("bias with size: %dx%dx%d\n", cm.bias.d, cm.bias.w, cm.bias.h);
+	printf("Applying horizontal stride of %d and vertical stride of %d\n", cm.stride_w, cm.stride_h);
+	
+	if(!cm.pad_h && !cm.pad_w) printf("No zero padding\n");
+	else printf("Zero padding: horizontal = %d, vertical = %d\n", cm.pad_w, cm.pad_h);
+	
+	if(print_tensors)
+	{
+		printf("Input:\n"); 
+		if(cm.input)
+			print_tensor(cm.input[0]);
+		else printf("Input of size\t%dx%dx%d\n", 0, 0, 0);
+		printf("\n");
+		
+		int i;
+		for(i = 0; i < cm.n_filters; i++)
+		{
+			printf("Filter #%d:\n", i);
+			print_tensor(cm.filters[i]);
+			printf("\n");
+		}
+		
+		printf("Bias:\n");
+		print_tensor(cm.bias);
+		
+		printf("Output:\n"); print_tensor(cm.output);
+	}
+	else
+	{
+		if(cm.input)
+			printf("input of size\t%dx%dx%d\n", cm.input[0].d, cm.input[0].w, cm.input[0].h);
+		else printf("Input of size\t%dx%dx%d\n", 0, 0, 0);
+		
+		printf("output of size\t%dx%dx%d\n", cm.output.d, cm.output.w, cm.output.h);
+	}
+}

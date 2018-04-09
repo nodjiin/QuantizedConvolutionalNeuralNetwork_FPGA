@@ -1,0 +1,48 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'zhang_cnn'" level="0">
+<item name = "Date">Tue Nov 28 10:42:32 2017
+</item>
+<item name = "Version">2017.3 (Build 2018833 on Wed Oct 04 20:30:40 MDT 2017)</item>
+<item name = "Project">Prova_casa</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.63, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">81159900, 2612824446, 81159901, 2612824447, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- row_loop">81159864, 2612824410, 3381661 ~ 87094147, -, -, 24 ~ 30, no</column>
+<column name=" + col_loop">3381624, 87094110, 140901 ~ 2903137, -, -, 24 ~ 30, no</column>
+<column name="  ++ to_loop">140864, 2903100, 2201 ~ 29031, -, -, 64 ~ 100, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

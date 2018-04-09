@@ -1,0 +1,43 @@
+verilog xil_defaultlib --include "../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/d5d3/hdl/verilog" --include "../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/e0a2/hdl" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/aesl_mux_load_28_37_s.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/convolve4.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_in_channbEo.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_in_channbEo_memcore.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_in_channels.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_in_channibs.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_in_channibs_memcore.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_out_chanbIp.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_out_chanbIp_memcore.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_out_channel.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/dataflow_out_channel_1.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/fifo_w32_d1_A.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/fifo_w32_d1_A_x.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/read_in_wh45.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/read_input.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/read_weights.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/set_out_buffer_to_0.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/write_output.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_control_s_axi.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_gmem_m_axi.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mac_mulbkb.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mac_mulcud.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mac_mulfYi.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mac_mulg8j.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mac_mulhbi.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mul_64ndEe.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_mul_96neOg.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_partialcau.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_srem_32bHp.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_srem_32cCy.v" \
+"../../../../tiled_convolution.srcs/sources_1/bd/design_1/ipshared/733d/hdl/verilog/zhang_cnn_srem_32cDy.v" \
+"../../../bd/design_1/ip/design_1_zhang_cnn_0_0/sim/design_1_zhang_cnn_0_0.v" \
+"../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
+"../../../bd/design_1/ip/design_1_auto_us_0/sim/design_1_auto_us_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

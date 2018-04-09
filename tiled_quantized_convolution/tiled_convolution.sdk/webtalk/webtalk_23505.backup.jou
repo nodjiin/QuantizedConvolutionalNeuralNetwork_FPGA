@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# 
+# Start of session at: Fri Nov  3 16:48:14 2017
+# Process ID: 23505
+# Current directory: /home/studio/VIVADO_2017/tiled_convolution/tiled_convolution.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/studio/VIVADO_2017/tiled_convolution/tiled_convolution.sdk/webtalk/webtalk.log
+# Journal file: /home/studio/VIVADO_2017/tiled_convolution/tiled_convolution.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

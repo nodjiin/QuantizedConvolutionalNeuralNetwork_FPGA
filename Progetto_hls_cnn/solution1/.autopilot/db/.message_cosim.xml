@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[COSIM 212-47]" severity="info" keynum="COSIM_TCL_47_1115" content="Using XSIM for RTL simulation." tag=""/>
+	<Message prefix="[COSIM 212-14]" severity="info" keynum="COSIM_TCL_14_1084" content="Instrumenting C test bench ..." tag=""/>
+	<Message prefix="[COSIM 212-369]" severity="warn" keynum="COSIM_TCL_369_1240" content="AXI_master port &apos;image&apos; has a depth of &apos;102400&apos;. Insufficient depth may result in simulation mismatch or freeze." tag=""/>
+	<Message prefix="[COSIM 212-369]" severity="warn" keynum="COSIM_TCL_369_1240" content="AXI_master port &apos;weights&apos; has a depth of &apos;102400&apos;. Insufficient depth may result in simulation mismatch or freeze." tag=""/>
+	<Message prefix="[COSIM 212-369]" severity="warn" keynum="COSIM_TCL_369_1240" content="AXI_master port &apos;out&apos; has a depth of &apos;102400&apos;. Insufficient depth may result in simulation mismatch or freeze." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1427" content="Running &apos;/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1428" content="For user &apos;studio&apos; on host &apos;dante-X55C&apos; (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:23:33 CET 2017" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1429" content="On os Linux Mint 18.2 Sonya" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1430" content="In directory &apos;/home/studio/Prova_casa/solution1/sim/wrapc&apos;" tag=""/>
+	<Message prefix="[APCC 202-3]" severity="info" keynum="APCC_3_1610" content="Tmp directory is /tmp/apcc_db_studio/170601511864613314500" tag=""/>
+	<Message prefix="[APCC 202-1]" severity="info" keynum="APCC_1_1611" content="APCC is done." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1427" content="Running &apos;/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1428" content="For user &apos;studio&apos; on host &apos;dante-X55C&apos; (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:23:39 CET 2017" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1429" content="On os Linux Mint 18.2 Sonya" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1430" content="In directory &apos;/home/studio/Prova_casa/solution1/sim/wrapc&apos;" tag=""/>
+	<Message prefix="[APCC 202-3]" severity="info" keynum="APCC_3_1610" content="Tmp directory is /tmp/apcc_db_studio/171191511864619988884" tag=""/>
+	<Message prefix="[APCC 202-1]" severity="info" keynum="APCC_1_1611" content="APCC is done." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1427" content="Running &apos;/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1428" content="For user &apos;studio&apos; on host &apos;dante-X55C&apos; (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:23:46 CET 2017" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1429" content="On os Linux Mint 18.2 Sonya" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1430" content="In directory &apos;/home/studio/Prova_casa/solution1/sim/wrapc&apos;" tag=""/>
+	<Message prefix="[APCC 202-3]" severity="info" keynum="APCC_3_1610" content="Tmp directory is /tmp/apcc_db_studio/171771511864626584042" tag=""/>
+	<Message prefix="[APCC 202-1]" severity="info" keynum="APCC_1_1611" content="APCC is done." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1427" content="Running &apos;/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1428" content="For user &apos;studio&apos; on host &apos;dante-X55C&apos; (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:23:53 CET 2017" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1429" content="On os Linux Mint 18.2 Sonya" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1430" content="In directory &apos;/home/studio/Prova_casa/solution1/sim/wrapc&apos;" tag=""/>
+	<Message prefix="[APCC 202-3]" severity="info" keynum="APCC_3_1610" content="Tmp directory is /tmp/apcc_db_studio/172361511864633519381" tag=""/>
+	<Message prefix="[APCC 202-1]" severity="info" keynum="APCC_1_1611" content="APCC is done." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1427" content="Running &apos;/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1428" content="For user &apos;studio&apos; on host &apos;dante-X55C&apos; (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:23:59 CET 2017" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1429" content="On os Linux Mint 18.2 Sonya" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1430" content="In directory &apos;/home/studio/Prova_casa/solution1/sim/wrapc&apos;" tag=""/>
+	<Message prefix="[APCC 202-3]" severity="info" keynum="APCC_3_1610" content="Tmp directory is /tmp/apcc_db_studio/172941511864640083177" tag=""/>
+	<Message prefix="[APCC 202-1]" severity="info" keynum="APCC_1_1611" content="APCC is done." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1427" content="Running &apos;/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1428" content="For user &apos;studio&apos; on host &apos;dante-X55C&apos; (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:24:06 CET 2017" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1429" content="On os Linux Mint 18.2 Sonya" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1430" content="In directory &apos;/home/studio/Prova_casa/solution1/sim/wrapc&apos;" tag=""/>
+	<Message prefix="[APCC 202-3]" severity="info" keynum="APCC_3_1610" content="Tmp directory is /tmp/apcc_db_studio/173561511864646285247" tag=""/>
+	<Message prefix="[APCC 202-1]" severity="info" keynum="APCC_1_1611" content="APCC is done." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1427" content="Running &apos;/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1428" content="For user &apos;studio&apos; on host &apos;dante-X55C&apos; (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:24:12 CET 2017" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1429" content="On os Linux Mint 18.2 Sonya" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1430" content="In directory &apos;/home/studio/Prova_casa/solution1/sim/wrapc&apos;" tag=""/>
+	<Message prefix="[APCC 202-3]" severity="info" keynum="APCC_3_1610" content="Tmp directory is /tmp/apcc_db_studio/174141511864652524162" tag=""/>
+	<Message prefix="[APCC 202-1]" severity="info" keynum="APCC_1_1611" content="APCC is done." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1427" content="Running &apos;/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1428" content="For user &apos;studio&apos; on host &apos;dante-X55C&apos; (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:24:19 CET 2017" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1429" content="On os Linux Mint 18.2 Sonya" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1430" content="In directory &apos;/home/studio/Prova_casa/solution1/sim/wrapc&apos;" tag=""/>
+	<Message prefix="[APCC 202-3]" severity="info" keynum="APCC_3_1610" content="Tmp directory is /tmp/apcc_db_studio/174771511864659503318" tag=""/>
+	<Message prefix="[APCC 202-1]" severity="info" keynum="APCC_1_1611" content="APCC is done." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1427" content="Running &apos;/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1428" content="For user &apos;studio&apos; on host &apos;dante-X55C&apos; (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:24:25 CET 2017" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1429" content="On os Linux Mint 18.2 Sonya" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1430" content="In directory &apos;/home/studio/Prova_casa/solution1/sim/wrapc&apos;" tag=""/>
+	<Message prefix="[APCC 202-3]" severity="info" keynum="APCC_3_1610" content="Tmp directory is /tmp/apcc_db_studio/175651511864665682449" tag=""/>
+	<Message prefix="[APCC 202-1]" severity="info" keynum="APCC_1_1611" content="APCC is done." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1427" content="Running &apos;/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1428" content="For user &apos;studio&apos; on host &apos;dante-X55C&apos; (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:24:31 CET 2017" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1429" content="On os Linux Mint 18.2 Sonya" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1430" content="In directory &apos;/home/studio/Prova_casa/solution1/sim/wrapc&apos;" tag=""/>
+	<Message prefix="[APCC 202-3]" severity="info" keynum="APCC_3_1610" content="Tmp directory is /tmp/apcc_db_studio/176621511864672044694" tag=""/>
+	<Message prefix="[APCC 202-1]" severity="info" keynum="APCC_1_1611" content="APCC is done." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1427" content="Running &apos;/media/dati/dante/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/apcc&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1428" content="For user &apos;studio&apos; on host &apos;dante-X55C&apos; (Linux_x86_64 version 4.8.0-53-generic) on Tue Nov 28 11:24:38 CET 2017" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1429" content="On os Linux Mint 18.2 Sonya" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1430" content="In directory &apos;/home/studio/Prova_casa/solution1/sim/wrapc&apos;" tag=""/>
+	<Message prefix="[APCC 202-3]" severity="info" keynum="APCC_3_1610" content="Tmp directory is /tmp/apcc_db_studio/177451511864678309370" tag=""/>
+	<Message prefix="[APCC 202-1]" severity="info" keynum="APCC_1_1611" content="APCC is done." tag=""/>
+	<Message prefix="[COSIM 212-317]" severity="error" keynum="COSIM_TCL_317_1189" content="C++ compile error." tag=""/>
+	<Message prefix="[COSIM 212-321]" severity="error" keynum="COSIM_TCL_321_1193" content="EXE file generate failed." tag=""/>
+	<Message prefix="[COSIM 212-321]" severity="error" keynum="COSIM_TCL_321_1193" content="EXE file generate failed." tag=""/>
+	<Message prefix="[COSIM 212-331]" severity="error" keynum="COSIM_TCL_331_1203" content="Aborting co-simulation: C simulation failed, compilation errors." tag=""/>
+	<Message prefix="[COSIM 212-4]" severity="error" keynum="COSIM_TCL_4_1074" content="*** C/RTL co-simulation finished: FAIL ***" tag=""/>
+	<Message prefix="[HLS 200-150]" severity="info" keynum="11" content="command &apos;ap_source&apos; returned error code
+    while executing
+&quot;source /home/studio/Prova_casa/solution1/cosim.tcl&quot;
+    invoked from within
+&quot;hls::main /home/studio/Prova_casa/solution1/cosim.tcl&quot;
+    (&quot;uplevel&quot; body line 1)
+    invoked from within
+&quot;uplevel 1 hls::main {*}$args&quot;
+    (procedure &quot;hls_proc&quot; line 5)
+    invoked from within
+&quot;hls_proc $argv&quot;" tag=""/>
+</Messages>

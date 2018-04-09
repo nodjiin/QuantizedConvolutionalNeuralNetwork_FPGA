@@ -1,0 +1,281 @@
+
+
+================================================================
+== Vivado HLS Report for 'aesl_mux_load_28_37_s'
+================================================================
+* Date:           Tue Nov 28 10:42:27 2017
+
+* Version:        2017.3 (Build 2018833 on Wed Oct 04 20:30:40 MDT 2017)
+* Project:        Prova_casa
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.51|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    2|    2|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+
+* FSM state operations: 
+
+ <State 1> : 8.51ns
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%tmp_98 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %empty)"
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%tmp_99 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %empty_13)"
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%tmp_100 = call i5 @_ssdm_op_Read.ap_auto.i5(i5 %empty_12)"
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_cast = sext i32 %tmp_99 to i64"
+ST_1 : Operation 8 [1/1] (8.51ns)   --->   "%tmp = mul i64 %p_cast, 27"   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 9 [1/1] (1.42ns)   --->   "switch i5 %tmp_100, label %case27.i [
+    i5 0, label %case0.i
+    i5 1, label %case1.i
+    i5 2, label %case2.i
+    i5 3, label %case3.i
+    i5 4, label %case4.i
+    i5 5, label %case5.i
+    i5 6, label %case6.i
+    i5 7, label %case7.i
+    i5 8, label %case8.i
+    i5 9, label %case9.i
+    i5 10, label %case10.i
+    i5 11, label %case11.i
+    i5 12, label %case12.i
+    i5 13, label %case13.i
+    i5 14, label %case14.i
+    i5 15, label %case15.i
+    i5 -16, label %case16.i
+    i5 -15, label %case17.i
+    i5 -14, label %case18.i
+    i5 -13, label %case19.i
+    i5 -12, label %case20.i
+    i5 -11, label %case21.i
+    i5 -10, label %case22.i
+    i5 -9, label %case23.i
+    i5 -8, label %case24.i
+    i5 -7, label %case25.i
+    i5 -6, label %case26.i
+  ]"
+
+ <State 2> : 5.81ns
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%p_cast1 = sext i32 %tmp_98 to i64"
+ST_2 : Operation 11 [1/1] (2.55ns)   --->   "%tmp_s = add i64 %p_cast1, %tmp"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%outputfm_0_addr = getelementptr [999 x i27]* %outputfm_0, i64 0, i64 %tmp_s"
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%outputfm_1_addr = getelementptr [999 x i27]* %outputfm_1, i64 0, i64 %tmp_s"
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%outputfm_10_addr = getelementptr [999 x i27]* %outputfm_10, i64 0, i64 %tmp_s"
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%outputfm_11_addr = getelementptr [999 x i27]* %outputfm_11, i64 0, i64 %tmp_s"
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%outputfm_12_addr = getelementptr [999 x i27]* %outputfm_12, i64 0, i64 %tmp_s"
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%outputfm_13_addr = getelementptr [999 x i27]* %outputfm_13, i64 0, i64 %tmp_s"
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%outputfm_14_addr = getelementptr [999 x i27]* %outputfm_14, i64 0, i64 %tmp_s"
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%outputfm_15_addr = getelementptr [999 x i27]* %outputfm_15, i64 0, i64 %tmp_s"
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%outputfm_16_addr = getelementptr [999 x i27]* %outputfm_16, i64 0, i64 %tmp_s"
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%outputfm_17_addr = getelementptr [999 x i27]* %outputfm_17, i64 0, i64 %tmp_s"
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%outputfm_18_addr = getelementptr [999 x i27]* %outputfm_18, i64 0, i64 %tmp_s"
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%outputfm_19_addr = getelementptr [999 x i27]* %outputfm_19, i64 0, i64 %tmp_s"
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%outputfm_2_addr = getelementptr [999 x i27]* %outputfm_2, i64 0, i64 %tmp_s"
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%outputfm_20_addr = getelementptr [999 x i27]* %outputfm_20, i64 0, i64 %tmp_s"
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%outputfm_21_addr = getelementptr [999 x i27]* %outputfm_21, i64 0, i64 %tmp_s"
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%outputfm_22_addr = getelementptr [999 x i27]* %outputfm_22, i64 0, i64 %tmp_s"
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%outputfm_23_addr = getelementptr [999 x i27]* %outputfm_23, i64 0, i64 %tmp_s"
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%outputfm_24_addr = getelementptr [999 x i27]* %outputfm_24, i64 0, i64 %tmp_s"
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%outputfm_25_addr = getelementptr [999 x i27]* %outputfm_25, i64 0, i64 %tmp_s"
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%outputfm_26_addr = getelementptr [999 x i27]* %outputfm_26, i64 0, i64 %tmp_s"
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%outputfm_27_addr = getelementptr [999 x i27]* %outputfm_27, i64 0, i64 %tmp_s"
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%outputfm_3_addr = getelementptr [999 x i27]* %outputfm_3, i64 0, i64 %tmp_s"
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%outputfm_4_addr = getelementptr [999 x i27]* %outputfm_4, i64 0, i64 %tmp_s"
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%outputfm_5_addr = getelementptr [999 x i27]* %outputfm_5, i64 0, i64 %tmp_s"
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%outputfm_6_addr = getelementptr [999 x i27]* %outputfm_6, i64 0, i64 %tmp_s"
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%outputfm_7_addr = getelementptr [999 x i27]* %outputfm_7, i64 0, i64 %tmp_s"
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%outputfm_8_addr = getelementptr [999 x i27]* %outputfm_8, i64 0, i64 %tmp_s"
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%outputfm_9_addr = getelementptr [999 x i27]* %outputfm_9, i64 0, i64 %tmp_s"
+ST_2 : Operation 40 [2/2] (3.25ns)   --->   "%outputfm_26_load = load i27* %outputfm_26_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 41 [2/2] (3.25ns)   --->   "%outputfm_25_load = load i27* %outputfm_25_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 42 [2/2] (3.25ns)   --->   "%outputfm_24_load = load i27* %outputfm_24_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 43 [2/2] (3.25ns)   --->   "%outputfm_23_load = load i27* %outputfm_23_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 44 [2/2] (3.25ns)   --->   "%outputfm_22_load = load i27* %outputfm_22_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 45 [2/2] (3.25ns)   --->   "%outputfm_21_load = load i27* %outputfm_21_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 46 [2/2] (3.25ns)   --->   "%outputfm_20_load = load i27* %outputfm_20_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 47 [2/2] (3.25ns)   --->   "%outputfm_19_load = load i27* %outputfm_19_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 48 [2/2] (3.25ns)   --->   "%outputfm_18_load = load i27* %outputfm_18_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 49 [2/2] (3.25ns)   --->   "%outputfm_17_load = load i27* %outputfm_17_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 50 [2/2] (3.25ns)   --->   "%outputfm_16_load = load i27* %outputfm_16_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 51 [2/2] (3.25ns)   --->   "%outputfm_15_load = load i27* %outputfm_15_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 52 [2/2] (3.25ns)   --->   "%outputfm_14_load = load i27* %outputfm_14_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 53 [2/2] (3.25ns)   --->   "%outputfm_13_load = load i27* %outputfm_13_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 54 [2/2] (3.25ns)   --->   "%outputfm_12_load = load i27* %outputfm_12_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 55 [2/2] (3.25ns)   --->   "%outputfm_11_load = load i27* %outputfm_11_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 56 [2/2] (3.25ns)   --->   "%outputfm_10_load = load i27* %outputfm_10_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 57 [2/2] (3.25ns)   --->   "%outputfm_9_load = load i27* %outputfm_9_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 58 [2/2] (3.25ns)   --->   "%outputfm_8_load = load i27* %outputfm_8_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 59 [2/2] (3.25ns)   --->   "%outputfm_7_load = load i27* %outputfm_7_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 60 [2/2] (3.25ns)   --->   "%outputfm_6_load = load i27* %outputfm_6_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 61 [2/2] (3.25ns)   --->   "%outputfm_5_load = load i27* %outputfm_5_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 62 [2/2] (3.25ns)   --->   "%outputfm_4_load = load i27* %outputfm_4_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 63 [2/2] (3.25ns)   --->   "%outputfm_3_load = load i27* %outputfm_3_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 64 [2/2] (3.25ns)   --->   "%outputfm_2_load = load i27* %outputfm_2_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 65 [2/2] (3.25ns)   --->   "%outputfm_1_load = load i27* %outputfm_1_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 66 [2/2] (3.25ns)   --->   "%outputfm_0_load = load i27* %outputfm_0_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_2 : Operation 67 [2/2] (3.25ns)   --->   "%outputfm_27_load = load i27* %outputfm_27_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+
+ <State 3> : 5.86ns
+ST_3 : Operation 68 [1/2] (3.25ns)   --->   "%outputfm_26_load = load i27* %outputfm_26_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 69 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 70 [1/2] (3.25ns)   --->   "%outputfm_25_load = load i27* %outputfm_25_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 71 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 72 [1/2] (3.25ns)   --->   "%outputfm_24_load = load i27* %outputfm_24_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 73 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 74 [1/2] (3.25ns)   --->   "%outputfm_23_load = load i27* %outputfm_23_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 75 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 76 [1/2] (3.25ns)   --->   "%outputfm_22_load = load i27* %outputfm_22_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 77 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 78 [1/2] (3.25ns)   --->   "%outputfm_21_load = load i27* %outputfm_21_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 79 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 80 [1/2] (3.25ns)   --->   "%outputfm_20_load = load i27* %outputfm_20_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 81 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 82 [1/2] (3.25ns)   --->   "%outputfm_19_load = load i27* %outputfm_19_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 83 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 84 [1/2] (3.25ns)   --->   "%outputfm_18_load = load i27* %outputfm_18_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 85 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 86 [1/2] (3.25ns)   --->   "%outputfm_17_load = load i27* %outputfm_17_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 87 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 88 [1/2] (3.25ns)   --->   "%outputfm_16_load = load i27* %outputfm_16_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 89 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 90 [1/2] (3.25ns)   --->   "%outputfm_15_load = load i27* %outputfm_15_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 91 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 92 [1/2] (3.25ns)   --->   "%outputfm_14_load = load i27* %outputfm_14_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 93 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 94 [1/2] (3.25ns)   --->   "%outputfm_13_load = load i27* %outputfm_13_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 95 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 96 [1/2] (3.25ns)   --->   "%outputfm_12_load = load i27* %outputfm_12_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 97 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 98 [1/2] (3.25ns)   --->   "%outputfm_11_load = load i27* %outputfm_11_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 99 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 100 [1/2] (3.25ns)   --->   "%outputfm_10_load = load i27* %outputfm_10_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 101 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 102 [1/2] (3.25ns)   --->   "%outputfm_9_load = load i27* %outputfm_9_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 103 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 104 [1/2] (3.25ns)   --->   "%outputfm_8_load = load i27* %outputfm_8_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 105 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 106 [1/2] (3.25ns)   --->   "%outputfm_7_load = load i27* %outputfm_7_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 107 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 108 [1/2] (3.25ns)   --->   "%outputfm_6_load = load i27* %outputfm_6_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 109 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 110 [1/2] (3.25ns)   --->   "%outputfm_5_load = load i27* %outputfm_5_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 111 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 112 [1/2] (3.25ns)   --->   "%outputfm_4_load = load i27* %outputfm_4_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 113 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 114 [1/2] (3.25ns)   --->   "%outputfm_3_load = load i27* %outputfm_3_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 115 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 116 [1/2] (3.25ns)   --->   "%outputfm_2_load = load i27* %outputfm_2_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 117 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 118 [1/2] (3.25ns)   --->   "%outputfm_1_load = load i27* %outputfm_1_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 119 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 120 [1/2] (3.25ns)   --->   "%outputfm_0_load = load i27* %outputfm_0_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 121 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 122 [1/2] (3.25ns)   --->   "%outputfm_27_load = load i27* %outputfm_27_addr, align 4"   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 27> <Depth = 999> <RAM>
+ST_3 : Operation 123 [1/1] (2.60ns)   --->   "br label %"aesl_mux_load.28[37 x [27 x i27]]P.i5.i64.i64.exit""
+ST_3 : Operation 124 [1/1] (0.00ns)   --->   "%UnifiedRetVal_i = phi i27 [ %outputfm_0_load, %case0.i ], [ %outputfm_1_load, %case1.i ], [ %outputfm_2_load, %case2.i ], [ %outputfm_3_load, %case3.i ], [ %outputfm_4_load, %case4.i ], [ %outputfm_5_load, %case5.i ], [ %outputfm_6_load, %case6.i ], [ %outputfm_7_load, %case7.i ], [ %outputfm_8_load, %case8.i ], [ %outputfm_9_load, %case9.i ], [ %outputfm_10_load, %case10.i ], [ %outputfm_11_load, %case11.i ], [ %outputfm_12_load, %case12.i ], [ %outputfm_13_load, %case13.i ], [ %outputfm_14_load, %case14.i ], [ %outputfm_15_load, %case15.i ], [ %outputfm_16_load, %case16.i ], [ %outputfm_17_load, %case17.i ], [ %outputfm_18_load, %case18.i ], [ %outputfm_19_load, %case19.i ], [ %outputfm_20_load, %case20.i ], [ %outputfm_21_load, %case21.i ], [ %outputfm_22_load, %case22.i ], [ %outputfm_23_load, %case23.i ], [ %outputfm_24_load, %case24.i ], [ %outputfm_25_load, %case25.i ], [ %outputfm_26_load, %case26.i ], [ %outputfm_27_load, %case27.i ]"
+ST_3 : Operation 125 [1/1] (0.00ns)   --->   "ret i27 %UnifiedRetVal_i"
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 8.51ns
+The critical path consists of the following:
+	wire read on port 'empty_13' [33]  (0 ns)
+	'mul' operation ('tmp') [37]  (8.51 ns)
+
+ <State 2>: 5.81ns
+The critical path consists of the following:
+	'add' operation ('tmp_s') [38]  (2.55 ns)
+	'getelementptr' operation ('outputfm_25_addr') [57]  (0 ns)
+	'load' operation ('outputfm_25_load') on array 'outputfm_25' [72]  (3.25 ns)
+
+ <State 3>: 5.86ns
+The critical path consists of the following:
+	'load' operation ('outputfm_26_load') on array 'outputfm_26' [69]  (3.25 ns)
+	multiplexor before 'phi' operation ('UnifiedRetVal_i') with incoming values : ('outputfm_26_load') ('outputfm_25_load') ('outputfm_24_load') ('outputfm_23_load') ('outputfm_22_load') ('outputfm_21_load') ('outputfm_20_load') ('outputfm_19_load') ('outputfm_18_load') ('outputfm_17_load') ('outputfm_16_load') ('outputfm_15_load') ('outputfm_14_load') ('outputfm_13_load') ('outputfm_12_load') ('outputfm_11_load') ('outputfm_10_load') ('outputfm_9_load') ('outputfm_8_load') ('outputfm_7_load') ('outputfm_6_load') ('outputfm_5_load') ('outputfm_4_load') ('outputfm_3_load') ('outputfm_2_load') ('outputfm_1_load') ('outputfm_0_load') ('outputfm_27_load') [153]  (2.6 ns)
+	'phi' operation ('UnifiedRetVal_i') with incoming values : ('outputfm_26_load') ('outputfm_25_load') ('outputfm_24_load') ('outputfm_23_load') ('outputfm_22_load') ('outputfm_21_load') ('outputfm_20_load') ('outputfm_19_load') ('outputfm_18_load') ('outputfm_17_load') ('outputfm_16_load') ('outputfm_15_load') ('outputfm_14_load') ('outputfm_13_load') ('outputfm_12_load') ('outputfm_11_load') ('outputfm_10_load') ('outputfm_9_load') ('outputfm_8_load') ('outputfm_7_load') ('outputfm_6_load') ('outputfm_5_load') ('outputfm_4_load') ('outputfm_3_load') ('outputfm_2_load') ('outputfm_1_load') ('outputfm_0_load') ('outputfm_27_load') [153]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

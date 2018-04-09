@@ -1,0 +1,191 @@
+
+
+================================================================
+== Vivado HLS Report for 'dataflow_out_channel_1'
+================================================================
+* Date:           Tue Nov 28 10:42:29 2017
+
+* Version:        2017.3 (Build 2018833 on Wed Oct 04 20:30:40 MDT 2017)
+* Project:        Prova_casa
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      9.63|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+-------+------+-------+----------+
+    |    Latency   |   Interval   | Pipeline |
+    |  min |  max  |  min |  max  |   Type   |
+    +------+-------+------+-------+----------+
+    |  1196|  28026|  1197|  27991| dataflow |
+    +------+-------+------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+
+* FSM state operations: 
+
+ <State 1> : 3.63ns
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%right_shift_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %right_shift)"
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%quantized_multiplier_3 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %quantized_multiplier)"
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%output_offset_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %output_offset)"
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%weights_offset_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %weights_offset_9)"
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%input_offset_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %input_offset)"
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%col_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %col)"
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%row_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %row)"
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%to_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %to_r)"
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%out_offset_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %out_offset)"
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%curr_layer_str_h_rea = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_str_h)"
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%curr_layer_str_w_rea = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_str_w)"
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%curr_layer_ker_h_rea = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_ker_h)"
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%curr_layer_ker_w_rea = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_ker_w)"
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%curr_layer_out_ch_re = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_out_ch)"
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%curr_layer_in_ch_rea = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_in_ch)"
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%curr_layer_out_h_rea = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_out_h)"
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%curr_layer_out_w_rea = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_out_w)"
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%curr_layer_in_h_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_in_h)"
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%curr_layer_in_w_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %curr_layer_in_w)"
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%image_offset_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %image_offset)"
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%weights_offset_read_24 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %weights_offset)"
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%out_offset_c = alloca i32, align 4"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%right_shift_c = alloca i32, align 4"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%quantized_multiplier_2 = alloca i32, align 4"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%output_offset_c = alloca i32, align 4"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%col_c = alloca i32, align 4"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%row_c = alloca i32, align 4"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%to_c = alloca i32, align 4"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%curr_layer_out_ch_c = alloca i32, align 4"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%curr_layer_out_h_c = alloca i32, align 4"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%curr_layer_out_w_c = alloca i32, align 4"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 36 [2/2] (3.63ns)   --->   "call fastcc void @dataflow_out_channel(i32 %curr_layer_in_ch_rea, i8* %weights, i32 %weights_offset_read_24, i32 %image_offset_read, i32 %curr_layer_in_w_read, i32 %curr_layer_in_h_read, i32 %curr_layer_out_w_rea, i32 %curr_layer_out_h_rea, i32 %curr_layer_out_ch_re, i32 %curr_layer_ker_w_rea, i32 %curr_layer_ker_h_rea, i32 %curr_layer_str_w_rea, i32 %curr_layer_str_h_rea, i32 %to_read, i32 %row_read, i32 %col_read, [999 x i27]* %partial_outputfm_0, [999 x i27]* %partial_outputfm_1, [999 x i27]* %partial_outputfm_2, [999 x i27]* %partial_outputfm_3, [999 x i27]* %partial_outputfm_4, [999 x i27]* %partial_outputfm_5, [999 x i27]* %partial_outputfm_6, [999 x i27]* %partial_outputfm_7, [999 x i27]* %partial_outputfm_8, [999 x i27]* %partial_outputfm_9, [999 x i27]* %partial_outputfm_10, [999 x i27]* %partial_outputfm_11, [999 x i27]* %partial_outputfm_12, [999 x i27]* %partial_outputfm_13, [999 x i27]* %partial_outputfm_14, [999 x i27]* %partial_outputfm_15, [999 x i27]* %partial_outputfm_16, [999 x i27]* %partial_outputfm_17, [999 x i27]* %partial_outputfm_18, [999 x i27]* %partial_outputfm_19, [999 x i27]* %partial_outputfm_20, [999 x i27]* %partial_outputfm_21, [999 x i27]* %partial_outputfm_22, [999 x i27]* %partial_outputfm_23, [999 x i27]* %partial_outputfm_24, [999 x i27]* %partial_outputfm_25, [999 x i27]* %partial_outputfm_26, [999 x i27]* %partial_outputfm_27, i32 %input_offset_read, i32 %weights_offset_read, i32 %output_offset_read, i32 %quantized_multiplier_3, i32 %right_shift_read, i32* %curr_layer_out_w_c, i32* %curr_layer_out_h_c, i32* %curr_layer_out_ch_c, i32* %to_c, i32* %row_c, i32* %col_c, i32* %output_offset_c, i32* %quantized_multiplier_2, i32* %right_shift_c, i32 %out_offset_read, i32* %out_offset_c)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 2> : 0.00ns
+ST_2 : Operation 37 [1/2] (0.00ns)   --->   "call fastcc void @dataflow_out_channel(i32 %curr_layer_in_ch_rea, i8* %weights, i32 %weights_offset_read_24, i32 %image_offset_read, i32 %curr_layer_in_w_read, i32 %curr_layer_in_h_read, i32 %curr_layer_out_w_rea, i32 %curr_layer_out_h_rea, i32 %curr_layer_out_ch_re, i32 %curr_layer_ker_w_rea, i32 %curr_layer_ker_h_rea, i32 %curr_layer_str_w_rea, i32 %curr_layer_str_h_rea, i32 %to_read, i32 %row_read, i32 %col_read, [999 x i27]* %partial_outputfm_0, [999 x i27]* %partial_outputfm_1, [999 x i27]* %partial_outputfm_2, [999 x i27]* %partial_outputfm_3, [999 x i27]* %partial_outputfm_4, [999 x i27]* %partial_outputfm_5, [999 x i27]* %partial_outputfm_6, [999 x i27]* %partial_outputfm_7, [999 x i27]* %partial_outputfm_8, [999 x i27]* %partial_outputfm_9, [999 x i27]* %partial_outputfm_10, [999 x i27]* %partial_outputfm_11, [999 x i27]* %partial_outputfm_12, [999 x i27]* %partial_outputfm_13, [999 x i27]* %partial_outputfm_14, [999 x i27]* %partial_outputfm_15, [999 x i27]* %partial_outputfm_16, [999 x i27]* %partial_outputfm_17, [999 x i27]* %partial_outputfm_18, [999 x i27]* %partial_outputfm_19, [999 x i27]* %partial_outputfm_20, [999 x i27]* %partial_outputfm_21, [999 x i27]* %partial_outputfm_22, [999 x i27]* %partial_outputfm_23, [999 x i27]* %partial_outputfm_24, [999 x i27]* %partial_outputfm_25, [999 x i27]* %partial_outputfm_26, [999 x i27]* %partial_outputfm_27, i32 %input_offset_read, i32 %weights_offset_read, i32 %output_offset_read, i32 %quantized_multiplier_3, i32 %right_shift_read, i32* %curr_layer_out_w_c, i32* %curr_layer_out_h_c, i32* %curr_layer_out_ch_c, i32* %to_c, i32* %row_c, i32* %col_c, i32* %output_offset_c, i32* %quantized_multiplier_2, i32* %right_shift_c, i32 %out_offset_read, i32* %out_offset_c)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 3> : 0.00ns
+ST_3 : Operation 38 [2/2] (0.00ns)   --->   "call fastcc void @write_output(i32* nocapture %curr_layer_out_w_c, i32* nocapture %curr_layer_out_h_c, i32* nocapture %curr_layer_out_ch_c, i8* %weights, i32* nocapture %out_offset_c, i32* nocapture %to_c, i32* nocapture %row_c, i32* nocapture %col_c, i32* nocapture %output_offset_c, i32* nocapture %quantized_multiplier_2, i32* nocapture %right_shift_c)" [Prova_casa/src/zhang_convolution_quant.c:287]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 4> : 0.00ns
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind" [Prova_casa/src/zhang_convolution_quant.c:278]
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([999 x i27]* %partial_outputfm_0, [999 x i27]* %partial_outputfm_1, [999 x i27]* %partial_outputfm_2, [999 x i27]* %partial_outputfm_3, [999 x i27]* %partial_outputfm_4, [999 x i27]* %partial_outputfm_5, [999 x i27]* %partial_outputfm_6, [999 x i27]* %partial_outputfm_7, [999 x i27]* %partial_outputfm_8, [999 x i27]* %partial_outputfm_9, [999 x i27]* %partial_outputfm_10, [999 x i27]* %partial_outputfm_11, [999 x i27]* %partial_outputfm_12, [999 x i27]* %partial_outputfm_13, [999 x i27]* %partial_outputfm_14, [999 x i27]* %partial_outputfm_15, [999 x i27]* %partial_outputfm_16, [999 x i27]* %partial_outputfm_17, [999 x i27]* %partial_outputfm_18, [999 x i27]* %partial_outputfm_19, [999 x i27]* %partial_outputfm_20, [999 x i27]* %partial_outputfm_21, [999 x i27]* %partial_outputfm_22, [999 x i27]* %partial_outputfm_23, [999 x i27]* %partial_outputfm_24, [999 x i27]* %partial_outputfm_25, [999 x i27]* %partial_outputfm_26, [999 x i27]* %partial_outputfm_27, [1 x i8]* @p_str, [12 x i8]* @p_str24, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %weights, [6 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 102400, [5 x i8]* @p_str19, [6 x i8]* @p_str20, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %weights, [6 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 102400, [5 x i8]* @p_str19, [6 x i8]* @p_str20, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %weights, [6 x i8]* @p_str18, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 102400, [5 x i8]* @p_str19, [6 x i8]* @p_str20, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecChannel([19 x i8]* @curr_layer_OC_out_w_s, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i32* %curr_layer_out_w_c, i32* %curr_layer_out_w_c)"
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %curr_layer_out_w_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%empty_25 = call i32 (...)* @_ssdm_op_SpecChannel([19 x i8]* @curr_layer_OC_out_h_s, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i32* %curr_layer_out_h_c, i32* %curr_layer_out_h_c)"
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %curr_layer_out_h_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%empty_26 = call i32 (...)* @_ssdm_op_SpecChannel([20 x i8]* @curr_layer_OC_out_ch, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i32* %curr_layer_out_ch_c, i32* %curr_layer_out_ch_c)"
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %curr_layer_out_ch_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%empty_27 = call i32 (...)* @_ssdm_op_SpecChannel([5 x i8]* @to_c_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i32* %to_c, i32* %to_c)"
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %to_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%empty_28 = call i32 (...)* @_ssdm_op_SpecChannel([6 x i8]* @row_c_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i32* %row_c, i32* %row_c)"
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %row_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%empty_29 = call i32 (...)* @_ssdm_op_SpecChannel([6 x i8]* @col_c_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i32* %col_c, i32* %col_c)"
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %col_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%empty_30 = call i32 (...)* @_ssdm_op_SpecChannel([16 x i8]* @output_offset_c_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i32* %output_offset_c, i32* %output_offset_c)"
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %output_offset_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "%empty_31 = call i32 (...)* @_ssdm_op_SpecChannel([23 x i8]* @quantized_multiplier, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i32* %quantized_multiplier_2, i32* %quantized_multiplier_2)"
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %quantized_multiplier_2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%empty_32 = call i32 (...)* @_ssdm_op_SpecChannel([14 x i8]* @right_shift_c_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i32* %right_shift_c, i32* %right_shift_c)"
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %right_shift_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%empty_33 = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @out_OC_offset_c_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 1, i32 0, i32* %out_offset_c, i32* %out_offset_c)"
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %out_offset_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_4 : Operation 64 [1/2] (0.00ns)   --->   "call fastcc void @write_output(i32* nocapture %curr_layer_out_w_c, i32* nocapture %curr_layer_out_h_c, i32* nocapture %curr_layer_out_ch_c, i8* %weights, i32* nocapture %out_offset_c, i32* nocapture %to_c, i32* nocapture %row_c, i32* nocapture %col_c, i32* nocapture %output_offset_c, i32* nocapture %quantized_multiplier_2, i32* nocapture %right_shift_c)" [Prova_casa/src/zhang_convolution_quant.c:287]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "ret void" [Prova_casa/src/zhang_convolution_quant.c:289]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 3.63ns
+The critical path consists of the following:
+	wire read on port 'right_shift' [167]  (0 ns)
+	'call' operation to 'dataflow_out_channel' [223]  (3.63 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

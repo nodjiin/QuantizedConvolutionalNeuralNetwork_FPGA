@@ -1,0 +1,256 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="RoundingDivideByPOT" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="set_out_buffer_to_0" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="set_out_buffer_to_0" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="set_in_wh_buffers_to_0" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="set_in_wh_buffers_to_0" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="set_in_wh_buffers_to_0" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="set_in_wh_buffers_to_0" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="set_in_wh_buffers_to_0" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="set_in_wh_buffers_to_0" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="read_input" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="read_input" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="max" value="3*(27-1)*1+3*(37-1)*1+3"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="read_weights" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="read_weights" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="max" value="28*3*3*3"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolve" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="max" value="3"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolve" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="max" value="3"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolve" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="max" value="37"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolve" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="convolve" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="max" value="27"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolve" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="convolve" label="">
+<pragma name="DEPENDENCE">
+<option name="variable" value="partial_outputfm"/>
+<option name="inter" positionalBoolean="type" value=""/>
+<option name="false" positionalBoolean="dependent" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolve" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="write_output" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="write_output" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="max" value="28*37*27"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="dataflow_in_channels" label="">
+<pragma name="DATAFLOW"/>
+</directive>
+<directive functionLabel="" functionName="dataflow_out_channels" label="">
+<pragma name="DATAFLOW"/>
+</directive>
+<directive functionLabel="" functionName="dataflow_out_channels" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="3"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="102400"/>
+<option name="port" positionalBoolean="4" value="image"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="gmem"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="102400"/>
+<option name="port" positionalBoolean="4" value="weights"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="gmem"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="102400"/>
+<option name="port" positionalBoolean="4" value="out"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="gmem"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="image"/>
+<option name="bundle" value="control"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="weights"/>
+<option name="bundle" value="control"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="out"/>
+<option name="bundle" value="control"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="curr_layer_in"/>
+<option name="bundle" value="control"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="input_offset"/>
+<option name="bundle" value="control"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="weights_offset"/>
+<option name="bundle" value="control"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="output_offset"/>
+<option name="bundle" value="control"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="quantized_multiplier"/>
+<option name="bundle" value="control"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="right_shift"/>
+<option name="bundle" value="control"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+<option name="bundle" value="control"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="partial_outputfm"/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="outputfm"/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="weightsbuf"/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="weightsbuf"/>
+<option name="dim" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="inputfm"/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="partial_outputfm"/>
+<option name="core" value="RAM_2P_BRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="24"/>
+<option name="max" value="30"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="24"/>
+<option name="max" value="30"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="zhang_cnn" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="64"/>
+<option name="max" value="100"/>
+</pragma>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>
